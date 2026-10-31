@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#fb6f92">
+  <title>Blind Date Language Test</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&family=Lobster&family=Pacifico&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="hearts" aria-hidden="true"></div>
+
+  <!-- Professor Pigeon, reused via <use href="#pigeon">. Mood is set with CSS variables
+       on the wrapper (--brow for angry eyebrows, --blush for happy cheeks). -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="pigeon-neck" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#4fb38a"/>
+        <stop offset="1" stop-color="#8d5cc4"/>
+      </linearGradient>
+    </defs>
+    <symbol id="pigeon" viewBox="0 0 120 120">
+      <!-- feet -->
+      <path d="M52 100 L50 112 M50 112 L44 115 M50 112 L56 115 M68 100 L68 112 M68 112 L62 115 M68 112 L74 115"
+            stroke="#e57f8f" stroke-width="3" stroke-linecap="round" fill="none"/>
+      <!-- tail -->
+      <path d="M26 76 L4 90 L10 97 L32 88 Z" fill="#6f7882"/>
+      <!-- body -->
+      <ellipse cx="58" cy="78" rx="36" ry="25" fill="#a3acb6"/>
+      <!-- wing with dark bars -->
+      <path d="M32 70 Q60 54 86 74 Q66 94 34 86 Z" fill="#8a939d"/>
+      <path d="M44 74 Q58 69 72 77 M48 81 Q60 77 72 83" stroke="#3f454c" stroke-width="3" stroke-linecap="round" fill="none"/>
+      <!-- iridescent neck -->
+      <ellipse cx="78" cy="60" rx="15" ry="16" fill="url(#pigeon-neck)"/>
+      <!-- head -->
+      <circle cx="82" cy="40" r="17" fill="#8e98a3"/>
+      <!-- beak + cere -->
+      <path d="M97 39 L111 43 L97 47 Z" fill="#3b3f45"/>
+      <ellipse cx="98.5" cy="39.5" rx="3.2" ry="2" fill="#f3f3f3"/>
+      <!-- eye -->
+      <circle cx="88" cy="37" r="5" fill="#f08a24"/>
+      <circle cx="89" cy="37" r="2.4" fill="#111"/>
+      <!-- teacher glasses -->
+      <circle cx="88" cy="37" r="8" fill="rgba(255,255,255,.25)" stroke="#222" stroke-width="2"/>
+      <path d="M80 36 L67 39" stroke="#222" stroke-width="2"/>
+      <!-- angry eyebrow / happy blush -->
+      <path d="M79 26 L96 31" stroke="#222" stroke-width="3.5" stroke-linecap="round" style="opacity: var(--brow, 0)"/>
+      <ellipse cx="83" cy="48" rx="4.5" ry="2.6" fill="#ff8fab" style="opacity: var(--blush, 0)"/>
+      <!-- graduation cap -->
+      <rect x="72" y="20" width="22" height="8" rx="2" fill="#222"/>
+      <polygon points="60,20 83,10 106,20 83,28" fill="#2b2b2b"/>
+      <path d="M83 19 L101 23 L101 33" stroke="#f4b942" stroke-width="2" fill="none"/>
+      <circle cx="101" cy="34" r="2.6" fill="#f4b942"/>
+    </symbol>
+  </svg>
+
+  <main class="table">
+    <nav class="lang-switch" id="lang-switch" data-i18n-aria="langLabel"></nav>
+
+    <!-- Loading -->
+    <section id="screen-loading" class="card screen active">
+      <div class="big-emoji spin">💘</div>
+      <p data-i18n="loading">Lighting the candles...</p>
+    </section>
+
+    <!-- Load error / manual JSON pick -->
+    <section id="screen-error" class="card screen">
+      <div class="big-emoji">💔</div>
+      <h2 data-i18n="errorTitle">Our date got stood up!</h2>
+      <p id="error-text"></p>
+      <p class="hint" data-i18n="errorHint"></p>
+      <div class="actions">
+        <button id="btn-retry" class="btn btn-primary btn-block" data-i18n="retry"></button>
+        <button id="btn-error-back" class="btn btn-ghost btn-block" data-i18n="backToTests" hidden></button>
+      </div>
+    </section>
+
+    <!-- Test picker -->
+    <section id="screen-picker" class="card screen">
+      <div class="candle" aria-hidden="true"><span class="flame"></span></div>
+      <h1 data-i18n="pickerTitle">Blind Date Language Test</h1>
+      <p class="subtitle" data-i18n="pickerSubtitle"></p>
+
+      <div class="gender">
+        <h3 data-i18n="genderTitle"></h3>
+        <div class="gender-choice" id="gender-choice">
+          <button data-gender="m" data-i18n="genderM"></button>
+          <button data-gender="f" data-i18n="genderF"></button>
+          <button data-gender="x" class="gender-x" data-i18n="genderX"></button>
+        </div>
+        <p class="gender-hint" data-i18n="genderHint"></p>
+      </div>
+
+      <p class="gender-needed" id="gender-needed" data-i18n="genderNeeded"></p>
+      <div class="test-list" id="test-list"></div>
+    </section>
+
+    <!-- Welcome (selected test) -->
+    <section id="screen-welcome" class="card screen">
+      <button id="btn-change-test" class="link-btn" data-i18n="allTests"></button>
+      <div class="big-emoji" id="test-emoji">💘</div>
+      <h1 id="title"></h1>
+      <p id="subtitle" class="subtitle"></p>
+      <div class="menu">
+        <h3 data-i18n="menuTitle"></h3>
+        <ul>
+          <li>🥂 <b data-i18n="course1"></b> - <span data-i18n="courseDesc1"></span></li>
+          <li>🥗 <b data-i18n="course2"></b> - <span data-i18n="courseDesc2"></span></li>
+          <li>🍝 <b data-i18n="course3"></b> - <span data-i18n="courseDesc3"></span></li>
+          <li>🍰 <b data-i18n="course4"></b> - <span data-i18n="courseDesc4"></span></li>
+        </ul>
+        <p class="menu-note" id="menu-note"></p>
+      </div>
+      <div class="prof">
+        <div class="prof-pigeon"><svg viewBox="0 0 120 120"><use href="#pigeon"/></svg></div>
+        <div class="prof-bubble">
+          <p class="prof-name" data-i18n="profName"></p>
+          <p class="prof-line" data-i18n="pigeonIntro"></p>
+        </div>
+      </div>
+      <label class="name-field">
+        <span data-i18n="nameLabel"></span>
+        <input type="text" id="player-name" maxlength="24" data-i18n-placeholder="namePlaceholder" autocomplete="given-name" enterkeyhint="go">
+      </label>
+      <button id="btn-start" class="btn btn-primary btn-block" data-i18n="start"></button>
+    </section>
+
+    <!-- Question -->
+    <section id="screen-quiz" class="card screen">
+      <header class="quiz-head">
+        <div class="course" id="course"></div>
+        <div class="counter" id="counter"></div>
+      </header>
+
+      <div class="progress"><div class="progress-bar" id="progress-bar"></div></div>
+
+      <div class="chemistry">
+        <span data-i18n="chemistry"></span>
+        <div class="meter"><div class="meter-fill" id="meter-fill"></div></div>
+        <span id="meter-emoji">😊</span>
+      </div>
+
+      <div class="scene">
+        <div class="avatar" id="date-avatar">🥰</div>
+        <div class="bubble" id="scenario"></div>
+      </div>
+
+      <div class="level-tag" id="level-tag"></div>
+      <h2 class="question" id="question"></h2>
+      <div class="options" id="options"></div>
+
+      <div class="feedback" id="feedback" hidden>
+        <p class="reaction" id="reaction"></p>
+        <div class="prof">
+          <div class="prof-pigeon" id="prof-pigeon"><svg viewBox="0 0 120 120"><use href="#pigeon"/></svg></div>
+          <div class="prof-bubble">
+            <p class="prof-name" data-i18n="profName"></p>
+            <p class="prof-line" id="prof-line"></p>
+            <p class="explanation" id="explanation"></p>
+          </div>
+        </div>
+        <button id="btn-next" class="btn btn-primary btn-block"></button>
+      </div>
+    </section>
+
+    <!-- Result -->
+    <section id="screen-result" class="card screen">
+      <p class="verdict-label"><span data-i18n="verdictFor"></span> <b id="result-name"></b></p>
+      <div class="big-emoji pop" id="result-emoji">🌹</div>
+      <div class="result-level" id="result-level"></div>
+      <h2 id="result-title"></h2>
+      <p class="score" id="result-score"></p>
+      <p id="result-desc"></p>
+
+      <div class="prof">
+        <div class="prof-pigeon" id="result-pigeon"><svg viewBox="0 0 120 120"><use href="#pigeon"/></svg></div>
+        <div class="prof-bubble">
+          <p class="prof-name" data-i18n="profName"></p>
+          <p class="prof-line" id="result-prof-line"></p>
+        </div>
+      </div>
+
+      <details class="review" id="review-box">
+        <summary id="review-summary"></summary>
+        <ol id="review-list"></ol>
+      </details>
+
+      <div class="actions">
+        <button id="btn-restart" class="btn btn-primary btn-block" data-i18n="restart"></button>
+        <button id="btn-other-test" class="btn btn-ghost btn-block" data-i18n="otherTest"></button>
+      </div>
+    </section>
+  </main>
+
+  <footer data-i18n="footer">Made with 💕 and questionable pick-up lines</footer>
+
+  <script src="i18n.js"></script>
+  <!-- Fallback copy of the JSON tests for file:// (generated by build.ps1) -->
+  <script src="tests-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

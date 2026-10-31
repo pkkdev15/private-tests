@@ -1,0 +1,373 @@
+{
+  "lang": "en",
+  "title": "Love at First Sentence",
+  "subtitle": {
+    "en": "The English proficiency test disguised as a candlelit dinner",
+    "pl": "Test z angielskiego przebrany za kolację przy świecach",
+    "ru": "Тест по английскому под видом ужина при свечах"
+  },
+  "settings": {
+    "shuffleQuestions": false,
+    "shuffleOptions": true,
+    "questionsPerTest": null
+  },
+  "reactions": {
+    "correct": [
+      "Your date blushes. Smooth grammar is so attractive.",
+      "The violinist plays a little faster. Nice!",
+      "Your date leans in. Correct answers are their love language.",
+      "Somewhere, a cupid high-fives another cupid.",
+      "The candle flickers approvingly."
+    ],
+    "wrong": [
+      "Awkward silence. Even the waiter looks away.",
+      "Your date checks their phone. Ouch.",
+      "A single cricket chirps in the corner of the restaurant.",
+      "Your date's smile freezes like the ice in their drink.",
+      "The violinist hits a wrong note out of sympathy."
+    ]
+  },
+  "levels": [
+    {
+      "minPercent": 0, "code": "A1", "emoji": "🙈", "title": "Awkward Small Talk",
+      "description": {
+        "en": "You mostly pointed at the menu and smiled. Cute, but your date thinks you might be a mime. Keep practising!",
+        "pl": "Komunikacja głównie przez pokazywanie palcem menu i uśmiech. Urocze, ale randka podejrzewa, że jesteś mimem. Ćwicz dalej!",
+        "ru": "Общение в основном жестами и улыбками над меню. Мило, но твоя пара подозревает, что ты мим. Тренируйся дальше!"
+      }
+    },
+    {
+      "minPercent": 20, "code": "A2", "emoji": "🌷", "title": "Shy Flower",
+      "description": {
+        "en": "You can order food and say nice things about the weather. A promising start, but no second date just yet.",
+        "pl": "Umiesz zamówić jedzenie i powiedzieć coś miłego o pogodzie. Obiecujący początek, ale na drugą randkę jeszcze za wcześnie.",
+        "ru": "Ты умеешь заказать еду и сказать что-то милое о погоде. Многообещающее начало, но до второго свидания пока далеко."
+      }
+    },
+    {
+      "minPercent": 40, "code": "B1", "emoji": "🍝", "title": "Spaghetti Kisser",
+      "description": {
+        "en": "You held a real conversation! There were a few tangled noodles, but your date laughed at your jokes.",
+        "pl": "Prawdziwa rozmowa! Kilka makaronów się poplątało, ale randka śmiała się z twoich żartów.",
+        "ru": "Настоящий разговор! Пара макаронин запуталась, но твоя пара смеялась над твоими шутками."
+      }
+    },
+    {
+      "minPercent": 60, "code": "B2", "emoji": "💃", "title": "Smooth Talker",
+      "description": {
+        "en": "Confident, fluent and charming. Your date is already planning what to wear next Friday.",
+        "pl": "Pewność siebie, płynność i urok. Randka już planuje, co założyć w przyszły piątek.",
+        "ru": "Уверенно, бегло и обаятельно. Твоя пара уже решает, что надеть в следующую пятницу."
+      }
+    },
+    {
+      "minPercent": 80, "code": "C1", "emoji": "🌹", "title": "Silver-Tongued Romantic",
+      "description": {
+        "en": "Idioms, inversions, subtle irony - your date is swooning. Wedding bells can be heard faintly in the distance.",
+        "pl": "Idiomy, inwersje, subtelna ironia – randka mdleje z zachwytu. W oddali słychać ciche dzwony weselne.",
+        "ru": "Идиомы, инверсии, тонкая ирония — твоя пара тает. Вдали уже слышны свадебные колокола."
+      }
+    },
+    {
+      "minPercent": 95, "code": "C2", "emoji": "💍", "title": "Soulmate Linguist",
+      "description": {
+        "en": "Flawless. Poets write about people like you. Your date just proposed - in perfect English, naturally.",
+        "pl": "Bezbłędnie. Poeci piszą o takich ludziach jak ty. Randka właśnie się oświadczyła – oczywiście nienaganną angielszczyzną.",
+        "ru": "Безупречно. О таких, как ты, пишут поэты. Твоя пара только что сделала предложение — разумеется, на безупречном английском."
+      }
+    }
+  ],
+  "questions": [
+    {
+      "level": "A1",
+      "scenario": "You arrive at the restaurant. Someone with a red rose waves at you.",
+      "question": "Hi! ____ you Alex?",
+      "options": ["Are", "Is", "Am", "Be"],
+      "answer": 0,
+      "explanation": {
+        "en": "With 'you' we always use 'are'.",
+        "pl": "Z „you” zawsze używamy „are”.",
+        "ru": "С «you» всегда используется «are»."
+      }
+    },
+    {
+      "level": "A1",
+      "scenario": "The waiter appears with a tiny notebook and a huge moustache.",
+      "question": "I ____ like the mushroom risotto, please.",
+      "options": ["would", "will", "am", "do"],
+      "answer": 0,
+      "explanation": {
+        "en": "'I would like...' is the polite way to order.",
+        "pl": "„I would like...” to uprzejmy sposób zamawiania.",
+        "ru": "«I would like...» — вежливый способ сделать заказ."
+      }
+    },
+    {
+      "level": "A1",
+      "scenario": "Your date asks: \"What do you do in your free time?\"",
+      "question": "Which answer keeps the conversation alive?",
+      "options": ["I like cooking and hiking.", "Yes, I do.", "It is Tuesday.", "I am one metre eighty."],
+      "answer": 0,
+      "explanation": {
+        "en": "The question asks about hobbies - the other answers are a great way to stay single.",
+        "pl": "Pytanie dotyczy hobby – pozostałe odpowiedzi to świetny sposób, żeby zostać singlem.",
+        "ru": "Вопрос про хобби — остальные ответы отличный способ остаться без пары."
+      }
+    },
+    {
+      "level": "A2",
+      "scenario": "You try to impress your date with your cultural life.",
+      "question": "Yesterday I ____ a really romantic film.",
+      "options": ["watched", "watch", "have watch", "watching"],
+      "answer": 0,
+      "explanation": {
+        "en": "'Yesterday' = finished time in the past, so we use the past simple: 'watched'.",
+        "pl": "„Yesterday” to zakończony czas w przeszłości, więc używamy past simple: „watched”.",
+        "ru": "«Yesterday» — завершённый период в прошлом, поэтому нужен past simple: «watched»."
+      }
+    },
+    {
+      "level": "A2",
+      "scenario": "Your date has been talking about their ex for 25 minutes. Time to change the topic.",
+      "question": "Anyway... ____ we order dessert?",
+      "options": ["shall", "must", "do", "are"],
+      "answer": 0,
+      "explanation": {
+        "en": "'Shall we...?' is used for suggestions. And for emergency topic changes.",
+        "pl": "„Shall we...?” służy do składania propozycji. I do awaryjnej zmiany tematu.",
+        "ru": "«Shall we...?» используется для предложений. И для экстренной смены темы."
+      }
+    },
+    {
+      "level": "A2",
+      "scenario": "You take a sip of the house wine.",
+      "question": "This wine is ____ than the one at my cousin's wedding.",
+      "options": ["better", "more good", "best", "gooder"],
+      "answer": 0,
+      "explanation": {
+        "en": "'Good' is irregular: good - better - the best.",
+        "pl": "„Good” jest nieregularne: good – better – the best.",
+        "ru": "«Good» — неправильное прилагательное: good – better – the best."
+      }
+    },
+    {
+      "level": "B1",
+      "scenario": "Things are going well. You decide to be brave.",
+      "question": "If you ____ free on Saturday, we could go dancing.",
+      "options": ["are", "is", "will be", "being"],
+      "answer": 0,
+      "explanation": {
+        "en": "First conditional: if + present simple, ... could/will + verb.",
+        "pl": "Pierwszy okres warunkowy: if + present simple, ... could/will + czasownik.",
+        "ru": "Условное предложение первого типа: if + present simple, ... could/will + глагол."
+      }
+    },
+    {
+      "level": "B1",
+      "scenario": "Your date arrives 40 minutes late. You stay calm. Ish.",
+      "question": "No problem! I've only been waiting ____ seven o'clock.",
+      "options": ["since", "for", "from", "at"],
+      "answer": 0,
+      "explanation": {
+        "en": "'Since' + a point in time, 'for' + a period of time.",
+        "pl": "„Since” + moment w czasie, „for” + okres czasu.",
+        "ru": "«Since» + момент времени, «for» + отрезок времени."
+      }
+    },
+    {
+      "level": "B1",
+      "scenario": "Oops! Your date spills red wine on the white tablecloth.",
+      "question": "Don't worry, the stain will ____ out with a bit of salt.",
+      "options": ["come", "go", "get", "take"],
+      "answer": 0,
+      "explanation": {
+        "en": "A stain 'comes out' when it disappears after cleaning.",
+        "pl": "Plama „comes out”, kiedy schodzi po czyszczeniu.",
+        "ru": "Пятно «comes out», когда оно отстирывается."
+      }
+    },
+    {
+      "level": "B1",
+      "scenario": "Your date says: \"I'm not a big fan of horror films.\"",
+      "question": "\"____ I. Let's watch a rom-com instead!\"",
+      "options": ["Neither am", "So am", "Neither do", "Me too am"],
+      "answer": 0,
+      "explanation": {
+        "en": "To agree with a negative sentence using 'be', we say 'Neither am I'.",
+        "pl": "Żeby zgodzić się z przeczeniem z „be”, mówimy „Neither am I” (ja też nie).",
+        "ru": "Чтобы согласиться с отрицанием с «be», говорим «Neither am I» (я тоже нет)."
+      }
+    },
+    {
+      "level": "B2",
+      "scenario": "Your date shows up dressed like a movie star. You are wearing a hoodie.",
+      "variants": {
+        "m": { "scenario": "Your date shows up in an elegant evening gown. You are wearing a hoodie." },
+        "f": { "scenario": "Your date shows up in a tuxedo. You are wearing a hoodie and slippers." }
+      },
+      "question": "If I ____ it was this fancy, I would have dressed up!",
+      "options": ["had known", "knew", "would know", "have known"],
+      "answer": 0,
+      "explanation": {
+        "en": "Third conditional: if + past perfect, would have + past participle.",
+        "pl": "Trzeci okres warunkowy: if + past perfect, would have + past participle (III forma).",
+        "ru": "Условное предложение третьего типа: if + past perfect, would have + past participle."
+      }
+    },
+    {
+      "level": "B2",
+      "scenario": "The bill arrives. Your date reaches for their wallet.",
+      "question": "No, no, put that away - this one's ____ me.",
+      "options": ["on", "by", "for", "at"],
+      "answer": 0,
+      "explanation": {
+        "en": "'It's on me' means 'I'm paying'. Very romantic. Slightly expensive.",
+        "pl": "„It's on me” znaczy „ja stawiam”. Bardzo romantyczne. Trochę kosztowne.",
+        "ru": "«It's on me» значит «я угощаю». Очень романтично. Слегка дороговато."
+      }
+    },
+    {
+      "level": "B2",
+      "scenario": "It's suddenly midnight. Your date says: \"Wow, time flies when you're having fun!\"",
+      "question": "What does your date mean?",
+      "options": [
+        "The evening passed very quickly because it was enjoyable.",
+        "They want to go home immediately.",
+        "There is an insect near the clock.",
+        "They are late for a flight."
+      ],
+      "answer": 0,
+      "explanation": {
+        "en": "'Time flies' = time passes quickly, usually because you're enjoying yourself. Good sign!",
+        "pl": "„Time flies” = czas szybko leci, zwykle dlatego, że dobrze się bawisz. Dobry znak!",
+        "ru": "«Time flies» = время летит, обычно потому что тебе хорошо. Хороший знак!"
+      }
+    },
+    {
+      "level": "B2",
+      "scenario": "At the end of the evening, you walk your date to the taxi.",
+      "question": "I'm really looking forward to ____ you again.",
+      "options": ["seeing", "see", "have seen", "be seeing"],
+      "answer": 0,
+      "explanation": {
+        "en": "'Look forward to' is followed by a gerund (-ing), because 'to' is a preposition here.",
+        "pl": "Po „look forward to” stawiamy gerund (-ing), bo „to” jest tu przyimkiem.",
+        "ru": "После «look forward to» нужен герундий (-ing), потому что «to» здесь предлог."
+      }
+    },
+    {
+      "level": "C1",
+      "scenario": "You tell your friends about the date the next day.",
+      "question": "Hardly ____ sat down when a violinist appeared at our table.",
+      "options": ["had we", "we had", "did we", "we have"],
+      "answer": 0,
+      "explanation": {
+        "en": "After negative adverbs like 'hardly' at the start, we use inversion: 'Hardly had we...'.",
+        "pl": "Po przysłówkach przeczących typu „hardly” na początku zdania stosujemy inwersję: „Hardly had we...”.",
+        "ru": "После отрицательных наречий вроде «hardly» в начале предложения нужна инверсия: «Hardly had we...»."
+      }
+    },
+    {
+      "level": "C1",
+      "scenario": "Your date tastes the soup and politely says it's \"a bit lukewarm\".",
+      "question": "What is wrong with the soup?",
+      "options": ["It's only slightly warm.", "It's far too hot.", "It's too spicy.", "It's too salty."],
+      "answer": 0,
+      "explanation": {
+        "en": "'Lukewarm' means only slightly warm - perfect for baths, terrible for soup.",
+        "pl": "„Lukewarm” znaczy letni – idealne do kąpieli, fatalne dla zupy.",
+        "ru": "«Lukewarm» значит «едва тёплый» — идеально для ванны, ужасно для супа."
+      }
+    },
+    {
+      "level": "C1",
+      "scenario": "Your best friend asks how the date went. You grin: \"We really hit it off!\"",
+      "question": "What does this mean?",
+      "options": [
+        "You liked each other immediately.",
+        "You had a big argument.",
+        "Somebody got punched.",
+        "You played tennis together."
+      ],
+      "answer": 0,
+      "explanation": {
+        "en": "To 'hit it off' = to get along well instantly. No violence involved.",
+        "pl": "„Hit it off” = od razu świetnie się dogadać. Bez przemocy.",
+        "ru": "«Hit it off» = сразу найти общий язык. Никакого насилия."
+      }
+    },
+    {
+      "level": "C1",
+      "scenario": "You are bragging about your date to your grandmother.",
+      "question": "Not only ____ an amazing cook, but they also write poetry.",
+      "variants": {
+        "m": {
+          "question": "Not only ____ an amazing cook, but she also writes poetry.",
+          "options": ["is she", "she is", "does she", "she does"],
+          "explanation": {
+            "en": "'Not only' at the start of a clause triggers inversion: 'Not only is she...'.",
+            "pl": "„Not only” na początku zdania wymusza inwersję: „Not only is she...”.",
+            "ru": "«Not only» в начале предложения требует инверсии: «Not only is she...»."
+          }
+        },
+        "f": {
+          "question": "Not only ____ an amazing cook, but he also writes poetry.",
+          "options": ["is he", "he is", "does he", "he does"],
+          "explanation": {
+            "en": "'Not only' at the start of a clause triggers inversion: 'Not only is he...'.",
+            "pl": "„Not only” na początku zdania wymusza inwersję: „Not only is he...”.",
+            "ru": "«Not only» в начале предложения требует инверсии: «Not only is he...»."
+          }
+        }
+      },
+      "options": ["are they", "they are", "do they", "they do"],
+      "answer": 0,
+      "explanation": {
+        "en": "'Not only' at the start of a clause triggers inversion: 'Not only are they...'.",
+        "pl": "„Not only” na początku zdania wymusza inwersję: „Not only are they...”.",
+        "ru": "«Not only» в начале предложения требует инверсии: «Not only are they...»."
+      }
+    },
+    {
+      "level": "C2",
+      "scenario": "Looking at the bill, your date murmurs: \"Well, that was a tad extortionate.\"",
+      "question": "What is the tone of this comment?",
+      "options": [
+        "Ironic understatement - it was ridiculously expensive.",
+        "Genuine praise for the fair prices.",
+        "Confusion about the menu.",
+        "A formal complaint to the manager."
+      ],
+      "answer": 0,
+      "explanation": {
+        "en": "'A tad' (a little) + 'extortionate' (outrageously overpriced) = classic British understatement.",
+        "pl": "„A tad” (odrobinę) + „extortionate” (zdzierczo drogi) = klasyczne brytyjskie niedopowiedzenie.",
+        "ru": "«A tad» (чуточку) + «extortionate» (грабительски дорогой) = классическое британское преуменьшение."
+      }
+    },
+    {
+      "level": "C2",
+      "scenario": "You planned a picnic for the second date. Then the sky opened.",
+      "question": "Had it not been for the rain, we ____ the picnic in the park.",
+      "options": ["would have had", "would have", "had had", "will have had"],
+      "answer": 0,
+      "explanation": {
+        "en": "Inverted third conditional: 'Had it not been for X, we would have + past participle'.",
+        "pl": "Trzeci okres warunkowy z inwersją: „Had it not been for X, we would have + III forma”.",
+        "ru": "Условное предложение третьего типа с инверсией: «Had it not been for X, we would have + past participle»."
+      }
+    },
+    {
+      "level": "C2",
+      "scenario": "Your date's love letter contains 14 metaphors about your eyes and 9 about the moon.",
+      "question": "The letter was sweet, but a little too ____ for my taste.",
+      "options": ["saccharine", "sacrilegious", "salubrious", "sanguine"],
+      "answer": 0,
+      "explanation": {
+        "en": "'Saccharine' = excessively sweet or sentimental. 'Salubrious' = healthy, 'sanguine' = optimistic.",
+        "pl": "„Saccharine” = przesłodzony, ckliwy. „Salubrious” = zdrowy, „sanguine” = optymistyczny.",
+        "ru": "«Saccharine» = приторный, слащавый. «Salubrious» = полезный для здоровья, «sanguine» = оптимистичный."
+      }
+    }
+  ]
+}

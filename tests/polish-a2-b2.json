@@ -1,0 +1,580 @@
+{
+  "lang": "pl",
+  "title": "Randka po polsku",
+  "subtitle": {
+    "en": "Polish proficiency test (A2 - B2) with candles, wine and a pinch of spice 🌶️",
+    "pl": "Test z języka polskiego (A2 – B2) przy świecach, z winem i szczyptą pikanterii 🌶️",
+    "ru": "Тест по польскому (A2 – B2) при свечах, с вином и щепоткой перчинки 🌶️"
+  },
+  "settings": {
+    "shuffleQuestions": false,
+    "shuffleOptions": true,
+    "questionsPerTest": null
+  },
+  "reactions": {
+    "correct": [
+      "Twoja randka się rumieni. 😳",
+      "Ooo, mówisz po polsku jak Casanova!",
+      "Kelner przynosi drugą butelkę wina. Na koszt firmy. 🍷",
+      "Ktoś tu dziś dostanie buziaka. 😘",
+      "Babcia byłaby dumna. I trochę zgorszona.",
+      "Świece płoną jaśniej. Atmosfera gęstnieje. 🔥"
+    ],
+    "wrong": [
+      "Cisza. Nawet kelner udaje, że cię nie zna.",
+      "Twoja randka nagle \"musi nakarmić kota\".",
+      "Ała. To zabolało bardziej niż ostatnie rozstanie.",
+      "Twoja randka pisze coś do przyjaciółki. Chyba o tobie. 📱",
+      "Gramatyka mówi: \"to nie ty, to ja\". Ale to ty.",
+      "Gdzieś w Krakowie płacze polonistka. 😢"
+    ]
+  },
+  "levels": [
+    {
+      "minPercent": 0, "code": "A1", "emoji": "🧊", "title": "Buziak w czoło",
+      "description": {
+        "en": "\"A kiss on the forehead\" - welcome to the friendzone. Your date thinks you're sweet, like a younger cousin. Grab a textbook and try again!",
+        "pl": "Witaj we friendzonie. Randka widzi w tobie kogoś w rodzaju młodszego kuzyna. Weź podręcznik i spróbuj jeszcze raz!",
+        "ru": "«Поцелуй в лоб» — добро пожаловать во френдзону. Твоя пара видит в тебе милого младшего кузена. Бери учебник и пробуй снова!"
+      }
+    },
+    {
+      "minPercent": 35, "code": "A2", "emoji": "🤝", "title": "Trzymanie za rączkę",
+      "description": {
+        "en": "\"Holding hands\" - you can flirt in simple sentences and order wine without pointing. Your date agrees to a second meeting... in a well-lit public place.",
+        "pl": "Umiesz flirtować prostymi zdaniami i zamówić wino bez pokazywania palcem. Randka zgadza się na drugie spotkanie... w dobrze oświetlonym miejscu publicznym.",
+        "ru": "«Держаться за ручки» — ты умеешь флиртовать простыми фразами и заказать вино, не тыча пальцем в меню. Пара согласна на вторую встречу... в хорошо освещённом людном месте."
+      }
+    },
+    {
+      "minPercent": 60, "code": "B1", "emoji": "🦋", "title": "Motyle w brzuchu",
+      "description": {
+        "en": "\"Butterflies in the stomach\" - you handle cases, aspects and compliments. Your date is already telling friends about you (in the genitive plural).",
+        "pl": "Radzisz sobie z przypadkami, aspektem i komplementami. Randka już opowiada o tobie znajomym (w dopełniaczu liczby mnogiej).",
+        "ru": "«Бабочки в животе» — ты справляешься с падежами, видами глагола и комплиментами. Твоя пара уже рассказывает о тебе друзьям (в родительном падеже множественного числа)."
+      }
+    },
+    {
+      "minPercent": 85, "code": "B2", "emoji": "☕", "title": "Śniadanie do łóżka",
+      "description": {
+        "en": "\"Breakfast in bed\" - fluent, witty and dangerously charming. We won't ask how the evening ended. The grammar was clearly perfect. 😏",
+        "pl": "Płynnie, dowcipnie i niebezpiecznie uroczo. Nie pytamy, jak skończył się wieczór. Gramatyka najwyraźniej była perfekcyjna. 😏",
+        "ru": "«Завтрак в постель» — бегло, остроумно и опасно обаятельно. Не будем спрашивать, чем закончился вечер. Грамматика явно была идеальной. 😏"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "level": "A2",
+      "scenario": "Pierwsza randka z Tindera. Twoja randka wygląda dokładnie jak na zdjęciach. Podejrzane!",
+      "question": "Cześć! Jak ____ na imię?",
+      "variants": {
+        "m": { "scenario": "Pierwsza randka z Tindera. Ona wygląda dokładnie jak na zdjęciach. Podejrzane!", "question": "Cześć! Jak ____ na imię, przystojniaku?" },
+        "f": { "scenario": "Pierwsza randka z Tindera. On jest wyższy niż na zdjęciach. Szok!", "question": "Cześć! Jak ____ na imię, piękna?" }
+      },
+      "options": ["masz", "jesteś", "nazywasz", "mówisz"],
+      "answer": 0,
+      "explanation": {
+        "en": "\"Jak masz na imię?\" = What's your name? (literally: how do you have as a name). \"Jak się nazywasz?\" also works, but it needs \"się\".",
+        "pl": "„Jak masz na imię?” to najczęstszy sposób pytania o imię. „Jak się nazywasz?” też jest poprawne, ale wymaga „się”.",
+        "ru": "«Jak masz na imię?» = Как тебя зовут? (дословно: «как имеешь на имя»). «Jak się nazywasz?» тоже верно, но нужно «się»."
+      }
+    },
+    {
+      "level": "A2",
+      "scenario": "Twój opis na portalu randkowym. Mama pomagała go pisać.",
+      "question": "Mam 32 lata, własne mieszkanie i ____ duszę. Mama mówi, że to wystarczy.",
+      "options": ["romantyczną", "romantyczna", "romantycznej", "romantyczny"],
+      "answer": 0,
+      "explanation": {
+        "en": "\"Mieć\" takes the accusative. Feminine adjectives end in -ą in the accusative: romantyczną duszę.",
+        "pl": "„Mieć” łączy się z biernikiem. Przymiotnik żeński w bierniku kończy się na -ą: romantyczną duszę.",
+        "ru": "«Mieć» требует винительного падежа. Прилагательное женского рода в винительном оканчивается на -ą: romantyczną duszę."
+      },
+      "variants": {
+        "m": {
+          "question": "Jestem ____, mam 32 lata i własne mieszkanie. Mama mówi, że to wystarczy.",
+          "options": ["romantykiem", "romantyk", "romantyka", "romantykowi"],
+          "explanation": {
+            "en": "After \"być\" a noun takes the instrumental case: jestem romantykiem, jestem studentem.",
+            "pl": "Po „być” rzeczownik stoi w narzędniku: jestem romantykiem, jestem studentem.",
+            "ru": "После «być» существительное стоит в творительном падеже: jestem romantykiem, jestem studentem — как в русском «быть романтиком»."
+          }
+        },
+        "f": {
+          "question": "Jestem ____, mam 32 lata i własne mieszkanie. Mama mówi, że to wystarczy.",
+          "options": ["romantyczką", "romantyczka", "romantyczki", "romantyczce"],
+          "explanation": {
+            "en": "After \"być\" a noun takes the instrumental case: jestem romantyczką, jestem studentką.",
+            "pl": "Po „być” rzeczownik stoi w narzędniku: jestem romantyczką, jestem studentką.",
+            "ru": "После «być» существительное стоит в творительном падеже: jestem romantyczką, jestem studentką — как в русском «быть студенткой»."
+          }
+        }
+      }
+    },
+    {
+      "level": "A2",
+      "scenario": "Kelner pyta, co pijecie. Twoja randka ma jasne priorytety.",
+      "question": "Kocham ____ wino. I ludzi, którzy za nie płacą.",
+      "options": ["czerwone", "czerwonego", "czerwonym", "czerwonej"],
+      "answer": 0,
+      "explanation": {
+        "en": "\"Kochać\" takes the accusative. For neuter nouns like \"wino\" the accusative looks the same as the nominative: czerwone wino.",
+        "pl": "„Kochać” łączy się z biernikiem. W rodzaju nijakim biernik wygląda jak mianownik: czerwone wino.",
+        "ru": "«Kochać» требует винительного падежа. У среднего рода он совпадает с именительным: czerwone wino."
+      }
+    },
+    {
+      "level": "A2",
+      "scenario": "Pytasz, czy twoja randka odwiezie cię do domu. Odpowiedź pada z godnością:",
+      "variants": {
+        "m": { "scenario": "Pytasz, czy odwiezie cię do domu. Ona odpowiada z godnością:" },
+        "f": { "scenario": "Pytasz, czy odwiezie cię do domu. On odpowiada z godnością:" }
+      },
+      "question": "Nie mam ____, ale mam piękne oczy i bilet miesięczny.",
+      "options": ["samochodu", "samochód", "samochodem", "samochodzie"],
+      "answer": 0,
+      "explanation": {
+        "en": "After negation, the accusative changes to the genitive: mam samochód → nie mam samochodu.",
+        "pl": "Po przeczeniu biernik zmienia się w dopełniacz: mam samochód → nie mam samochodu.",
+        "ru": "При отрицании винительный падеж меняется на родительный: mam samochód → nie mam samochodu (как «нет машины»)."
+      }
+    },
+    {
+      "level": "A2",
+      "scenario": "Kasia pisze SMS-a do Tomka o drugiej w nocy.",
+      "variants": {
+        "m": {
+          "scenario": "Piszesz SMS-a do niej o drugiej w nocy.",
+          "options": ["myślałem", "myślałam", "myśleć", "myślę"],
+          "explanation": {
+            "en": "You're a man, so the past tense ends in -łem: myślałem. A woman would say \"myślałam\".",
+            "pl": "Jesteś mężczyzną, więc czas przeszły kończy się na -łem: myślałem. Kobieta powiedziałaby „myślałam”.",
+            "ru": "Ты мужчина, поэтому прошедшее время на -łem: myślałem. Женщина сказала бы «myślałam»."
+          }
+        },
+        "f": {
+          "scenario": "Piszesz SMS-a do niego o drugiej w nocy.",
+          "explanation": {
+            "en": "You're a woman, so the past tense ends in -łam: myślałam. A man would say \"myślałem\".",
+            "pl": "Jesteś kobietą, więc czas przeszły kończy się na -łam: myślałam. Mężczyzna powiedziałby „myślałem”.",
+            "ru": "Ты женщина, поэтому прошедшее время на -łam: myślałam. Мужчина сказал бы «myślałem»."
+          }
+        }
+      },
+      "question": "Wczoraj ____ o tobie całą noc. 🙈",
+      "options": ["myślałam", "myślałem", "myśleć", "myślę"],
+      "answer": 0,
+      "explanation": {
+        "en": "Kasia is a woman, so the past tense ends in -łam: myślałam. A man would say \"myślałem\".",
+        "pl": "Kasia jest kobietą, więc czas przeszły kończy się na -łam: myślałam. Mężczyzna powiedziałby „myślałem”.",
+        "ru": "Кася — женщина, поэтому прошедшее время на -łam: myślałam. Мужчина сказал бы «myślałem»."
+      }
+    },
+    {
+      "level": "A2",
+      "scenario": "Koniec wieczoru. Stoicie pod blokiem twojej randki. Uśmiech, spojrzenie...",
+      "variants": {
+        "m": { "scenario": "Koniec wieczoru. Stoicie pod jej blokiem. Ona się uśmiecha..." },
+        "f": { "scenario": "Koniec wieczoru. Stoicie pod jego blokiem. On się uśmiecha..." }
+      },
+      "question": "Zapraszam cię ____ mnie na herbatę. 😏 Herbaty nie mam.",
+      "options": ["do", "u", "na", "w"],
+      "answer": 0,
+      "explanation": {
+        "en": "Movement towards a person's home: \"do mnie\" (to my place). \"U mnie\" means \"at my place\" - no movement.",
+        "pl": "Ruch w stronę czyjegoś domu: „do mnie”. „U mnie” znaczy „w moim domu” – bez ruchu.",
+        "ru": "Движение к кому-то домой: «do mnie» (ко мне). «U mnie» = у меня, без движения."
+      }
+    },
+    {
+      "level": "A2",
+      "scenario": "Twoja randka opowiada o swoim życiu prywatnym.",
+      "question": "Mam dwa ____ i zero chłopaków. Koty są lepsze.",
+      "variants": {
+        "f": { "question": "Mam dwa ____ i zero dziewczyn. Koty są lepsze." }
+      },
+      "options": ["koty", "kotów", "kotami", "kot"],
+      "answer": 0,
+      "explanation": {
+        "en": "Numbers 2, 3, 4 take the nominative plural: dwa koty. From 5 up: pięć kotów (genitive plural).",
+        "pl": "Po liczebnikach 2, 3, 4 używamy mianownika liczby mnogiej: dwa koty. Od 5 w górę: pięć kotów (dopełniacz).",
+        "ru": "После 2, 3, 4 — именительный падеж мн. числа: dwa koty. От 5 и выше — родительный: pięć kotów."
+      }
+    },
+    {
+      "level": "A2",
+      "scenario": "Pierwsza randka była super. Czas na drugą!",
+      "question": "Spotkajmy się ____ piątek o ósmej. Ubierz coś seksownego.",
+      "options": ["w", "we", "na", "o"],
+      "answer": 0,
+      "explanation": {
+        "en": "Days of the week: w + accusative (w piątek, w sobotę). \"We\" only before tricky clusters: we wtorek, we środę.",
+        "pl": "Dni tygodnia: w + biernik (w piątek, w sobotę). „We” tylko przed trudnymi zbitkami: we wtorek, we środę.",
+        "ru": "Дни недели: w + винительный (w piątek, w sobotę). «We» — только перед сложными сочетаниями: we wtorek, we środę."
+      }
+    },
+    {
+      "level": "B1",
+      "scenario": "Romantyczny wieczór, który nie poszedł zgodnie z planem.",
+      "question": "____ dla niego kolację przez trzy godziny, a on zasnął po pięciu minutach.",
+      "variants": {
+        "m": {
+          "question": "____ dla niej kolację przez trzy godziny, a ona zasnęła po pięciu minutach.",
+          "options": ["Gotowałem", "Ugotowałem", "Gotuję", "Ugotuję"],
+          "explanation": {
+            "en": "\"Przez trzy godziny\" describes duration, so we need the imperfective aspect: gotowałem. Perfective \"ugotowałem\" focuses on the result.",
+            "pl": "„Przez trzy godziny” opisuje czas trwania, więc potrzebny jest aspekt niedokonany: gotowałem. Dokonane „ugotowałem” skupia się na rezultacie.",
+            "ru": "«Przez trzy godziny» описывает длительность, поэтому нужен несовершенный вид: gotowałem. Совершенный «ugotowałem» подчёркивает результат."
+          }
+        }
+      },
+      "options": ["Gotowałam", "Ugotowałam", "Gotuję", "Ugotuję"],
+      "answer": 0,
+      "explanation": {
+        "en": "\"Przez trzy godziny\" describes duration, so we need the imperfective aspect: gotowałam. Perfective \"ugotowałam\" focuses on the result.",
+        "pl": "„Przez trzy godziny” opisuje czas trwania, więc potrzebny jest aspekt niedokonany: gotowałam. Dokonane „ugotowałam” skupia się na rezultacie.",
+        "ru": "«Przez trzy godziny» описывает длительность, поэтому нужен несовершенный вид: gotowałam. Совершенный «ugotowałam» подчёркивает результат."
+      }
+    },
+    {
+      "level": "B1",
+      "scenario": "Ona patrzy na zdjęcia jachtów na Instagramie. Długo.",
+      "variants": {
+        "m": {
+          "scenario": "Przeglądacie razem zdjęcia jachtów na Instagramie. Długo.",
+          "question": "Gdybyś miała jacht, ____ się z tobą od razu. 🛥️",
+          "options": ["ożeniłbym", "ożenię", "ożeniłem", "żeniłbym"],
+          "explanation": {
+            "en": "Conditional: gdybyś + past, ...-bym. \"Ożenić się z kimś\" = a man marries someone. One-time event → perfective: ożeniłbym.",
+            "pl": "Tryb przypuszczający: gdybyś + czas przeszły, ...-bym. „Ożenić się z kimś” mówimy o mężczyźnie. Jednorazowe zdarzenie → aspekt dokonany: ożeniłbym.",
+            "ru": "Сослагательное наклонение: gdybyś + прошедшее, ...-bym. «Ożenić się z kimś» = жениться на ком-то. Однократное событие → совершенный вид: ożeniłbym."
+          }
+        },
+        "f": { "scenario": "Przeglądacie razem zdjęcia jachtów na Instagramie. Długo." }
+      },
+      "question": "Gdybyś miał jacht, ____ za ciebie od razu. 🛥️",
+      "options": ["wyszłabym", "wyjdę", "wyszłam", "wychodziłabym"],
+      "answer": 0,
+      "explanation": {
+        "en": "Conditional: gdybyś + past, ...-bym. \"Wyjść za kogoś (za mąż)\" = a woman marries someone. One-time event → perfective: wyszłabym.",
+        "pl": "Tryb przypuszczający: gdybyś + czas przeszły, ...-bym. „Wyjść za kogoś (za mąż)” mówimy o kobiecie. Jednorazowe zdarzenie → aspekt dokonany: wyszłabym.",
+        "ru": "Сослагательное наклонение: gdybyś + прошедшее, ...-bym. «Wyjść za kogoś (za mąż)» = выйти замуж за кого-то. Однократное событие → совершенный вид: wyszłabym."
+      }
+    },
+    {
+      "level": "B1",
+      "scenario": "Tomek opowiada kumplom, jak poznał swoją dziewczynę.",
+      "variants": {
+        "m": { "scenario": "Opowiadasz kumplom, jak poznałeś swoją dziewczynę." },
+        "f": {
+          "scenario": "Opowiadasz koleżankom, jak poznałaś swojego chłopaka.",
+          "question": "Zakochałam się ____ nim od pierwszego wejrzenia. On we mnie - od trzeciego piwa.",
+          "explanation": {
+            "en": "\"Zakochać się w kimś\" (+ locative) = to fall in love with someone. Note: w nim, we mnie.",
+            "pl": "„Zakochać się w kimś” (+ miejscownik). Uwaga: w nim, ale we mnie.",
+            "ru": "«Zakochać się w kimś» (+ предложный падеж) = влюбиться в кого-то. Обрати внимание: w nim, но we mnie."
+          }
+        }
+      },
+      "question": "Zakochałem się ____ niej od pierwszego wejrzenia. Ona we mnie - od trzeciego piwa.",
+      "options": ["w", "na", "do", "z"],
+      "answer": 0,
+      "explanation": {
+        "en": "\"Zakochać się w kimś\" (+ locative) = to fall in love with someone. Note: w niej, we mnie.",
+        "pl": "„Zakochać się w kimś” (+ miejscownik). Uwaga: w niej, ale we mnie.",
+        "ru": "«Zakochać się w kimś» (+ предложный падеж) = влюбиться в кого-то. Обрати внимание: w niej, но we mnie."
+      }
+    },
+    {
+      "level": "B1",
+      "scenario": "Najgorsza impreza roku. Opowiadasz o niej przyjaciółce.",
+      "variants": {
+        "m": { "scenario": "Najgorsza impreza roku. Opowiadasz o niej kumplowi." },
+        "f": {
+          "question": "Kasia przyszła na imprezę ze ____ chłopakiem, a wyszła z moim. 😤",
+          "options": ["swoim", "jej", "jego", "swojego"],
+          "explanation": {
+            "en": "When the owner is the subject of the sentence, Polish uses \"swój\": Kasia przyszła ze swoim chłopakiem. \"Z jej chłopakiem\" would mean someone else's boyfriend.",
+            "pl": "Gdy właścicielem jest podmiot zdania, używamy „swój”: Kasia przyszła ze swoim chłopakiem. „Z jej chłopakiem” oznaczałoby chłopaka kogoś innego.",
+            "ru": "Если владелец — подлежащее, используется «swój» (как русское «свой»): ze swoim chłopakiem. «Z jej chłopakiem» — с парнем кого-то другого."
+          }
+        }
+      },
+      "question": "Marek przyszedł na imprezę ze ____ dziewczyną, a wyszedł z moją. 😤",
+      "options": ["swoją", "jego", "jej", "swojej"],
+      "answer": 0,
+      "explanation": {
+        "en": "When the owner is the subject of the sentence, Polish uses \"swój\": Marek przyszedł ze swoją dziewczyną. \"Z jego dziewczyną\" would mean someone else's girlfriend.",
+        "pl": "Gdy właścicielem jest podmiot zdania, używamy „swój”: Marek przyszedł ze swoją dziewczyną. „Z jego dziewczyną” oznaczałoby dziewczynę kogoś innego.",
+        "ru": "Если владелец — подлежащее, используется «swój» (как русское «свой»): ze swoją dziewczyną. «Z jego dziewczyną» — с девушкой кого-то другого."
+      }
+    },
+    {
+      "level": "B1",
+      "scenario": "Północ. Ciemna kuchnia. Słychać namiętny szept...",
+      "question": "Nie mogę żyć bez ____! - wyszeptał. Do lodówki.",
+      "variants": {
+        "m": { "question": "Nie mogę żyć bez ____! - wyszeptała. Do lodówki." }
+      },
+      "options": ["ciebie", "ty", "tobą", "tobie"],
+      "answer": 0,
+      "explanation": {
+        "en": "\"Bez\" takes the genitive: bez ciebie, bez niego, bez czekolady.",
+        "pl": "„Bez” łączy się z dopełniaczem: bez ciebie, bez niego, bez czekolady.",
+        "ru": "«Bez» требует родительного падежа: bez ciebie, bez niego, bez czekolady."
+      }
+    },
+    {
+      "level": "B1",
+      "scenario": "Spacer w świetle księżyca. Ona się zatrzymuje.",
+      "variants": {
+        "f": {
+          "scenario": "Spacer w świetle księżyca. On się zatrzymuje.",
+          "question": "____ mnie! - szepnął, zamykając oczy. - Ale najpierw umyj zęby po tym kebabie."
+        }
+      },
+      "question": "____ mnie! - szepnęła, zamykając oczy. - Ale najpierw umyj zęby po tym kebabie.",
+      "options": ["Pocałuj", "Pocałujesz", "Całować", "Pocałowała"],
+      "answer": 0,
+      "explanation": {
+        "en": "Imperative (a command or request) of \"pocałować\": pocałuj! (you, singular), pocałujcie! (you, plural).",
+        "pl": "Tryb rozkazujący od „pocałować”: pocałuj! (ty), pocałujcie! (wy).",
+        "ru": "Повелительное наклонение от «pocałować»: pocałuj! (ты), pocałujcie! (вы)."
+      }
+    },
+    {
+      "level": "B1",
+      "scenario": "Trzecia randka. Plaża. On zdejmuje koszulkę.",
+      "variants": {
+        "m": { "scenario": "Trzecia randka. Plaża. Ona zdejmuje sukienkę. Pod spodem - kostium i tatuaże." }
+      },
+      "question": "Bardzo mi się ____ twoje tatuaże. Zwłaszcza ten, którego nikt nie widzi. 😏",
+      "options": ["podobają", "podoba", "lubią", "podobam"],
+      "answer": 0,
+      "explanation": {
+        "en": "With \"podobać się\" the thing you like is the subject. \"Tatuaże\" is plural, so: podobają mi się. The person who likes it goes in the dative (mi).",
+        "pl": "Przy „podobać się” podmiotem jest to, co się podoba. „Tatuaże” to liczba mnoga, więc: podobają mi się. Osoba stoi w celowniku (mi).",
+        "ru": "С «podobać się» подлежащее — то, что нравится. «Tatuaże» во мн. числе: podobają mi się. Тот, кому нравится, — в дательном (mi), как в русском «мне нравятся»."
+      }
+    },
+    {
+      "level": "B1",
+      "scenario": "Polskie pary mówią do siebie jak w zoo: kotku, misiu, żabko, myszko...",
+      "question": "Dobranoc, ____! 😘 Śpij dobrze. Ja jeszcze trochę pogram.",
+      "options": ["kotku", "kotek", "kotka", "kotkiem"],
+      "answer": 0,
+      "explanation": {
+        "en": "When you address someone directly, Polish uses the vocative: kotek → kotku, miś → misiu, żabka → żabko.",
+        "pl": "Zwracając się do kogoś, używamy wołacza: kotek → kotku, miś → misiu, żabka → żabko.",
+        "ru": "При обращении в польском используется звательный падеж: kotek → kotku, miś → misiu, żabka → żabko."
+      }
+    },
+    {
+      "level": "B2",
+      "scenario": "Przyjaciółka zwierza ci się przy trzecim kieliszku prosecco.",
+      "question": "Mam ____ byłych i każdy miał na imię Tomek. Czy to jakiś znak?",
+      "options": ["pięciu", "pięć", "pięcioro", "piątkę"],
+      "answer": 0,
+      "explanation": {
+        "en": "With masculine-personal nouns (men) numerals 5+ take the -u form + genitive: pięciu byłych (chłopaków). \"Pięć byłych\" would mean five ex-girlfriends.",
+        "pl": "Z rzeczownikami męskoosobowymi liczebniki od 5 mają formę na -u + dopełniacz: pięciu byłych (chłopaków). „Pięć byłych” oznaczałoby pięć byłych dziewczyn.",
+        "ru": "С мужско-личными существительными числительные от 5 имеют форму на -u + родительный: pięciu byłych (парней). «Pięć byłych» — пять бывших девушек."
+      }
+    },
+    {
+      "level": "B2",
+      "scenario": "Netflix i... no wiesz. Ktoś tu ma plan.",
+      "question": "Jak tylko ____ ten film, idziemy do sypialni. 😏 Film trwa trzy i pół godziny.",
+      "options": ["skończymy", "kończymy", "skończyliśmy", "kończylibyśmy"],
+      "answer": 0,
+      "explanation": {
+        "en": "\"Jak tylko\" + a single completed future action → perfective future: skończymy. Imperfective \"kończymy\" would describe a repeated habit.",
+        "pl": "„Jak tylko” + pojedyncza zakończona czynność w przyszłości → czas przyszły prosty (dokonany): skończymy. Niedokonane „kończymy” opisywałoby powtarzający się zwyczaj.",
+        "ru": "«Jak tylko» (как только) + однократное завершённое действие в будущем → будущее совершенного вида: skończymy. Несовершенный «kończymy» описывал бы привычку."
+      }
+    },
+    {
+      "level": "B2",
+      "scenario": "Babcia opowiada o swojej pierwszej randce z dziadkiem w 1968 roku.",
+      "question": {
+        "en": "\"Między nami od razu zaiskrzyło!\" - What does grandma mean?",
+        "pl": "„Między nami od razu zaiskrzyło!” – Co babcia ma na myśli?",
+        "ru": "«Między nami od razu zaiskrzyło!» — Что имеет в виду бабушка?"
+      },
+      "options": [
+        {
+          "en": "There was instant chemistry and attraction between them.",
+          "pl": "Od razu poczuli do siebie chemię i pociąg.",
+          "ru": "Между ними сразу возникли химия и притяжение."
+        },
+        {
+          "en": "There was an electrical short circuit at the dance hall.",
+          "pl": "Na sali tanecznej doszło do zwarcia elektrycznego.",
+          "ru": "На танцплощадке случилось короткое замыкание."
+        },
+        {
+          "en": "They had a big argument right away.",
+          "pl": "Od razu się pokłócili.",
+          "ru": "Они сразу поссорились."
+        },
+        {
+          "en": "Grandpa set the restaurant on fire.",
+          "pl": "Dziadek podpalił restaurację.",
+          "ru": "Дедушка поджёг ресторан."
+        }
+      ],
+      "answer": 0,
+      "explanation": {
+        "en": "\"Zaiskrzyło między nimi\" (it sparked between them) = they felt instant attraction. Go grandma! 🔥",
+        "pl": "„Zaiskrzyło między nimi” = od razu poczuli do siebie pociąg. Brawo, babciu! 🔥",
+        "ru": "«Zaiskrzyło między nimi» (между ними заискрило) = сразу возникло притяжение. Браво, бабушка! 🔥"
+      }
+    },
+    {
+      "level": "B2",
+      "scenario": "Michał przygotował kwiaty, wiersz i kolację przy świecach.",
+      "question": {
+        "en": "\"Zaprosił ją na kolację, ale dała mu kosza.\" - What happened?",
+        "pl": "„Zaprosił ją na kolację, ale dała mu kosza.” – Co się stało?",
+        "ru": "«Zaprosił ją na kolację, ale dała mu kosza.» — Что произошло?"
+      },
+      "options": [
+        {
+          "en": "She turned him down.",
+          "pl": "Odrzuciła go.",
+          "ru": "Она ему отказала."
+        },
+        {
+          "en": "She gave him a basket of fruit as a thank-you.",
+          "pl": "Dała mu kosz owoców w podziękowaniu.",
+          "ru": "Она подарила ему корзину фруктов в благодарность."
+        },
+        {
+          "en": "She agreed and brought a picnic basket.",
+          "pl": "Zgodziła się i przyniosła kosz piknikowy.",
+          "ru": "Она согласилась и принесла корзину для пикника."
+        },
+        {
+          "en": "She paid for the dinner.",
+          "pl": "Zapłaciła za kolację.",
+          "ru": "Она заплатила за ужин."
+        }
+      ],
+      "answer": 0,
+      "explanation": {
+        "en": "\"Dać komuś kosza\" (to give someone a basket) = to reject someone's romantic advances. Poor Michał.",
+        "pl": "„Dać komuś kosza” = odrzucić czyjeś zaloty. Biedny Michał.",
+        "ru": "«Dać komuś kosza» (дать корзину) = отказать в ухаживаниях. Бедный Михал."
+      }
+    },
+    {
+      "level": "B2",
+      "scenario": "Koleżanki z pracy plotkują o mężu Beaty.",
+      "question": {
+        "en": "\"Jej mąż jest totalnie pod pantoflem.\" - What does it mean?",
+        "pl": "„Jej mąż jest totalnie pod pantoflem.” – Co to znaczy?",
+        "ru": "«Jej mąż jest totalnie pod pantoflem.» — Что это значит?"
+      },
+      "options": [
+        {
+          "en": "He's henpecked - his wife decides everything.",
+          "pl": "Żona o wszystkim decyduje, a on się podporządkowuje.",
+          "ru": "Всё решает жена, а он беспрекословно слушается."
+        },
+        {
+          "en": "He has a foot fetish.",
+          "pl": "Ma fetysz stóp.",
+          "ru": "У него фетиш на ноги."
+        },
+        {
+          "en": "He's hiding under the bed.",
+          "pl": "Chowa się pod łóżkiem.",
+          "ru": "Он прячется под кроватью."
+        },
+        {
+          "en": "He never takes his slippers off.",
+          "pl": "Nigdy nie zdejmuje kapci.",
+          "ru": "Он никогда не снимает тапочки."
+        }
+      ],
+      "answer": 0,
+      "explanation": {
+        "en": "\"Być pod pantoflem\" (to be under the slipper) = to be dominated by your partner. The foot fetish is a different story. 🦶",
+        "pl": "„Być pod pantoflem” = być zdominowanym przez partnerkę. Fetysz stóp to zupełnie inna historia. 🦶",
+        "ru": "«Być pod pantoflem» (дословно «быть под тапком») = быть под каблуком. Фетиш на ноги — совсем другая история. 🦶"
+      }
+    },
+    {
+      "level": "B2",
+      "scenario": "Mama pyta, co robiliście do czwartej rano.",
+      "question": "____ w łóżku, rozmawialiśmy do rana. Tylko rozmawialiśmy. Serio. 🙄",
+      "options": ["Leżąc", "Leżący", "Położony", "Leżeć"],
+      "answer": 0,
+      "explanation": {
+        "en": "The adverbial participle (imiesłów przysłówkowy) \"leżąc\" = while lying. It describes an action happening at the same time as the main verb. Mama doesn't believe you either.",
+        "pl": "Imiesłów przysłówkowy współczesny „leżąc” opisuje czynność równoczesną z czasownikiem głównym. Mama też nie wierzy.",
+        "ru": "Деепричастие «leżąc» = лёжа. Описывает действие, одновременное с основным. Мама тоже не верит."
+      }
+    },
+    {
+      "level": "B2",
+      "scenario": "Ona stoi w drzwiach z rękami skrzyżowanymi na piersi.",
+      "variants": {
+        "f": {
+          "scenario": "On stoi w drzwiach z rękami skrzyżowanymi na piersi.",
+          "question": "Podobno ____ cię wczoraj w kinie z jakimś brunetem. Wytłumaczysz się?"
+        }
+      },
+      "question": "Podobno ____ cię wczoraj w kinie z jakąś blondynką. Wytłumaczysz się?",
+      "options": ["widziano", "widziałeś", "widzieli się", "widziana"],
+      "answer": 0,
+      "explanation": {
+        "en": "The impersonal -no/-to form (widziano, mówiono) = \"someone saw\", without saying who. Perfect for gossip and accusations.",
+        "pl": "Forma bezosobowa na -no/-to (widziano, mówiono) = „ktoś widział”, bez wskazania kto. Idealna do plotek i oskarżeń.",
+        "ru": "Безличная форма на -no/-to (widziano, mówiono) = «кто-то видел», без указания кто. Идеальна для сплетен и обвинений."
+      }
+    },
+    {
+      "level": "B2",
+      "scenario": "Wasz wspólny znajomy właśnie mrugnął do twojej przyjaciółki. Trzeci raz.",
+      "variants": {
+        "m": {
+          "scenario": "Twoja randka właśnie mrugnęła do twojego kumpla. Trzeci raz.",
+          "question": "Przestań ____ na mojego kumpla! Ja tu siedzę!"
+        },
+        "f": { "scenario": "Twój chłopak właśnie mrugnął do twojej przyjaciółki. Trzeci raz." }
+      },
+      "question": "Przestań ____ na moją przyjaciółkę! Ja tu siedzę!",
+      "options": ["patrzeć", "popatrzeć", "patrz", "patrzysz"],
+      "answer": 0,
+      "explanation": {
+        "en": "\"Przestać\" (to stop) is followed by an imperfective infinitive: przestań patrzeć, przestań flirtować.",
+        "pl": "Po „przestać” stoi bezokolicznik niedokonany: przestań patrzeć, przestań flirtować.",
+        "ru": "После «przestać» (перестать) нужен инфинитив несовершенного вида: przestań patrzeć, przestań flirtować."
+      }
+    },
+    {
+      "level": "B2",
+      "scenario": "Spotykasz swoją wielką miłość z liceum. Po piętnastu latach.",
+      "question": "Gdybyś wtedy do mnie ____, bylibyśmy już po ślubie. A tak mam trzy koty.",
+      "variants": {
+        "m": {
+          "options": ["zadzwoniła", "zadzwoniłaś", "zadzwonisz", "dzwoniłabyś"],
+          "explanation": {
+            "en": "In \"gdyby\" clauses the personal ending is attached to \"gdy-\": gdybyś zadzwoniła, not \"gdyby zadzwoniłaś\".",
+            "pl": "W zdaniach z „gdyby” końcówka osobowa dołącza do „gdy-”: gdybyś zadzwoniła, a nie „gdyby zadzwoniłaś”.",
+            "ru": "В предложениях с «gdyby» личное окончание присоединяется к «gdy-»: gdybyś zadzwoniła, а не «gdyby zadzwoniłaś»."
+          }
+        }
+      },
+      "options": ["zadzwonił", "zadzwoniłeś", "zadzwonisz", "dzwoniłbyś"],
+      "answer": 0,
+      "explanation": {
+        "en": "In \"gdyby\" clauses the personal ending is attached to \"gdy-\": gdybyś zadzwonił, not \"gdyby zadzwoniłeś\".",
+        "pl": "W zdaniach z „gdyby” końcówka osobowa dołącza do „gdy-”: gdybyś zadzwonił, a nie „gdyby zadzwoniłeś”.",
+        "ru": "В предложениях с «gdyby» личное окончание присоединяется к «gdy-»: gdybyś zadzwonił, а не «gdyby zadzwoniłeś»."
+      }
+    }
+  ]
+}
