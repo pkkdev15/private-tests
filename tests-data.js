@@ -17,11 +17,11 @@ window.TEST_DATA = {
     },
     {
       "id": "polish",
-      "file": "tests/polish-a2-b2.json",
+      "file": "tests/polish-a1-c2.json",
       "emoji": "🇵🇱",
       "title": "Randka po polsku",
       "language": { "en": "Polish", "pl": "Polski", "ru": "Польский" },
-      "levels": "A2 - B2",
+      "levels": "A1 - C2",
       "description": {
         "en": "Cases, aspects and a pinch of spice 🌶️. Flirting, exes, cats and \"herbatka\" at 2 a.m. (18+ humour)",
         "pl": "Przypadki, aspekty i szczypta pikanterii 🌶️. Flirt, byli, koty i „herbatka” o drugiej w nocy. (humor 18+)",
@@ -406,13 +406,13 @@ window.TEST_DATA = {
   ]
 }
 ,
-    "tests/polish-a2-b2.json": {
+    "tests/polish-a1-c2.json": {
   "lang": "pl",
   "title": "Randka po polsku",
   "subtitle": {
-    "en": "Polish proficiency test (A2 - B2) with candles, wine and a pinch of spice 🌶️",
-    "pl": "Test z języka polskiego (A2 – B2) przy świecach, z winem i szczyptą pikanterii 🌶️",
-    "ru": "Тест по польскому (A2 – B2) при свечах, с вином и щепоткой перчинки 🌶️"
+    "en": "Polish proficiency test (A1 - C2) with candles, wine and a pinch of spice 🌶️",
+    "pl": "Test z języka polskiego (A1 – C2) przy świecach, z winem i szczyptą pikanterii 🌶️",
+    "ru": "Тест по польскому (A1 – C2) при свечах, с вином и щепоткой перчинки 🌶️"
   },
   "settings": {
     "shuffleQuestions": false,
@@ -447,7 +447,7 @@ window.TEST_DATA = {
       }
     },
     {
-      "minPercent": 35, "code": "A2", "emoji": "🤝", "title": "Trzymanie za rączkę",
+      "minPercent": 20, "code": "A2", "emoji": "🤝", "title": "Trzymanie za rączkę",
       "description": {
         "en": "\"Holding hands\" - you can flirt in simple sentences and order wine without pointing. Your date agrees to a second meeting... in a well-lit public place.",
         "pl": "Umiesz flirtować prostymi zdaniami i zamówić wino bez pokazywania palcem. Randka zgadza się na drugie spotkanie... w dobrze oświetlonym miejscu publicznym.",
@@ -455,7 +455,7 @@ window.TEST_DATA = {
       }
     },
     {
-      "minPercent": 60, "code": "B1", "emoji": "🦋", "title": "Motyle w brzuchu",
+      "minPercent": 40, "code": "B1", "emoji": "🦋", "title": "Motyle w brzuchu",
       "description": {
         "en": "\"Butterflies in the stomach\" - you handle cases, aspects and compliments. Your date is already telling friends about you (in the genitive plural).",
         "pl": "Radzisz sobie z przypadkami, aspektem i komplementami. Randka już opowiada o tobie znajomym (w dopełniaczu liczby mnogiej).",
@@ -463,15 +463,127 @@ window.TEST_DATA = {
       }
     },
     {
-      "minPercent": 85, "code": "B2", "emoji": "☕", "title": "Śniadanie do łóżka",
+      "minPercent": 60, "code": "B2", "emoji": "☕", "title": "Śniadanie do łóżka",
       "description": {
         "en": "\"Breakfast in bed\" - fluent, witty and dangerously charming. We won't ask how the evening ended. The grammar was clearly perfect. 😏",
         "pl": "Płynnie, dowcipnie i niebezpiecznie uroczo. Nie pytamy, jak skończył się wieczór. Gramatyka najwyraźniej była perfekcyjna. 😏",
         "ru": "«Завтрак в постель» — бегло, остроумно и опасно обаятельно. Не будем спрашивать, чем закончился вечер. Грамматика явно была идеальной. 😏"
       }
+    },
+    {
+      "minPercent": 80, "code": "C1", "emoji": "🥟", "title": "Obiad u przyszłych teściów",
+      "description": {
+        "en": "\"Sunday dinner with the future in-laws\" - the final boss of Polish. You managed to decline the third helping of pierogi in the conditional mood - and survive. Respect.",
+        "pl": "Ostateczny boss polszczyzny. Udało się odmówić trzeciej dokładki pierogów w trybie przypuszczającym – i przeżyć. Szacunek.",
+        "ru": "«Обед у будущих родственников» — финальный босс польского. Тебе удалось отказаться от третьей порции вареников в сослагательном наклонении — и выжить. Респект."
+      }
+    },
+    {
+      "minPercent": 95, "code": "C2", "emoji": "💍", "title": "Wesele do białego rana",
+      "description": {
+        "en": "\"A wedding until dawn\" - flawless Polish, tongue-twisters included. Uncle Zdzisiek raised a toast in the instrumental, and you answered in the vocative. Gorzko, gorzko! 💋",
+        "pl": "Bezbłędna polszczyzna, łącznie z łamańcami językowymi. Wujek Zdzisiek wzniósł toast w narzędniku, a odpowiedź padła w wołaczu. Gorzko, gorzko! 💋",
+        "ru": "«Свадьба до рассвета» — безупречный польский, включая скороговорки. Дядя Здзисек поднял тост в творительном падеже, а ответ прозвучал в звательном. Горько! Горько! 💋"
+      }
     }
   ],
   "questions": [
+    {
+      "level": "A1",
+      "scenario": "Ktoś uroczy przysiada się do twojego stolika w kawiarni. Mrugasz zalotnie.",
+      "question": "Dzień dobry! ____ się Alex. A ty?",
+      "options": ["Nazywam", "Nazywa", "Mam", "Jestem"],
+      "answer": 0,
+      "explanation": {
+        "en": "\"Nazywać się\" = to be called. With \"ja\": nazywam się. You can also say \"Mam na imię Alex\" or \"Jestem Alex\" - but then without \"się\".",
+        "pl": "„Nazywać się”: (ja) nazywam się, (ty) nazywasz się. Można też powiedzieć „Mam na imię…” albo „Jestem…”, ale wtedy bez „się”.",
+        "ru": "«Nazywać się» = называться: (ja) nazywam się, (ty) nazywasz się. Можно сказать и «Mam na imię…» или «Jestem…», но тогда без «się»."
+      },
+      "variants": {
+        "m": { "scenario": "Piękna nieznajoma przysiada się do twojego stolika w kawiarni. Mrugasz zalotnie.", "question": "Dzień dobry! ____ się Adam. A ty?" },
+        "f": { "scenario": "Przystojny nieznajomy przysiada się do twojego stolika w kawiarni. Mrugasz zalotnie.", "question": "Dzień dobry! ____ się Ania. A ty?" }
+      }
+    },
+    {
+      "level": "A1",
+      "scenario": "Twoja randka pyta, ile masz lat. Uwaga, pułapka!",
+      "question": "Mam dwadzieścia pięć ____. No dobrze… trzydzieści dwa.",
+      "options": ["lat", "lata", "rok", "roku"],
+      "answer": 0,
+      "explanation": {
+        "en": "1 rok, 2-4 lata, 5 and more: lat. So: dwadzieścia pięć lat (but the truth, trzydzieści dwa lata, even has a different ending).",
+        "pl": "1 rok, 2–4 lata, od 5: lat. Czyli: dwadzieścia pięć lat (ale prawda – trzydzieści dwa lata – ma nawet inną końcówkę).",
+        "ru": "1 rok, 2–4 lata, от 5 — lat. Значит: dwadzieścia pięć lat (а у правды — trzydzieści dwa lata — даже окончание другое)."
+      }
+    },
+    {
+      "level": "A1",
+      "scenario": "Trzecia randka. Wino, świece, muzyka. Nie wytrzymujesz:",
+      "question": "Kocham ____! … Za wcześnie? Za wcześnie.",
+      "options": ["cię", "ty", "tobie", "tobą"],
+      "answer": 0,
+      "explanation": {
+        "en": "\"Kochać\" takes the accusative. The short form \"cię\" is the natural one: kocham cię. \"Ciebie\" is for emphasis: kocham ciebie, nie twoją siostrę.",
+        "pl": "„Kochać” łączy się z biernikiem. Naturalna jest krótka forma „cię”: kocham cię. „Ciebie” – dla podkreślenia: kocham ciebie, nie twoją siostrę.",
+        "ru": "«Kochać» требует винительного падежа. Естественна краткая форма «cię»: kocham cię. «Ciebie» — для акцента: kocham ciebie, nie twoją siostrę (тебя, а не твою сестру)."
+      }
+    },
+    {
+      "level": "A1",
+      "scenario": "Wykwintna restauracja. Ceny ogromne, porcje mikroskopijne.",
+      "question": "Jesteśmy bardzo ____. Może potem pójdziemy na kebab?",
+      "options": ["głodni", "głodne", "głodny", "głód"],
+      "answer": 0,
+      "explanation": {
+        "en": "A plural adjective for a mixed couple (or men) ends in -i: jesteśmy głodni. Only women: jesteśmy głodne.",
+        "pl": "Przymiotnik w liczbie mnogiej dla pary mieszanej (lub mężczyzn) kończy się na -i: jesteśmy głodni. Same kobiety: jesteśmy głodne.",
+        "ru": "Прилагательное во мн. числе для смешанной пары (или мужчин) оканчивается на -i: jesteśmy głodni. Только женщины: jesteśmy głodne."
+      },
+      "variants": {
+        "m": {
+          "question": "Jestem bardzo ____. Może potem pójdziemy na kebab?",
+          "options": ["głodny", "głodna", "głodne", "głód"],
+          "explanation": {
+            "en": "Adjectives agree with the speaker's gender: a man is głodny, a woman is głodna.",
+            "pl": "Przymiotnik zgadza się z rodzajem mówiącego: mężczyzna jest głodny, kobieta – głodna.",
+            "ru": "Прилагательное согласуется с родом говорящего: мужчина — głodny, женщина — głodna."
+          }
+        },
+        "f": {
+          "question": "Jestem bardzo ____. Może potem pójdziemy na kebab?",
+          "options": ["głodna", "głodny", "głodne", "głód"],
+          "explanation": {
+            "en": "Adjectives agree with the speaker's gender: a woman is głodna, a man is głodny.",
+            "pl": "Przymiotnik zgadza się z rodzajem mówiącego: kobieta jest głodna, mężczyzna – głodny.",
+            "ru": "Прилагательное согласуется с родом говорящего: женщина — głodna, мужчина — głodny."
+          }
+        }
+      }
+    },
+    {
+      "level": "A1",
+      "scenario": "Przedstawiasz swoją drugą połówkę babci. Babcia mruży oczy.",
+      "question": "To jest mój partner. ____ ma na imię Paweł i… szuka pracy.",
+      "options": ["On", "Ona", "Ono", "Oni"],
+      "answer": 0,
+      "explanation": {
+        "en": "Personal pronouns: on (he), ona (she), ono (it), oni (they). Grandma has her own word for an unemployed boyfriend, but we won't print it.",
+        "pl": "Zaimki osobowe: on, ona, ono, oni. Babcia ma własne określenie na bezrobotnego chłopaka, ale go nie wydrukujemy.",
+        "ru": "Личные местоимения: on (он), ona (она), ono (оно), oni (они). У бабушки есть своё слово для безработного парня, но мы его не напечатаем."
+      },
+      "variants": {
+        "m": {
+          "question": "To jest moja dziewczyna. ____ ma na imię Ola i… jest weganką.",
+          "options": ["Ona", "On", "Ono", "Oni"],
+          "explanation": {
+            "en": "Personal pronouns: on (he), ona (she), ono (it), oni (they). Grandma has her own opinion about a pierogi-free life, but we won't print it.",
+            "pl": "Zaimki osobowe: on, ona, ono, oni. Babcia ma własne zdanie o życiu bez schabowego, ale go nie wydrukujemy.",
+            "ru": "Личные местоимения: on (он), ona (она), ono (оно), oni (они). У бабушки есть своё мнение о жизни без котлет, но мы его не напечатаем."
+          }
+        },
+        "f": { "question": "To jest mój chłopak. ____ ma na imię Paweł i… szuka pracy." }
+      }
+    },
     {
       "level": "A2",
       "scenario": "Pierwsza randka z Tindera. Twoja randka wygląda dokładnie jak na zdjęciach. Podejrzane!",
@@ -982,6 +1094,182 @@ window.TEST_DATA = {
         "en": "In \"gdyby\" clauses the personal ending is attached to \"gdy-\": gdybyś zadzwonił, not \"gdyby zadzwoniłeś\".",
         "pl": "W zdaniach z „gdyby” końcówka osobowa dołącza do „gdy-”: gdybyś zadzwonił, a nie „gdyby zadzwoniłeś”.",
         "ru": "В предложениях с «gdyby» личное окончание присоединяется к «gdy-»: gdybyś zadzwonił, а не «gdyby zadzwoniłeś»."
+      }
+    },
+    {
+      "level": "C1",
+      "scenario": "Północ. Pod twoim blokiem ktoś stoi z głośnikiem.",
+      "question": "Mój były ____ pod moje okno i zaczął śpiewać disco polo. Sąsiedzi wezwali policję.",
+      "options": ["podszedł", "rozszedł się", "obszedł", "zszedł"],
+      "answer": 0,
+      "explanation": {
+        "en": "Prefixes change the direction of motion verbs: pod- = up to / towards (podejść pod okno), ob- = around, roz- = apart, z- = down.",
+        "pl": "Przedrostki zmieniają kierunek ruchu: pod- = zbliżenie (podejść pod okno), ob- = dookoła, roz- = w różne strony, z- = w dół.",
+        "ru": "Приставки меняют направление движения: pod- = приближение (podejść pod okno — подойти к окну), ob- = вокруг, roz- = в разные стороны, z- = вниз."
+      },
+      "variants": {
+        "m": {
+          "question": "Moja była ____ pod moje okno i zaczęła śpiewać disco polo. Sąsiedzi wezwali policję.",
+          "options": ["podeszła", "rozeszła się", "obeszła", "zeszła"]
+        }
+      }
+    },
+    {
+      "level": "C1",
+      "scenario": "Plotki na klatce schodowej. Pani Halina wie wszystko.",
+      "question": {
+        "en": "\"Żona złapała go na gorącym uczynku.\" - What happened?",
+        "pl": "„Żona złapała go na gorącym uczynku.” – Co się stało?",
+        "ru": "«Żona złapała go na gorącym uczynku.» — Что произошло?"
+      },
+      "options": [
+        { "en": "His wife caught him red-handed.", "pl": "Żona przyłapała go w trakcie zdrady (albo innego występku).", "ru": "Жена застукала его на месте преступления." },
+        { "en": "His wife caught him eating a hot dinner.", "pl": "Żona złapała go, gdy jadł gorący obiad.", "ru": "Жена поймала его за горячим обедом." },
+        { "en": "His wife caught him during a heatwave.", "pl": "Żona złapała go podczas upału.", "ru": "Жена поймала его в жару." },
+        { "en": "His wife caught him as he was falling.", "pl": "Żona złapała go, kiedy się przewracał.", "ru": "Жена поймала его, когда он падал." }
+      ],
+      "answer": 0,
+      "explanation": {
+        "en": "\"Złapać kogoś na gorącym uczynku\" = to catch someone red-handed (literally: during a hot deed). Pani Halina already knows the details.",
+        "pl": "„Złapać kogoś na gorącym uczynku” = przyłapać kogoś w trakcie robienia czegoś złego. Pani Halina zna już szczegóły.",
+        "ru": "«Złapać kogoś na gorącym uczynku» = поймать с поличным (дословно — «на горячем поступке»). Пани Халина уже знает подробности."
+      }
+    },
+    {
+      "level": "C1",
+      "scenario": "Telenowela w bloku nr 7 trwa w najlepsze.",
+      "question": {
+        "en": "\"Podobno przyprawiła mu rogi.\" - What does it mean?",
+        "pl": "„Podobno przyprawiła mu rogi.” – Co to znaczy?",
+        "ru": "«Podobno przyprawiła mu rogi.» — Что это значит?"
+      },
+      "options": [
+        { "en": "She cheated on him.", "pl": "Zdradziła go.", "ru": "Она ему изменила." },
+        { "en": "She seasoned his dinner very spicily.", "pl": "Mocno przyprawiła mu obiad.", "ru": "Она очень остро приправила ему ужин." },
+        { "en": "She bought him a Viking helmet.", "pl": "Kupiła mu hełm wikinga.", "ru": "Она купила ему шлем викинга." },
+        { "en": "She made him very angry.", "pl": "Bardzo go zdenerwowała.", "ru": "Она его сильно разозлила." }
+      ],
+      "answer": 0,
+      "explanation": {
+        "en": "\"Przyprawić komuś rogi\" = to cheat on someone (literally: to attach horns to someone). \"Przyprawić\" has nothing to do with spices here.",
+        "pl": "„Przyprawić komuś rogi” = zdradzić partnera. „Przyprawić” nie ma tu nic wspólnego z kuchnią.",
+        "ru": "«Przyprawić komuś rogi» = изменить, как русское «наставить рога». «Przyprawić» здесь не имеет ничего общего со специями."
+      }
+    },
+    {
+      "level": "C1",
+      "scenario": "Dziesięć lat po ślubie. Romantyzm? Jaki romantyzm?",
+      "question": "Mamy ____ dzieci, psa, kredyt i zero czasu na amory.",
+      "options": ["troje", "trzy", "trzech", "trojga"],
+      "answer": 0,
+      "explanation": {
+        "en": "\"Dzieci\" takes collective numerals: dwoje, troje, czworo dzieci (also used for mixed groups of people and young animals: troje kociąt).",
+        "pl": "Z rzeczownikiem „dzieci” używamy liczebników zbiorowych: dwoje, troje, czworo dzieci (także z grupami mieszanymi i młodymi zwierzętami: troje kociąt).",
+        "ru": "Со словом «dzieci» используются собирательные числительные: dwoje, troje, czworo dzieci — как русское «трое детей»."
+      }
+    },
+    {
+      "level": "C1",
+      "scenario": "Wracasz do domu. Na poduszce coś na ciebie czeka…",
+      "question": "List miłosny ____ jej perfumami leżał na mojej poduszce. 😏",
+      "options": ["skropiony", "skrapiający", "skropiwszy", "skropił"],
+      "answer": 0,
+      "explanation": {
+        "en": "\"Skropiony\" is a passive adjectival participle (the letter was sprinkled with perfume). \"Skrapiający\" = sprinkling (active), \"skropiwszy\" = having sprinkled (adverbial).",
+        "pl": "„Skropiony” to imiesłów przymiotnikowy bierny (list został skropiony). „Skrapiający” – imiesłów czynny, „skropiwszy” – imiesłów przysłówkowy uprzedni.",
+        "ru": "«Skropiony» — страдательное причастие (письмо, обрызганное духами). «Skrapiający» — действительное причастие, «skropiwszy» — деепричастие (обрызгав)."
+      },
+      "variants": {
+        "f": { "question": "List miłosny ____ jego wodą kolońską leżał na mojej poduszce. 😏" }
+      }
+    },
+    {
+      "level": "C2",
+      "scenario": "Marek ogłasza wielką nowinę na rodzinnym grillu.",
+      "question": "Kochani, Ania i ja w końcu ____ ślub! Babcia płakała, wujek tańczył na stole.",
+      "options": ["wzięliśmy", "wzięłyśmy", "braliśmy", "wzięły"],
+      "answer": 0,
+      "explanation": {
+        "en": "A mixed couple takes the masculine-personal form: wzięliśmy. \"Wzięłyśmy\" is only for a group of women. Perfective, because you take the wedding vows once. Ideally.",
+        "pl": "Para mieszana to forma męskoosobowa: wzięliśmy. „Wzięłyśmy” – tylko grupa kobiet. Aspekt dokonany, bo ślub bierze się raz. Najlepiej.",
+        "ru": "Смешанная пара — мужско-личная форма: wzięliśmy. «Wzięłyśmy» — только о группе женщин. Совершенный вид, потому что свадьба бывает один раз. В идеале."
+      }
+    },
+    {
+      "level": "C2",
+      "scenario": "Twoja randka zbliża się i szepcze ci do ucha najbardziej zmysłowe zdanie po polsku:",
+      "question": "W Szczebrzeszynie ____ brzmi w trzcinie. 😳",
+      "options": ["chrząszcz", "hrząszcz", "chżąszcz", "chrzonszcz"],
+      "answer": 0,
+      "explanation": {
+        "en": "\"Chrząszcz\" (beetle) - the legendary Polish tongue-twister: ch + rz + ą + szcz. If you can whisper it seductively, you can whisper anything.",
+        "pl": "„Chrząszcz” – legendarny polski łamaniec językowy: ch + rz + ą + szcz. Kto wyszepcze to zmysłowo, ten wyszepcze wszystko.",
+        "ru": "«Chrząszcz» (жук) — легендарная польская скороговорка: ch + rz + ą + szcz. Кто сможет прошептать это соблазнительно, тот сможет всё."
+      }
+    },
+    {
+      "level": "C2",
+      "scenario": "Babcia wspomina lata sześćdziesiąte. Dziadek udaje, że śpi.",
+      "question": {
+        "en": "\"Dziadek stroił do mnie koperczaki przez dwa lata.\" - What did grandpa do?",
+        "pl": "„Dziadek stroił do mnie koperczaki przez dwa lata.” – Co robił dziadek?",
+        "ru": "«Dziadek stroił do mnie koperczaki przez dwa lata.» — Что делал дедушка?"
+      },
+      "options": [
+        { "en": "He courted her.", "pl": "Zalecał się do niej.", "ru": "Он за ней ухаживал." },
+        { "en": "He tuned her guitar.", "pl": "Stroił jej gitarę.", "ru": "Он настраивал ей гитару." },
+        { "en": "He sewed her fancy shoes.", "pl": "Szył jej eleganckie buty.", "ru": "Он шил ей нарядные туфли." },
+        { "en": "He argued with her.", "pl": "Kłócił się z nią.", "ru": "Он с ней спорил." }
+      ],
+      "answer": 0,
+      "explanation": {
+        "en": "\"Stroić koperczaki (do kogoś)\" - an old-fashioned, literary idiom for courting someone. Grandpa is not asleep. Grandpa is blushing.",
+        "pl": "„Stroić koperczaki do kogoś” – staroświeckie, książkowe określenie zalotów. Dziadek nie śpi. Dziadek się rumieni.",
+        "ru": "«Stroić koperczaki do kogoś» — старомодное книжное выражение: ухаживать, «строить куры». Дедушка не спит. Дедушка краснеет."
+      }
+    },
+    {
+      "level": "C2",
+      "scenario": "Samotny wieczór. Wino, okno, westchnienie…",
+      "question": "Mój ____ na białym koniu, gdzie ty się podziewasz?",
+      "options": ["książę", "księciu", "księcia", "książe"],
+      "answer": 0,
+      "explanation": {
+        "en": "The vocative of \"książę\" is… \"książę\" - irregularly identical to the nominative. And it's spelled with ę: \"książe\" is a classic spelling mistake.",
+        "pl": "Wołacz od „książę” to… „książę” – nieregularnie taki sam jak mianownik. I koniecznie z „ę”: „książe” to klasyczny błąd ortograficzny.",
+        "ru": "Звательный падеж от «książę» — тоже «książę», неправильно совпадает с именительным. И обязательно с «ę»: «książe» — классическая орфографическая ошибка."
+      },
+      "variants": {
+        "m": {
+          "question": "Moja ____ z bajki, gdzie ty się podziewasz?",
+          "options": ["królewno", "królewna", "królewny", "królewnie"],
+          "explanation": {
+            "en": "Feminine nouns in -a take -o in the vocative: królewna → królewno, żabka → żabko. Your princess is probably still on Tinder.",
+            "pl": "Rzeczowniki żeńskie na -a mają w wołaczu -o: królewna → królewno, żabka → żabko. Twoja królewna pewnie wciąż przegląda Tindera.",
+            "ru": "Существительные женского рода на -a в звательном падеже получают -o: królewna → królewno, żabka → żabko. Твоя принцесса, наверное, всё ещё листает Тиндер."
+          }
+        }
+      }
+    },
+    {
+      "level": "C2",
+      "scenario": "Czwarta rano. Klucz w zamku. W przedpokoju zapala się światło.",
+      "question": {
+        "en": "\"Ładna mi godzina!\" - says the wife. What does she mean?",
+        "pl": "„Ładna mi godzina!” – mówi żona. Co ma na myśli?",
+        "ru": "«Ładna mi godzina!» — говорит жена. Что она имеет в виду?"
+      },
+      "options": [
+        { "en": "She's furious - it's an outrageous time to come home.", "pl": "Jest wściekła – to skandaliczna pora na powrót.", "ru": "Она в ярости — это возмутительное время для возвращения." },
+        { "en": "She's admiring the beautiful early morning.", "pl": "Zachwyca się piękną porą poranka.", "ru": "Она любуется прекрасным утренним часом." },
+        { "en": "She's asking what time it is.", "pl": "Pyta, która jest godzina.", "ru": "Она спрашивает, который час." },
+        { "en": "She's happy he's finally home.", "pl": "Cieszy się, że wreszcie wrócił.", "ru": "Она рада, что он наконец вернулся." }
+      ],
+      "answer": 0,
+      "explanation": {
+        "en": "\"Ładny/ładna mi…\" with the dative \"mi\" is ironic and means the opposite: \"Ładna mi godzina!\" = \"A fine time to come home!\" Likewise: \"Ładny mi przyjaciel!\"",
+        "pl": "Konstrukcja „ładny/ładna mi…” z celownikiem „mi” jest ironiczna i znaczy odwrotnie: „Ładna mi godzina!” = skandaliczna pora. Podobnie: „Ładny mi przyjaciel!”",
+        "ru": "Конструкция «ładny/ładna mi…» с дательным «mi» иронична и значит обратное — как русское «Хорошенькое время!» Так же: «Ładny mi przyjaciel!» (Хорош друг!)."
       }
     }
   ]

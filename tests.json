@@ -15,11 +15,11 @@
     },
     {
       "id": "polish",
-      "file": "tests/polish-a2-b2.json",
+      "file": "tests/polish-a1-c2.json",
       "emoji": "🇵🇱",
       "title": "Randka po polsku",
       "language": { "en": "Polish", "pl": "Polski", "ru": "Польский" },
-      "levels": "A2 - B2",
+      "levels": "A1 - C2",
       "description": {
         "en": "Cases, aspects and a pinch of spice 🌶️. Flirting, exes, cats and \"herbatka\" at 2 a.m. (18+ humour)",
         "pl": "Przypadki, aspekty i szczypta pikanterii 🌶️. Flirt, byli, koty i „herbatka” o drugiej w nocy. (humor 18+)",

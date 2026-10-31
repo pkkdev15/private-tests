@@ -9,6 +9,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&family=Lobster&family=Pacifico&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script>
+    // Apply the saved color theme before the first paint (no flash of the default theme).
+    try {
+      var t = localStorage.getItem("uiTheme");
+      if (t && t !== "pink") document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  </script>
 </head>
 <body>
   <div id="hearts" aria-hidden="true"></div>
@@ -58,7 +65,10 @@
   </svg>
 
   <main class="table">
-    <nav class="lang-switch" id="lang-switch" data-i18n-aria="langLabel"></nav>
+    <div class="topbar">
+      <nav class="theme-switch" id="theme-switch" data-i18n-aria="themeLabel"></nav>
+      <nav class="lang-switch" id="lang-switch" data-i18n-aria="langLabel"></nav>
+    </div>
 
     <!-- Loading -->
     <section id="screen-loading" class="card screen active">

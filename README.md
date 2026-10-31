@@ -21,8 +21,8 @@ powershell -ExecutionPolicy Bypass -File build.ps1
 2. Register it in `tests.json`:
 
 ```json
-{ "id": "polish", "file": "tests/polish-a2-b2.json", "emoji": "🇵🇱",
-  "title": "Randka po polsku", "language": "Polish", "levels": "A2 - B2",
+{ "id": "polish", "file": "tests/polish-a1-c2.json", "emoji": "🇵🇱",
+  "title": "Randka po polsku", "language": "Polish", "levels": "A1 - C2",
   "description": "Shown on the picker card." }
 ```
 
@@ -77,3 +77,13 @@ Professor Pigeon's lines (praise, threats, final warnings, result verdicts) are 
 | `reactions.correct` / `.wrong` | Random date reactions after each answer |
 | `levels[]` | `minPercent`, `code`, `emoji`, `title`, `description` - result by score % |
 | `questions[]` | `level`, `scenario`, `question`, `options[]`, `answer` (0-based index), `explanation` |
+
+## Color themes
+
+The swatches next to the language switch change the color theme: Pink (default), Graphite (dark),
+Dark green and Burgundy. The choice is remembered in the browser and applied before the first paint.
+
+All colors in `style.css` come from CSS variables defined once per theme at the top of the file
+(`:root` = Pink, `:root[data-theme="graphite"]`, `...="green"`, `...="burgundy"`).
+To add a theme: copy one of those blocks with a new name, add a swatch class (`.swatch-<name>`)
+and an entry in `THEMES` in `app.js`, plus its name in `i18n.js`.

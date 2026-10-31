@@ -9,6 +9,8 @@ window.I18N = {
   strings: {
     en: {
       langLabel: "Interface language",
+      themeLabel: "Color theme",
+      themePink: "Pink", themeGraphite: "Graphite", themeGreen: "Dark green", themeBurgundy: "Burgundy",
       loading: "Lighting the candles...",
       errorTitle: "Our date got stood up!",
       errorPrefix: "Couldn't load: ",
@@ -80,6 +82,8 @@ window.I18N = {
     },
     pl: {
       langLabel: "Język interfejsu",
+      themeLabel: "Motyw kolorystyczny",
+      themePink: "Różowy", themeGraphite: "Grafit", themeGreen: "Ciemna zieleń", themeBurgundy: "Burgund",
       loading: "Zapalamy świece...",
       errorTitle: "Randka nas wystawiła!",
       errorPrefix: "Nie udało się wczytać: ",
@@ -151,6 +155,8 @@ window.I18N = {
     },
     ru: {
       langLabel: "Язык интерфейса",
+      themeLabel: "Цветовая тема",
+      themePink: "Розовая", themeGraphite: "Графит", themeGreen: "Тёмно-зелёная", themeBurgundy: "Бордовая",
       loading: "Зажигаем свечи...",
       errorTitle: "Нас продинамили!",
       errorPrefix: "Не удалось загрузить: ",

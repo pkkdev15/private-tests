@@ -87,6 +87,44 @@
     });
   }
 
+  // ---------- color themes ----------
+  // "color" is the browser UI color (meta theme-color) matching the page background.
+  const THEMES = [
+    { id: "pink", key: "themePink", color: "#fb6f92" },
+    { id: "graphite", key: "themeGraphite", color: "#24272c" },
+    { id: "green", key: "themeGreen", color: "#173a2e" },
+    { id: "burgundy", key: "themeBurgundy", color: "#4a1022" }
+  ];
+  const THEME_KEY = "uiTheme";
+
+  function currentTheme() {
+    return document.documentElement.getAttribute("data-theme") || "pink";
+  }
+
+  function renderThemeSwitch() {
+    const nav = $("theme-switch");
+    nav.innerHTML = "";
+    THEMES.forEach((t) => {
+      const b = document.createElement("button");
+      b.className = `swatch swatch-${t.id}`;
+      b.title = tr(t.key);
+      b.setAttribute("aria-label", tr(t.key));
+      b.setAttribute("aria-pressed", String(t.id === currentTheme()));
+      b.addEventListener("click", () => setTheme(t.id));
+      nav.appendChild(b);
+    });
+  }
+
+  function setTheme(id) {
+    const theme = THEMES.find((t) => t.id === id) || THEMES[0];
+    if (theme.id === "pink") document.documentElement.removeAttribute("data-theme");
+    else document.documentElement.setAttribute("data-theme", theme.id);
+    try { localStorage.setItem(THEME_KEY, theme.id); } catch (e) { /* storage unavailable */ }
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.content = theme.color;
+    renderThemeSwitch();
+  }
+
   function setLang(code) {
     uiLang = code;
     try { localStorage.setItem(LANG_KEY, code); } catch (e) { /* storage unavailable */ }
@@ -95,6 +133,7 @@
     document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => { el.placeholder = tr(el.dataset.i18nPlaceholder); });
     document.querySelectorAll("[data-i18n-aria]").forEach((el) => { el.setAttribute("aria-label", tr(el.dataset.i18nAria)); });
     renderLangSwitch();
+    renderThemeSwitch();
     refresh();
   }
 
@@ -589,6 +628,7 @@
   });
 
   // ---------- start ----------
+  setTheme(currentTheme()); // set by the inline script in <head> from the saved choice
   setLang(detectLang());
   loadManifest()
     .then(() => {
