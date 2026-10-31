@@ -141,7 +141,8 @@
   function refresh() {
     const active = document.querySelector(".screen.active");
     switch (active && active.id) {
-      case "screen-picker": renderPicker(); break;
+      case "screen-picker": renderPicker(); if (currentTab === "lessons") renderCourses(); break;
+      case "screen-lesson": renderLessonStep(); break;
       case "screen-welcome": renderWelcome(); break;
       case "screen-quiz": renderQuestion(true); break;
       case "screen-result": renderResult(); break;
@@ -294,9 +295,38 @@
   function showPicker() {
     setUrlTest(null);
     renderPicker();
+    setTab(currentTab);
     show("screen-picker");
     updateTitle();
   }
+
+  // ---------- tabs: Tests / Lessons ----------
+  const TAB_KEY = "uiTab";
+  let currentTab = "tests";
+  try { if (localStorage.getItem(TAB_KEY) === "lessons") currentTab = "lessons"; } catch (e) { /* storage unavailable */ }
+
+  function setTab(tab) {
+    currentTab = tab;
+    try { localStorage.setItem(TAB_KEY, tab); } catch (e) { /* storage unavailable */ }
+    document.querySelectorAll(".tabs [role=tab]").forEach((b) => {
+      const on = b.dataset.tab === tab;
+      b.setAttribute("aria-selected", String(on));
+      b.tabIndex = on ? 0 : -1;
+    });
+    $("pane-tests").hidden = tab !== "tests";
+    $("pane-lessons").hidden = tab !== "lessons";
+    if (tab === "lessons") loadCourses().then(renderCourses).catch(() => {
+      $("course-list").innerHTML = "";
+      const p = document.createElement("p");
+      p.className = "gender-needed";
+      p.textContent = tr("lessonsError");
+      $("course-list").appendChild(p);
+    });
+  }
+
+  document.querySelectorAll(".tabs [role=tab]").forEach((b) => {
+    b.addEventListener("click", () => setTab(b.dataset.tab));
+  });
 
   function selectTest(t) {
     show("screen-loading");
@@ -538,6 +568,273 @@
     $("review-box").hidden = mistakes.length === 0;
     $("btn-other-test").hidden = tests.length < 2;
   }
+
+  // ---------- lessons ----------
+  // lessons.json lists course files; each course has categories → lessons → cards + practice.
+  // Progress is kept per lesson in localStorage: { "course/lesson": { best, total } }.
+  const LESSONS_URL = "lessons.json";
+  const PROGRESS_KEY = "lessonProgress";
+  let coursesPromise = null;
+  let courses = [];
+  let lesson = null; // the lesson being played: { course, ref, cards, practice, step, score }
+
+  function loadCourses() {
+    if (!coursesPromise) {
+      coursesPromise = fetchJson(LESSONS_URL)
+        .then((m) => Promise.all((m.courses || []).filter((c) => c && c.id && isSafePath(c.file))
+          .map((c) => fetchJson(c.file).then((data) => ({ ...data, id: c.id })))))
+        .then((list) => { courses = list; return list; })
+        .catch((err) => { coursesPromise = null; throw err; });
+    }
+    return coursesPromise;
+  }
+
+  function getProgress() {
+    try { return JSON.parse(localStorage.getItem(PROGRESS_KEY)) || {}; } catch (e) { return {}; }
+  }
+
+  function saveLessonResult(key, score, total) {
+    const all = getProgress();
+    const prev = all[key];
+    all[key] = { best: Math.max(score, prev ? prev.best : 0), total };
+    try { localStorage.setItem(PROGRESS_KEY, JSON.stringify(all)); } catch (e) { /* storage unavailable */ }
+  }
+
+  const lessonKey = (course, l) => `${course.id}/${l.id}`;
+  const stars = (best, total) => "★".repeat(best) + "☆".repeat(Math.max(0, total - best));
+
+  function el(tag, cls, text) {
+    const e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text != null) e.textContent = text;
+    return e;
+  }
+
+  function renderCourses() {
+    const list = $("course-list");
+    list.innerHTML = "";
+    const progress = getProgress();
+
+    courses.forEach((course) => {
+      const all = course.categories.flatMap((c) => c.lessons);
+      const done = all.filter((l) => progress[lessonKey(course, l)]).length;
+
+      const head = el("div", "course-head");
+      head.append(el("span", "course-emoji", course.emoji || "📚"));
+      const info = el("div", "course-info");
+      info.append(el("h3", "course-title", loc(course.title)), el("p", "course-sub", loc(course.subtitle)));
+      head.append(info);
+      list.append(head);
+
+      const bar = el("div", "progress course-progress");
+      const fill = el("div", "progress-bar");
+      fill.style.width = `${all.length ? (done / all.length) * 100 : 0}%`;
+      bar.append(fill);
+      list.append(bar, el("p", "course-count", tr("courseProgress", { done, total: all.length })));
+
+      course.categories.forEach((cat) => {
+        const catDone = cat.lessons.filter((l) => progress[lessonKey(course, l)]).length;
+        const section = el("section", "lesson-cat");
+        const h = el("h4", "lesson-cat-title");
+        h.append(el("span", null, `${cat.emoji || ""} ${loc(cat.title)}`), el("span", "lesson-cat-count", `${catDone}/${cat.lessons.length}`));
+        section.append(h);
+
+        cat.lessons.forEach((l, i) => {
+          const p = progress[lessonKey(course, l)];
+          const btn = el("button", "lesson-item" + (p ? " done" : ""));
+          btn.append(el("span", "lesson-num", p ? "✓" : String(i + 1)));
+          const body = el("span", "lesson-item-body");
+          body.append(el("span", "lesson-item-title", loc(l.title)));
+          const meta = el("span", "lesson-item-meta");
+          if (l.level) meta.append(el("span", "level-tag", l.level));
+          if (p) meta.append(el("span", "lesson-stars", stars(p.best, p.total)));
+          body.append(meta);
+          btn.append(body, el("span", "test-arrow", "➜"));
+          btn.addEventListener("click", () => startLesson(course, l));
+          section.append(btn);
+        });
+        list.append(section);
+      });
+    });
+  }
+
+  function startLesson(course, ref) {
+    const prepared = withVariant(ref);
+    lesson = {
+      course,
+      ref,
+      cards: (prepared.cards || []).map(withVariant),
+      practice: (prepared.practice || []).map(withVariant).map((q) => ({
+        ...q,
+        opts: shuffle(q.options.map((text, i) => ({ text, correct: i === q.answer }))),
+        chosen: null,
+        prof: null
+      })),
+      step: 0,
+      score: 0,
+      saved: false
+    };
+    show("screen-lesson");
+    renderLessonStep();
+  }
+
+  function nextLessonOf(course, ref) {
+    const all = course.categories.flatMap((c) => c.lessons);
+    return all[all.indexOf(ref) + 1] || null;
+  }
+
+  function renderLessonStep() {
+    if (!lesson) return;
+    const { cards, practice } = lesson;
+    const total = cards.length + practice.length;
+    const step = lesson.step;
+    $("lesson-title").textContent = loc(lesson.ref.title);
+    $("lesson-level").textContent = lesson.ref.level || "";
+    $("lesson-level").hidden = !lesson.ref.level;
+    $("lesson-counter").textContent = `${Math.min(step + 1, total)} / ${total}`;
+    $("lesson-progress").style.width = `${(Math.min(step, total) / total) * 100}%`;
+    $("lesson-counter").hidden = step >= total;
+
+    const body = $("lesson-body");
+    body.innerHTML = "";
+    if (step < cards.length) renderLessonCard(body, cards[step], step);
+    else if (step < total) renderLessonPractice(body, practice[step - cards.length], step - cards.length);
+    else renderLessonSummary(body);
+  }
+
+  function lessonNextButton(label) {
+    const b = el("button", "btn btn-primary btn-block", label);
+    b.addEventListener("click", () => { lesson.step++; renderLessonStep(); window.scrollTo({ top: 0, behavior: "smooth" }); });
+    return b;
+  }
+
+  function renderLessonCard(body, card, i) {
+    const box = el("div", "lesson-card");
+    box.append(el("p", "lesson-step-label", tr("lessonCard", { n: i + 1, total: lesson.cards.length })));
+    const phrase = el("p", "lesson-phrase", loc(card.phrase));
+    phrase.lang = lesson.course.lang || "pl";
+    box.append(phrase, el("p", "lesson-meaning", loc(card.meaning)));
+    if (card.example) {
+      const ex = el("div", "lesson-example");
+      const exText = el("p", null, loc(card.example));
+      exText.lang = lesson.course.lang || "pl";
+      ex.append(el("span", "lesson-example-label", tr("lessonExample")), exText);
+      box.append(ex);
+    }
+    if (card.note) box.append(el("p", "lesson-note", loc(card.note)));
+    body.append(box);
+    const last = i === lesson.cards.length - 1;
+    body.append(lessonNextButton(last && lesson.practice.length ? tr("lessonPractice") : tr("next")));
+  }
+
+  function renderLessonPractice(body, q, i) {
+    body.append(el("p", "lesson-step-label", tr("lessonExercise", { n: i + 1, total: lesson.practice.length })));
+    const question = el("h3", "question", loc(q.question));
+    question.lang = lesson.course.lang || "pl";
+    body.append(question);
+
+    const options = el("div", "options");
+    const fb = el("div", "feedback");
+    fb.hidden = true;
+
+    const showFeedback = () => {
+      fb.className = "feedback " + (q.chosen.correct ? "good" : "bad");
+      fb.innerHTML = "";
+      const prof = el("div", "prof");
+      const pig = el("div", "prof-pigeon" + (q.animate ? (q.chosen.correct ? " happy" : " angry") : ""));
+      pig.innerHTML = '<svg viewBox="0 0 120 120"><use href="#pigeon"/></svg>';
+      if (!q.chosen.correct) pig.style.setProperty("--brow", "1");
+      else pig.style.setProperty("--blush", "1");
+      const bubble = el("div", "prof-bubble");
+      bubble.append(el("p", "prof-name", tr("profName")), el("p", "prof-line", tr(q.prof.set)[q.prof.i]));
+      if (q.explanation) bubble.append(el("p", "explanation", loc(q.explanation)));
+      prof.append(pig, bubble);
+      const last = i === lesson.practice.length - 1;
+      fb.append(prof, lessonNextButton(last ? tr("verdictBtn") : tr("next")));
+      fb.hidden = false;
+      return pig;
+    };
+
+    q.opts.forEach((opt, k) => {
+      const b = el("button", "option", loc(opt.text));
+      b.dataset.letter = String.fromCharCode(65 + k);
+      b.lang = lesson.course.lang || "pl";
+      if (q.chosen) {
+        b.disabled = true;
+        if (opt.correct) b.classList.add("correct");
+        else if (opt === q.chosen) b.classList.add("wrong");
+        else b.classList.add("faded");
+      }
+      b.addEventListener("click", () => {
+        if (q.chosen) return;
+        q.chosen = opt;
+        q.animate = true;
+        if (opt.correct) lesson.score++;
+        q.prof = pickLine(opt.correct ? "pigeonCorrect" : "pigeonWrong");
+        renderLessonStep();
+        const btn = $("lesson-body").querySelectorAll(".option")[k];
+        const pig = $("lesson-body").querySelector(".prof-pigeon");
+        if (opt.correct) { heartBurst(btn); if (navigator.vibrate) navigator.vibrate(30); }
+        else {
+          if (navigator.vibrate) navigator.vibrate([60, 40, 60]);
+          setTimeout(() => warningShot(pig, 1), 400);
+        }
+        $("lesson-body").querySelector(".feedback").scrollIntoView({ behavior: "smooth", block: "nearest" });
+        q.animate = false;
+      });
+      options.append(b);
+    });
+    body.append(options, fb);
+    if (q.chosen) showFeedback();
+  }
+
+  function renderLessonSummary(body) {
+    const total = lesson.practice.length;
+    const key = lessonKey(lesson.course, lesson.ref);
+    if (!lesson.saved) {
+      saveLessonResult(key, lesson.score, total);
+      lesson.saved = true;
+      if (lesson.score === total) setTimeout(() => heartBurst($("lesson-body").querySelector(".big-emoji")), 200);
+    }
+    const pct = total ? Math.round((lesson.score / total) * 100) : 100;
+    const box = el("div", "lesson-summary");
+    box.append(el("div", "big-emoji pop", pct === 100 ? "🎓" : pct >= 60 ? "🌹" : "📚"));
+    box.append(el("h2", "lesson-done-title", tr("lessonDone")));
+    if (total) {
+      box.append(el("p", "lesson-stars big", stars(lesson.score, total)));
+      box.append(el("p", "score", tr("score", { score: lesson.score, total, pct })));
+    }
+    const verdict = pct >= 85 ? 3 : pct >= 60 ? 2 : pct >= 35 ? 1 : 0;
+    const prof = el("div", "prof");
+    const pig = el("div", "prof-pigeon" + (verdict >= 2 ? " happy" : verdict === 0 ? " angry" : ""));
+    pig.innerHTML = '<svg viewBox="0 0 120 120"><use href="#pigeon"/></svg>';
+    const bubble = el("div", "prof-bubble");
+    bubble.append(el("p", "prof-name", tr("profName")), el("p", "prof-line", tr("pigeonResult")[verdict]));
+    prof.append(pig, bubble);
+    box.append(prof);
+
+    const actions = el("div", "actions");
+    const next = nextLessonOf(lesson.course, lesson.ref);
+    if (next) {
+      const b = el("button", "btn btn-primary btn-block", tr("lessonNextLesson"));
+      b.addEventListener("click", () => startLesson(lesson.course, next));
+      actions.append(b);
+    } else {
+      box.append(el("p", "lesson-all-done", tr("lessonAllDone")));
+    }
+    const again = el("button", "btn btn-ghost btn-block", tr("lessonRepeat"));
+    again.addEventListener("click", () => startLesson(lesson.course, lesson.ref));
+    actions.append(again);
+    box.append(actions);
+    body.append(box);
+  }
+
+  $("btn-lesson-back").addEventListener("click", () => { currentTab = "lessons"; showPicker(); });
+  $("btn-reset-progress").addEventListener("click", () => {
+    if (!window.confirm(tr("resetConfirm"))) return;
+    try { localStorage.removeItem(PROGRESS_KEY); } catch (e) { /* storage unavailable */ }
+    renderCourses();
+  });
 
   // ---------- eye candy ----------
   function heartBurst(el) {

@@ -655,6 +655,118 @@ h1 { color: var(--rose); font-size: clamp(28px, 8vw, 44px); line-height: 1.25; m
 .review .yours { color: var(--bad); }
 .review .right { color: var(--ok); }
 
+/* ---------- tabs: Tests / Lessons ---------- */
+.tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  margin: 18px 0 4px;
+  padding: 4px;
+  background: var(--blush);
+  border-radius: 999px;
+}
+.tabs [role=tab] {
+  font: inherit; font-weight: 700; font-size: 16px;
+  min-height: 46px;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--wine);
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: background 150ms, color 150ms;
+}
+.tabs [role=tab][aria-selected="true"] {
+  background: linear-gradient(135deg, var(--btn-1), var(--btn-2));
+  color: var(--on-accent);
+  box-shadow: 0 3px 0 var(--accent-shadow);
+}
+.lessons-intro { margin: 14px 0 6px; font-size: 14px; opacity: .8; }
+.reset-btn { margin: 18px auto 0; font-size: 13px; opacity: .75; }
+
+/* ---------- course list ---------- */
+.course-head { display: flex; align-items: center; gap: 12px; text-align: left; margin-top: 10px; }
+.course-emoji { font-size: 36px; }
+.course-title { margin: 0; color: var(--rose); font-size: 22px; line-height: 1.25; }
+.course-sub { margin: 2px 0 0; font-size: 14px; }
+.course-progress { margin: 12px 0 4px; }
+.course-count { margin: 0 0 6px; font-size: 13px; font-weight: 700; text-align: right; }
+
+.lesson-cat { margin-top: 16px; text-align: left; }
+.lesson-cat-title {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 8px;
+  margin: 0 0 8px;
+  font-family: "Quicksand", "Comfortaa", sans-serif; font-weight: 700; font-size: 17px;
+  color: var(--rose-dark);
+}
+.lesson-cat-count { font-size: 13px; color: var(--wine); opacity: .7; }
+
+.lesson-item {
+  font: inherit;
+  color: var(--wine);
+  display: flex; align-items: center; gap: 12px;
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 10px 12px;
+  text-align: left;
+  background: var(--surface-2);
+  border: 2px solid var(--blush);
+  border-radius: 16px;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: transform 120ms, border-color 120ms;
+}
+.lesson-item:active { transform: scale(0.98); border-color: var(--rose); }
+.lesson-item.done { border-color: var(--ok-line); }
+.lesson-num {
+  flex-shrink: 0;
+  width: 32px; height: 32px; line-height: 32px;
+  border-radius: 50%;
+  text-align: center; font-weight: 700;
+  background: var(--blush);
+}
+.lesson-item.done .lesson-num { background: var(--ok); color: #fff; }
+.lesson-item-body { display: flex; flex-direction: column; gap: 3px; flex: 1; min-width: 0; }
+.lesson-item-title { font-weight: 700; }
+.lesson-item-meta { display: flex; align-items: center; gap: 8px; }
+.lesson-item-meta .level-tag { margin: 0; font-size: 11px; padding: 1px 7px; }
+.lesson-stars { color: var(--gold); letter-spacing: 1px; font-size: 15px; }
+.lesson-stars.big { font-size: 30px; margin: 4px 0; }
+
+/* ---------- lesson player ---------- */
+.lesson-head { display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; margin: 4px 0 10px; }
+.lesson-head h2 { margin: 0; font-size: 22px; color: var(--rose); }
+.lesson-head .level-tag { margin: 0; }
+.lesson-step-label { margin: 6px 0 10px; font-size: 13px; font-weight: 700; color: var(--rose-dark); }
+.lesson-card {
+  padding: 18px 16px;
+  margin-bottom: 16px;
+  background: var(--surface-2);
+  border: 2px solid var(--blush);
+  border-radius: 20px;
+  animation: fadeIn 300ms ease;
+}
+.lesson-phrase {
+  margin: 0 0 10px;
+  font-size: 24px; font-weight: 700; line-height: 1.3;
+  color: var(--rose);
+}
+.lesson-meaning { margin: 0 0 14px; font-size: 16px; }
+.lesson-example {
+  text-align: left;
+  padding: 10px 12px;
+  border-left: 4px solid var(--rose);
+  border-radius: 0 12px 12px 0;
+  background: var(--cream);
+}
+.lesson-example p { margin: 2px 0 0; font-style: italic; }
+.lesson-example-label { font-size: 11px; font-weight: 700; letter-spacing: .8px; text-transform: uppercase; color: var(--rose-dark); }
+.lesson-note { margin: 12px 0 0; font-size: 14px; opacity: .85; }
+.lesson-done-title { margin: 4px 0; color: var(--rose); }
+.lesson-summary .prof { margin: 14px auto 18px; max-width: 460px; }
+.lesson-all-done { font-weight: 700; color: var(--rose-dark); }
+#lesson-body .feedback .btn-block { margin-top: 4px; }
+
 /* ---------- very small phones (iPhone SE 1st gen, small Androids) ---------- */
 @media (max-width: 360px) {
   .table { padding-left: max(8px, env(safe-area-inset-left)); padding-right: max(8px, env(safe-area-inset-right)); }

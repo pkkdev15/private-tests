@@ -1,0 +1,5 @@
+{
+  "courses": [
+    { "id": "polish", "file": "lessons/polish.json" }
+  ]
+}

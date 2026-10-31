@@ -1,0 +1,911 @@
+{
+  "id": "polish",
+  "lang": "pl",
+  "emoji": "🇵🇱",
+  "title": "Polski na randce",
+  "subtitle": {
+    "en": "Short Polish lessons: sayings, slang, flirting and tongue-twisters",
+    "pl": "Krótkie lekcje polskiego: powiedzenia, slang, flirt i łamańce językowe",
+    "ru": "Короткие уроки польского: поговорки, сленг, флирт и скороговорки"
+  },
+  "categories": [
+    {
+      "id": "sayings",
+      "emoji": "🦉",
+      "title": { "en": "Sayings & proverbs", "pl": "Powiedzenia i przysłowia", "ru": "Поговорки и пословицы" },
+      "lessons": [
+        {
+          "id": "sayings-love",
+          "level": "B1",
+          "title": { "en": "Love proverbs", "pl": "Przysłowia o miłości", "ru": "Пословицы о любви" },
+          "cards": [
+            {
+              "phrase": "Kto się czubi, ten się lubi.",
+              "meaning": {
+                "en": "Those who bicker like each other - teasing is a sign of affection.",
+                "pl": "Kto się często sprzecza, ten tak naprawdę się lubi.",
+                "ru": "Милые бранятся — только тешатся."
+              },
+              "example": "Ciągle się kłócicie? No cóż, kto się czubi, ten się lubi. 😏"
+            },
+            {
+              "phrase": "Przez żołądek do serca.",
+              "meaning": {
+                "en": "The way to someone's heart is through their stomach.",
+                "pl": "Najłatwiej zdobyć czyjeś serce dobrym jedzeniem.",
+                "ru": "Путь к сердцу лежит через желудок."
+              },
+              "example": "Ugotował jej pierogi. Przez żołądek do serca!"
+            },
+            {
+              "phrase": "Nie ma róży bez kolców.",
+              "meaning": {
+                "en": "There's no rose without thorns - every good thing has its downside.",
+                "pl": "Wszystko, co piękne, ma też swoje wady.",
+                "ru": "Нет розы без шипов."
+              },
+              "example": "Jest idealny, tylko chrapie. Cóż, nie ma róży bez kolców."
+            }
+          ],
+          "practice": [
+            {
+              "question": "Kto się czubi, ten się ____.",
+              "options": ["lubi", "kocha", "czubi", "bije"],
+              "answer": 0,
+              "explanation": {
+                "en": "The saying rhymes: czubi - lubi.",
+                "pl": "Przysłowie się rymuje: czubi – lubi.",
+                "ru": "Пословица рифмуется: czubi – lubi."
+              }
+            },
+            {
+              "question": {
+                "en": "Your date cooked you a three-course dinner. Which saying fits?",
+                "pl": "Randka ugotowała ci trzydaniową kolację. Które przysłowie pasuje?",
+                "ru": "Твоя пара приготовила тебе ужин из трёх блюд. Какая пословица подходит?"
+              },
+              "options": ["Przez żołądek do serca.", "Nie ma róży bez kolców.", "Kto się czubi, ten się lubi.", "Nie mój cyrk, nie moje małpy."],
+              "answer": 0,
+              "explanation": {
+                "en": "Good food leads straight to the heart.",
+                "pl": "Dobre jedzenie prowadzi prosto do serca.",
+                "ru": "Вкусная еда — прямая дорога к сердцу."
+              }
+            },
+            {
+              "question": {
+                "en": "\"Nie ma róży bez kolców\" means:",
+                "pl": "„Nie ma róży bez kolców” znaczy:",
+                "ru": "«Nie ma róży bez kolców» значит:"
+              },
+              "options": [
+                { "en": "Every good thing has a downside.", "pl": "Wszystko, co dobre, ma też wady.", "ru": "У всего хорошего есть недостатки." },
+                { "en": "Never buy roses for a date.", "pl": "Nigdy nie kupuj róż na randkę.", "ru": "Никогда не дари розы на свидании." },
+                { "en": "Love always hurts.", "pl": "Miłość zawsze boli.", "ru": "Любовь всегда ранит." },
+                { "en": "Roses are expensive.", "pl": "Róże są drogie.", "ru": "Розы дорогие." }
+              ],
+              "answer": 0,
+              "explanation": {
+                "en": "Same as in English: no rose without thorns.",
+                "pl": "Nawet najpiękniejsze rzeczy mają swoje minusy.",
+                "ru": "Как и в русском: нет розы без шипов."
+              }
+            }
+          ]
+        },
+        {
+          "id": "sayings-life",
+          "level": "B2",
+          "title": { "en": "Everyday sayings", "pl": "Powiedzenia na co dzień", "ru": "Повседневные выражения" },
+          "cards": [
+            {
+              "phrase": "Nie mój cyrk, nie moje małpy.",
+              "meaning": {
+                "en": "Not my circus, not my monkeys - not my problem.",
+                "pl": "To nie moja sprawa, nie wtrącam się.",
+                "ru": "Не мой цирк, не мои обезьяны — не моё дело."
+              },
+              "example": "Twoja siostra znowu kłóci się z chłopakiem? Nie mój cyrk, nie moje małpy."
+            },
+            {
+              "phrase": "Co ma piernik do wiatraka?",
+              "meaning": {
+                "en": "What does gingerbread have to do with a windmill? - What's the connection?",
+                "pl": "Co jedno ma wspólnego z drugim? Mówi się o czymś bez związku.",
+                "ru": "При чём тут пряник и мельница? — Как «в огороде бузина, а в Киеве дядька»."
+              },
+              "example": "Pytam o kolację, a ty o pogodzie. Co ma piernik do wiatraka?"
+            },
+            {
+              "phrase": "Darowanemu koniowi w zęby się nie zagląda.",
+              "meaning": {
+                "en": "Don't look a gift horse in the mouth.",
+                "pl": "Nie krytykuje się prezentów.",
+                "ru": "Дарёному коню в зубы не смотрят."
+              },
+              "example": "Skarpetki na walentynki? Darowanemu koniowi w zęby się nie zagląda."
+            }
+          ],
+          "practice": [
+            {
+              "question": "Nie mój cyrk, nie moje ____.",
+              "options": ["małpy", "słonie", "problemy", "klauny"],
+              "answer": 0,
+              "explanation": {
+                "en": "Małpy = monkeys. The circus and the monkeys belong to someone else.",
+                "pl": "Małpy – cyrk i małpy należą do kogoś innego.",
+                "ru": "Małpy — обезьяны: и цирк, и обезьяны чужие."
+              }
+            },
+            {
+              "question": "Darowanemu koniowi w ____ się nie zagląda.",
+              "options": ["zęby", "oczy", "kopyta", "uszy"],
+              "answer": 0,
+              "explanation": {
+                "en": "Zęby = teeth - that's how people checked a horse's age.",
+                "pl": "W zęby – tak sprawdzano wiek konia.",
+                "ru": "В зубы — как и в русском."
+              }
+            },
+            {
+              "question": {
+                "en": "You ask about dinner, and your date tells you about their dentist. You say:",
+                "pl": "Pytasz o kolację, a randka opowiada o dentyście. Mówisz:",
+                "ru": "Ты спрашиваешь об ужине, а твоя пара рассказывает о стоматологе. Ты говоришь:"
+              },
+              "options": ["Co ma piernik do wiatraka?", "Nie mój cyrk, nie moje małpy.", "Kto się czubi, ten się lubi.", "Przez żołądek do serca."],
+              "answer": 0,
+              "explanation": {
+                "en": "Gingerbread and a windmill have nothing in common - just like dinner and the dentist.",
+                "pl": "Piernik i wiatrak nie mają ze sobą nic wspólnego – tak jak kolacja i dentysta.",
+                "ru": "У пряника и мельницы нет ничего общего — как у ужина и стоматолога."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "idioms",
+      "emoji": "🎭",
+      "title": { "en": "Idioms", "pl": "Idiomy i frazeologia", "ru": "Идиомы" },
+      "lessons": [
+        {
+          "id": "idioms-feelings",
+          "level": "B1",
+          "title": { "en": "Falling in love", "pl": "Zakochanie", "ru": "Влюблённость" },
+          "cards": [
+            {
+              "phrase": "mieć motyle w brzuchu",
+              "meaning": {
+                "en": "to have butterflies in your stomach",
+                "pl": "czuć ekscytację i tremę z powodu zakochania",
+                "ru": "бабочки в животе"
+              },
+              "example": "Kiedy do mnie pisze, mam motyle w brzuchu."
+            },
+            {
+              "phrase": "stracić dla kogoś głowę",
+              "meaning": {
+                "en": "to lose your head over someone - to fall madly in love",
+                "pl": "zakochać się bez pamięci",
+                "ru": "потерять голову от кого-то"
+              },
+              "example": "Straciła dla niego głowę po pierwszej randce."
+            },
+            {
+              "phrase": "być w siódmym niebie",
+              "meaning": {
+                "en": "to be in seventh heaven - extremely happy",
+                "pl": "być bardzo szczęśliwym",
+                "ru": "быть на седьмом небе"
+              },
+              "example": "Oświadczył się! Jestem w siódmym niebie!"
+            }
+          ],
+          "practice": [
+            {
+              "question": "Kiedy go widzę, mam ____ w brzuchu.",
+              "options": ["motyle", "pszczoły", "ptaki", "robaki"],
+              "answer": 0,
+              "explanation": {
+                "en": "Butterflies - motyle, just like in English.",
+                "pl": "Motyle – symbol zakochania.",
+                "ru": "Бабочки — motyle, как в русском."
+              }
+            },
+            {
+              "question": "Jestem w ____ niebie!",
+              "options": ["siódmym", "dziewiątym", "trzecim", "ostatnim"],
+              "answer": 0,
+              "explanation": {
+                "en": "Seventh heaven = siódme niebo; in the locative: w siódmym niebie.",
+                "pl": "Siódme niebo; w miejscowniku: w siódmym niebie.",
+                "ru": "Седьмое небо; в предложном падеже: w siódmym niebie."
+              }
+            },
+            {
+              "question": "Stracił dla niej ____.",
+              "options": ["głowę", "serce", "rozum", "portfel"],
+              "answer": 0,
+              "explanation": {
+                "en": "Stracić dla kogoś głowę = to lose your head over someone. The wallet usually goes later.",
+                "pl": "Stracić dla kogoś głowę = zakochać się. Portfel traci się zwykle później.",
+                "ru": "Stracić głowę = потерять голову. Кошелёк обычно теряют позже."
+              }
+            }
+          ]
+        },
+        {
+          "id": "idioms-relationships",
+          "level": "B2",
+          "title": { "en": "Relationships", "pl": "Związki", "ru": "Отношения" },
+          "cards": [
+            {
+              "phrase": "wpaść komuś w oko",
+              "meaning": {
+                "en": "to catch someone's eye - someone likes you (literally: to fall into someone's eye)",
+                "pl": "spodobać się komuś",
+                "ru": "приглянуться кому-то (дословно: «упасть в глаз»)"
+              },
+              "example": "Chyba ktoś wpadł ci w oko. Cały wieczór patrzysz w stronę baru."
+            },
+            {
+              "phrase": "chodzić z kimś",
+              "meaning": {
+                "en": "to go out with someone - to be in a relationship (literally: to walk with someone)",
+                "pl": "być z kimś w związku",
+                "ru": "встречаться с кем-то (дословно: «ходить с кем-то»)"
+              },
+              "example": "Od kiedy ze sobą chodzicie? – Od wczoraj. Ale to coś poważnego."
+            },
+            {
+              "phrase": "zerwać z kimś",
+              "meaning": {
+                "en": "to break up with someone",
+                "pl": "zakończyć z kimś związek",
+                "ru": "расстаться с кем-то, порвать"
+              },
+              "example": "Zerwała z nim przez SMS-a. Zimne."
+            }
+          ],
+          "practice": [
+            {
+              "question": "Od miesiąca ____ z Kasią. – Gratulacje!",
+              "options": ["chodzę", "idę", "spaceruję", "jeżdżę"],
+              "answer": 0,
+              "explanation": {
+                "en": "Chodzić z kimś = to date someone. \"Idę z Kasią\" only means you're walking with her right now.",
+                "pl": "Chodzić z kimś = być w związku. „Idę z Kasią” znaczy tylko, że teraz razem idziecie.",
+                "ru": "Chodzić z kimś = встречаться. «Idę z Kasią» значит лишь, что вы сейчас идёте вместе."
+              }
+            },
+            {
+              "question": "Zerwała ____ nim przez SMS-a.",
+              "options": ["z", "od", "do", "na"],
+              "answer": 0,
+              "explanation": {
+                "en": "Zerwać z kimś - always \"z\" + instrumental.",
+                "pl": "Zerwać z kimś – zawsze „z” + narzędnik.",
+                "ru": "Zerwać z kimś — всегда «z» + творительный."
+              }
+            },
+            {
+              "question": {
+                "en": "\"Wpadła mi w oko\" means:",
+                "pl": "„Wpadła mi w oko” znaczy:",
+                "ru": "«Wpadła mi w oko» значит:"
+              },
+              "options": [
+                { "en": "She caught my eye - I like her.", "pl": "Spodobała mi się.", "ru": "Она мне приглянулась." },
+                { "en": "Something got in my eye.", "pl": "Coś wpadło mi do oka.", "ru": "Мне что-то попало в глаз." },
+                { "en": "She hit me in the face.", "pl": "Uderzyła mnie w twarz.", "ru": "Она ударила меня по лицу." },
+                { "en": "She is my optician.", "pl": "Jest moją okulistką.", "ru": "Она мой окулист." }
+              ],
+              "answer": 0,
+              "explanation": {
+                "en": "Wpaść komuś w oko = to catch someone's eye. No eye drops needed.",
+                "pl": "Wpaść komuś w oko = spodobać się komuś. Krople do oczu nie będą potrzebne.",
+                "ru": "Wpaść komuś w oko = приглянуться. Глазные капли не понадобятся."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "colloquial",
+      "emoji": "🛹",
+      "title": { "en": "Colloquial Polish & slang", "pl": "Mowa potoczna i slang", "ru": "Разговорный польский и сленг" },
+      "lessons": [
+        {
+          "id": "slang-dating",
+          "level": "B1",
+          "title": { "en": "Dating slang", "pl": "Slang randkowy", "ru": "Сленг свиданий" },
+          "cards": [
+            {
+              "phrase": "spoko",
+              "meaning": {
+                "en": "cool, OK, no worries (from \"spokojnie\" - calmly)",
+                "pl": "w porządku, luz (od „spokojnie”)",
+                "ru": "норм, окей, без проблем (от «spokojnie» — спокойно)"
+              },
+              "example": "Spóźnię się 10 minut. – Spoko!"
+            },
+            {
+              "phrase": "wyrwać kogoś",
+              "meaning": {
+                "en": "to pull / pick someone up (literally: to tear someone out)",
+                "pl": "poderwać kogoś",
+                "ru": "закадрить, склеить кого-то (дословно: «вырвать»)"
+              },
+              "example": "Idziemy do klubu kogoś wyrwać? – Ja tylko potańczę."
+            },
+            {
+              "phrase": "masakra",
+              "meaning": {
+                "en": "a disaster, a nightmare (literally: massacre)",
+                "pl": "coś okropnego, koszmar",
+                "ru": "кошмар, жесть (дословно: «резня»)"
+              },
+              "example": "Randka była masakra: przyszedł z mamą."
+            }
+          ],
+          "practice": [
+            {
+              "question": {
+                "en": "Your date texts: \"Sorki, spóźnię się 10 minut!\" The most natural casual answer:",
+                "pl": "Randka pisze: „Sorki, spóźnię się 10 minut!”. Najbardziej naturalna luźna odpowiedź:",
+                "ru": "Твоя пара пишет: «Sorki, spóźnię się 10 minut!». Самый естественный непринуждённый ответ:"
+              },
+              "options": ["Spoko!", "Uprzejmie dziękuję za informację.", "Masakra, żegnaj na zawsze.", "Nie mój cyrk."],
+              "answer": 0,
+              "explanation": {
+                "en": "\"Spoko\" = no worries. The second answer sounds like a letter from your bank.",
+                "pl": "„Spoko” = nie ma sprawy. Druga odpowiedź brzmi jak pismo z banku.",
+                "ru": "«Spoko» = без проблем. Второй ответ звучит как письмо из банка."
+              }
+            },
+            {
+              "question": "Idziemy do klubu kogoś ____?",
+              "options": ["wyrwać", "wyrwić", "wyrwała", "wyrwanie"],
+              "answer": 0,
+              "explanation": {
+                "en": "Infinitive: wyrwać. Very casual - don't say it in front of your future mother-in-law.",
+                "pl": "Bezokolicznik: wyrwać. Bardzo potoczne – nie mów tak przy przyszłej teściowej.",
+                "ru": "Инфинитив: wyrwać. Очень разговорное — не говори так при будущей тёще."
+              }
+            },
+            {
+              "question": {
+                "en": "\"Ta randka to była masakra\" most likely means:",
+                "pl": "„Ta randka to była masakra” najczęściej znaczy:",
+                "ru": "«Ta randka to była masakra» чаще всего значит:"
+              },
+              "options": [
+                { "en": "The date was a disaster.", "pl": "Randka była okropna.", "ru": "Свидание было ужасным." },
+                { "en": "There was a fight with weapons.", "pl": "Była bójka z bronią.", "ru": "Была драка с оружием." },
+                { "en": "The date was at a butcher's.", "pl": "Randka odbyła się u rzeźnika.", "ru": "Свидание было у мясника." },
+                { "en": "The date lasted very long.", "pl": "Randka trwała bardzo długo.", "ru": "Свидание длилось очень долго." }
+              ],
+              "answer": 0,
+              "explanation": {
+                "en": "In everyday speech \"masakra\" = disaster, nightmare. No actual massacre involved.",
+                "pl": "W mowie potocznej „masakra” = coś okropnego. Bez prawdziwej rzezi.",
+                "ru": "В разговорной речи «masakra» = кошмар, жесть. Без настоящей резни."
+              }
+            }
+          ]
+        },
+        {
+          "id": "slang-fillers",
+          "level": "B2",
+          "title": { "en": "Fillers & casual words", "pl": "Wtrącenia i słówka potoczne", "ru": "Разговорные словечки" },
+          "cards": [
+            {
+              "phrase": "No!",
+              "meaning": {
+                "en": "Yes! / Well… - in casual Polish \"no\" very often means YES",
+                "pl": "potoczne „tak” albo „no więc”",
+                "ru": "Да! / Ну… — в разговорном польском «no» очень часто значит ДА"
+              },
+              "example": "Idziesz ze mną na kawę? – No!"
+            },
+            {
+              "phrase": "Weź…",
+              "meaning": {
+                "en": "Come on… / Stop it… (literally: take) - to protest, tease or hide embarrassment",
+                "pl": "wyraża protest, zniecierpliwienie albo zawstydzenie",
+                "ru": "Да ладно… / Перестань… (дословно: «возьми»)"
+              },
+              "example": "Masz piękne oczy. – Weź, bo się zarumienię!"
+            },
+            {
+              "phrase": "w sumie",
+              "meaning": {
+                "en": "actually, all things considered",
+                "pl": "właściwie, jak się zastanowić",
+                "ru": "в принципе, вообще-то"
+              },
+              "example": "Nie lubię kina. W sumie… z tobą mogę iść."
+            }
+          ],
+          "practice": [
+            {
+              "question": {
+                "en": "\"Idziesz ze mną na kawę?\" - \"No!\" The answer means:",
+                "pl": "„Idziesz ze mną na kawę?” – „No!”. Odpowiedź znaczy:",
+                "ru": "«Idziesz ze mną na kawę?» — «No!». Ответ значит:"
+              },
+              "options": [
+                { "en": "Yes!", "pl": "Tak!", "ru": "Да!" },
+                { "en": "No!", "pl": "Nie!", "ru": "Нет!" },
+                { "en": "Maybe.", "pl": "Może.", "ru": "Может быть." },
+                { "en": "Who are you?", "pl": "Kim jesteś?", "ru": "Ты кто?" }
+              ],
+              "answer": 0,
+              "explanation": {
+                "en": "The classic trap: Polish \"no\" = yes. \"Nie\" = no.",
+                "pl": "Klasyczna pułapka dla obcokrajowców: „no” = tak, „nie” = nie.",
+                "ru": "Классическая ловушка: польское «no» = да. «Nie» = нет."
+              }
+            },
+            {
+              "question": {
+                "en": "You get a compliment and you're embarrassed. You say:",
+                "pl": "Dostajesz komplement i się wstydzisz. Mówisz:",
+                "ru": "Тебе сделали комплимент, и ты смущаешься. Ты говоришь:"
+              },
+              "options": ["Weź, bo się zarumienię!", "W sumie spoko.", "No.", "Masakra."],
+              "answer": 0,
+              "explanation": {
+                "en": "\"Weź…\" = come on, stop it - perfect when you're blushing.",
+                "pl": "„Weź…” = przestań, zawstydzasz mnie.",
+                "ru": "«Weź…» = да ладно, перестань — идеально, когда краснеешь."
+              }
+            },
+            {
+              "question": "Nie lubię tańczyć. W ____… z tobą mogę spróbować.",
+              "options": ["sumie", "sumę", "sumach", "suma"],
+              "answer": 0,
+              "explanation": {
+                "en": "Fixed phrase: w sumie (locative of \"suma\").",
+                "pl": "Stałe wyrażenie: w sumie (miejscownik od „suma”).",
+                "ru": "Устойчивое выражение: w sumie (предложный падеж от «suma»)."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "diminutives",
+      "emoji": "🧸",
+      "title": { "en": "Diminutives & pet names", "pl": "Zdrobnienia i czułe słówka", "ru": "Уменьшительные и ласковые слова" },
+      "lessons": [
+        {
+          "id": "dimin-petnames",
+          "level": "A2",
+          "title": { "en": "Pet names", "pl": "Czułe słówka", "ru": "Ласковые прозвища" },
+          "cards": [
+            {
+              "phrase": "kotku, misiu, żabko",
+              "meaning": {
+                "en": "kitty, teddy bear, little frog - Polish couples love animal pet names (in the vocative!)",
+                "pl": "najpopularniejsze czułe słówka – w wołaczu",
+                "ru": "котик, мишка, лягушонок — поляки обожают «зоопарк» (в звательном падеже!)"
+              },
+              "example": "Dobranoc, misiu! 🧸"
+            },
+            {
+              "phrase": "kochanie, skarbie",
+              "meaning": {
+                "en": "darling, treasure",
+                "pl": "najbardziej klasyczne czułe słówka",
+                "ru": "любимый/любимая, сокровище"
+              },
+              "example": "Kochanie, gdzie są moje klucze? – Tam, gdzie zawsze, skarbie."
+            },
+            {
+              "phrase": "słoneczko",
+              "meaning": {
+                "en": "little sun - a diminutive of \"słońce\"",
+                "pl": "zdrobnienie od „słońce”",
+                "ru": "солнышко — уменьшительное от «słońce»"
+              },
+              "example": "Dzień dobry, słoneczko! ☀️"
+            }
+          ],
+          "practice": [
+            {
+              "question": "Dobranoc, ____! 🧸 (miś)",
+              "options": ["misiu", "miś", "misia", "misiem"],
+              "answer": 0,
+              "explanation": {
+                "en": "Vocative of \"miś\": misiu.",
+                "pl": "Wołacz od „miś”: misiu.",
+                "ru": "Звательный падеж от «miś»: misiu."
+              }
+            },
+            {
+              "question": "Dzień dobry, ____! ☀️ (słońce)",
+              "options": ["słoneczko", "słońcu", "słońcem", "słoneczny"],
+              "answer": 0,
+              "explanation": {
+                "en": "Słońce → słoneczko. Neuter nouns look the same in the vocative.",
+                "pl": "Słońce → słoneczko. Rzeczowniki nijakie w wołaczu się nie zmieniają.",
+                "ru": "Słońce → słoneczko. Существительные среднего рода в звательном не меняются."
+              }
+            },
+            {
+              "question": "Gdzie są moje klucze, ____?",
+              "options": ["kochanie", "kochaniu", "kochaniem", "kochania"],
+              "answer": 0,
+              "explanation": {
+                "en": "\"Kochanie\" is neuter - vocative = nominative.",
+                "pl": "„Kochanie” jest rodzaju nijakiego – wołacz = mianownik.",
+                "ru": "«Kochanie» среднего рода — звательный = именительный."
+              }
+            }
+          ]
+        },
+        {
+          "id": "dimin-everyday",
+          "level": "B1",
+          "title": { "en": "Little things: kawka, piwko", "pl": "Zdrobnienia na co dzień: kawka, piwko", "ru": "Уменьшительные в быту: kawka, piwko" },
+          "cards": [
+            {
+              "phrase": "kawka, herbatka",
+              "meaning": {
+                "en": "a little coffee, a little tea - diminutives make an invitation sound friendly",
+                "pl": "zdrobnienia brzmią przyjaźnie i niezobowiązująco",
+                "ru": "кофеёк, чаёк — уменьшительные делают приглашение дружелюбным"
+              },
+              "example": "Wpadniesz na kawkę? 😏"
+            },
+            {
+              "phrase": "piwko, winko",
+              "meaning": {
+                "en": "a little beer, a little wine (usually not little at all)",
+                "pl": "„małe” piwko – zwykle wcale nie małe",
+                "ru": "пивко, винцо (обычно совсем не маленькие)"
+              },
+              "example": "Idziemy na jedno piwko? – Jedno, jasne…"
+            },
+            {
+              "phrase": "chwileczkę, momencik",
+              "meaning": {
+                "en": "just a sec - diminutives of \"chwila\" and \"moment\"",
+                "pl": "zdrobnienia od „chwila” i „moment” – grzeczniej i łagodniej",
+                "ru": "минуточку, моментик"
+              },
+              "example": "Momencik, tylko poprawię makijaż. (40 minut później…)"
+            }
+          ],
+          "practice": [
+            {
+              "question": "Wpadniesz do mnie na ____? 😏 (kawa)",
+              "options": ["kawkę", "kawka", "kawce", "kawką"],
+              "answer": 0,
+              "explanation": {
+                "en": "Na + accusative: na kawkę, na herbatkę.",
+                "pl": "Na + biernik: na kawkę, na herbatkę.",
+                "ru": "Na + винительный: na kawkę, na herbatkę."
+              }
+            },
+            {
+              "question": {
+                "en": "The diminutive of \"piwo\" is:",
+                "pl": "Zdrobnienie od „piwo” to:",
+                "ru": "Уменьшительное от «piwo»:"
+              },
+              "options": ["piwko", "piwczyk", "piwak", "piwunek"],
+              "answer": 0,
+              "explanation": {
+                "en": "Piwo → piwko, wino → winko, mleko → mleczko.",
+                "pl": "Piwo → piwko, wino → winko, mleko → mleczko.",
+                "ru": "Piwo → piwko, wino → winko, mleko → mleczko."
+              }
+            },
+            {
+              "question": "Poczekaj ____, tylko poprawię makijaż.",
+              "options": ["chwileczkę", "chwileczka", "chwileczce", "chwileczką"],
+              "answer": 0,
+              "explanation": {
+                "en": "Accusative: poczekaj chwileczkę - wait a moment. Means anything from 1 to 40 minutes.",
+                "pl": "Biernik: poczekaj chwileczkę. Oznacza od 1 do 40 minut.",
+                "ru": "Винительный: poczekaj chwileczkę — подожди минуточку. Значит от 1 до 40 минут."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "flirt",
+      "emoji": "🌹",
+      "title": { "en": "Compliments & flirting", "pl": "Komplementy i flirt", "ru": "Комплименты и флирт" },
+      "lessons": [
+        {
+          "id": "flirt-compliments",
+          "level": "A2",
+          "title": { "en": "Compliments", "pl": "Komplementy", "ru": "Комплименты" },
+          "cards": [
+            {
+              "phrase": "Ładnie ci w tym.",
+              "meaning": {
+                "en": "You look nice in that (literally: it's nice to you in that).",
+                "pl": "Dobrze wyglądasz w tym ubraniu.",
+                "ru": "Тебе идёт (дословно: «красиво тебе в этом»)."
+              },
+              "example": "Ładnie ci w tej sukience. / Ładnie ci w tej koszuli."
+            },
+            {
+              "phrase": "Masz piękny uśmiech.",
+              "meaning": {
+                "en": "You have a beautiful smile.",
+                "pl": "Klasyczny, bezpieczny komplement.",
+                "ru": "У тебя красивая улыбка."
+              },
+              "example": "Masz piękny uśmiech. I szpinak między zębami. Ale uśmiech piękny."
+            },
+            {
+              "phrase": "Podobasz mi się.",
+              "meaning": {
+                "en": "I like you / I find you attractive (literally: you please me).",
+                "pl": "Jesteś dla mnie atrakcyjny / atrakcyjna.",
+                "ru": "Ты мне нравишься."
+              },
+              "example": "Muszę ci coś powiedzieć… podobasz mi się."
+            }
+          ],
+          "practice": [
+            {
+              "question": "Ładnie ____ w tej sukience.",
+              "options": ["ci", "ty", "cię", "tobą"],
+              "answer": 0,
+              "explanation": {
+                "en": "Dative: it looks nice on someone → ładnie ci.",
+                "pl": "Celownik: komuś jest ładnie w czymś → ładnie ci.",
+                "ru": "Дательный: кому-то идёт → ładnie ci (как «тебе»)."
+              }
+            },
+            {
+              "question": "Bardzo mi się ____.",
+              "options": ["podobasz", "lubisz", "kochasz", "podoba"],
+              "answer": 0,
+              "explanation": {
+                "en": "Podobać się: you please me → (ty) podobasz mi się.",
+                "pl": "Podobać się: ty podobasz się mnie → podobasz mi się.",
+                "ru": "Podobać się: ты нравишься мне → podobasz mi się."
+              }
+            },
+            {
+              "question": "Masz ____ uśmiech.",
+              "options": ["piękny", "piękna", "piękne", "pięknie"],
+              "answer": 0,
+              "explanation": {
+                "en": "\"Uśmiech\" is masculine → piękny uśmiech.",
+                "pl": "„Uśmiech” jest rodzaju męskiego → piękny uśmiech.",
+                "ru": "«Uśmiech» мужского рода → piękny uśmiech."
+              }
+            }
+          ]
+        },
+        {
+          "id": "flirt-invite",
+          "level": "B1",
+          "title": { "en": "Asking someone out", "pl": "Zaproszenie na randkę", "ru": "Пригласить на свидание" },
+          "cards": [
+            {
+              "phrase": "Dasz się zaprosić na kawę?",
+              "meaning": {
+                "en": "Will you let me take you out for coffee? (polite and charming)",
+                "pl": "uprzejme, czarujące zaproszenie",
+                "ru": "Позволишь пригласить тебя на кофе? (вежливо и обаятельно)"
+              },
+              "example": "Dasz się zaprosić na kawę? Albo na dwie."
+            },
+            {
+              "phrase": "Może się kiedyś umówimy?",
+              "meaning": {
+                "en": "Maybe we could go out sometime? (umówić się = to arrange a date)",
+                "pl": "„umówić się” = zaplanować spotkanie, randkę",
+                "ru": "Может, как-нибудь встретимся? («umówić się» = договориться о встрече)"
+              },
+              "example": "Może się kiedyś umówimy? Na przykład dziś o ósmej."
+            },
+            {
+              "phrase": "Odprowadzę cię.",
+              "meaning": {
+                "en": "I'll walk you home.",
+                "pl": "propozycja odprowadzenia do domu",
+                "ru": "Я тебя провожу."
+              },
+              "example": "Już późno. Odprowadzę cię. Tylko do drzwi. Chyba."
+            }
+          ],
+          "practice": [
+            {
+              "question": "Może się kiedyś ____?",
+              "options": ["umówimy", "umawiamy", "umówiliśmy", "umówić"],
+              "answer": 0,
+              "explanation": {
+                "en": "Perfective future: umówimy się = we'll arrange a date.",
+                "pl": "Czas przyszły dokonany: umówimy się.",
+                "ru": "Будущее совершенного вида: umówimy się."
+              }
+            },
+            {
+              "question": "Dasz się ____ na kawę?",
+              "options": ["zaprosić", "zapraszasz", "zaproszony", "zaproś"],
+              "answer": 0,
+              "explanation": {
+                "en": "Dać się + infinitive = to let yourself be…: dasz się zaprosić?",
+                "pl": "Dać się + bezokolicznik: dasz się zaprosić?",
+                "ru": "Dać się + инфинитив = позволить себя…: dasz się zaprosić?"
+              }
+            },
+            {
+              "question": "Już późno. ____ cię do domu.",
+              "options": ["Odprowadzę", "Wyprowadzę", "Rozprowadzę", "Przeprowadzę"],
+              "answer": 0,
+              "explanation": {
+                "en": "Odprowadzić kogoś = to walk someone home. \"Wyprowadzić\" is what you do with a dog.",
+                "pl": "Odprowadzić kogoś do domu. „Wyprowadza się” psa.",
+                "ru": "Odprowadzić = проводить. «Wyprowadzić» — так выгуливают собаку."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pronunciation",
+      "emoji": "👅",
+      "title": { "en": "Pronunciation & tongue-twisters", "pl": "Wymowa i łamańce językowe", "ru": "Произношение и скороговорки" },
+      "lessons": [
+        {
+          "id": "pron-sounds",
+          "level": "A1",
+          "title": { "en": "sz, cz, rz, ż, ą, ę", "pl": "sz, cz, rz, ż, ą, ę", "ru": "sz, cz, rz, ż, ą, ę" },
+          "cards": [
+            {
+              "phrase": "sz, cz",
+              "meaning": {
+                "en": "sz ≈ English \"sh\", cz ≈ \"ch\": szampan, czekolada",
+                "pl": "sz jak w „szampan”, cz jak w „czekolada”",
+                "ru": "sz ≈ «ш», cz ≈ «ч»: szampan, czekolada"
+              },
+              "example": "Szampan i czekolada – idealna randka."
+            },
+            {
+              "phrase": "rz = ż",
+              "meaning": {
+                "en": "rz and ż sound the same (like \"s\" in \"pleasure\"): rzeka, żaba",
+                "pl": "rz i ż brzmią tak samo: rzeka, żaba",
+                "ru": "rz и ż звучат одинаково (≈ «ж»): rzeka, żaba"
+              },
+              "example": "Żaba i rzeka – brzmią podobnie, piszą się inaczej."
+            },
+            {
+              "phrase": "ą, ę",
+              "meaning": {
+                "en": "nasal vowels: ą ≈ \"on\", ę ≈ \"en\": mąż (husband), ręka (hand)",
+                "pl": "samogłoski nosowe: mąż, ręka",
+                "ru": "носовые гласные: ą ≈ «он», ę ≈ «эн»: mąż (муж), ręka (рука)"
+              },
+              "example": "Proszę o rękę… twojej córki."
+            }
+          ],
+          "practice": [
+            {
+              "question": {
+                "en": "Choose the correct spelling of \"husband\":",
+                "pl": "Wybierz poprawną pisownię słowa oznaczającego męża:",
+                "ru": "Выбери правильное написание слова «муж»:"
+              },
+              "options": ["mąż", "monż", "mąsz", "mosz"],
+              "answer": 0,
+              "explanation": {
+                "en": "Mąż: ą in the middle, ż at the end (pronounced like \"sh\" at the end of a word).",
+                "pl": "Mąż: „ą” w środku i „ż” na końcu.",
+                "ru": "Mąż: «ą» в середине и «ż» на конце (в конце слова звучит как «ш»)."
+              }
+            },
+            {
+              "question": {
+                "en": "Choose the correct spelling of \"chocolate\":",
+                "pl": "Wybierz poprawną pisownię:",
+                "ru": "Выбери правильное написание слова «шоколад»:"
+              },
+              "options": ["czekolada", "chekolada", "tschekolada", "szekolada"],
+              "answer": 0,
+              "explanation": {
+                "en": "Cz = \"ch\". Czekolada - the second most important word on a date.",
+                "pl": "Cz jak w „czekolada” – drugie najważniejsze słowo na randce.",
+                "ru": "Cz = «ч». Czekolada — второе по важности слово на свидании."
+              }
+            },
+            {
+              "question": "Płyniemy łódką po ____. Romantycznie!",
+              "options": ["rzece", "żece", "rzeże", "żeże"],
+              "answer": 0,
+              "explanation": {
+                "en": "Rzeka → po rzece (locative). Rz and ż sound the same, so the spelling has to be memorised.",
+                "pl": "Rzeka → po rzece. Rz i ż brzmią tak samo – pisownię trzeba zapamiętać.",
+                "ru": "Rzeka → po rzece. Rz и ż звучат одинаково — написание надо запомнить."
+              }
+            }
+          ]
+        },
+        {
+          "id": "pron-twisters",
+          "level": "B2",
+          "title": { "en": "Tongue-twisters", "pl": "Łamańce językowe", "ru": "Скороговорки" },
+          "cards": [
+            {
+              "phrase": "Stół z powyłamywanymi nogami.",
+              "meaning": {
+                "en": "A table with broken-off legs.",
+                "pl": "Klasyczny łamaniec z „ł”.",
+                "ru": "Стол с отломанными ножками."
+              },
+              "example": "Powtórz trzy razy szybko. A potem po winie."
+            },
+            {
+              "phrase": "Król Karol kupił królowej Karolinie korale koloru koralowego.",
+              "meaning": {
+                "en": "King Karol bought Queen Karolina coral-coloured beads.",
+                "pl": "Łamaniec na „k” i „r” – i romantyczny prezent.",
+                "ru": "Король Кароль купил королеве Каролине кораллы кораллового цвета."
+              },
+              "example": "Romantyczny prezent i ćwiczenie wymowy w jednym."
+            },
+            {
+              "phrase": "W Szczebrzeszynie chrząszcz brzmi w trzcinie.",
+              "meaning": {
+                "en": "In Szczebrzeszyn a beetle buzzes in the reeds - the king of Polish tongue-twisters.",
+                "pl": "Król polskich łamańców językowych.",
+                "ru": "В Щебжешине жук жужжит в камышах — король польских скороговорок."
+              },
+              "example": "Wyszepcz to komuś do ucha. Efekt gwarantowany. Jaki – nie wiadomo."
+            }
+          ],
+          "practice": [
+            {
+              "question": "Stół z ____ nogami.",
+              "options": ["powyłamywanymi", "powyłamywane", "powyłamywanych", "powyłamywanym"],
+              "answer": 0,
+              "explanation": {
+                "en": "Z + instrumental plural: z powyłamywanymi nogami.",
+                "pl": "Z + narzędnik liczby mnogiej: z powyłamywanymi nogami.",
+                "ru": "Z + творительный мн. ч.: z powyłamywanymi nogami."
+              }
+            },
+            {
+              "question": "Król Karol kupił królowej Karolinie korale koloru ____.",
+              "options": ["koralowego", "koralowy", "koralowej", "korali"],
+              "answer": 0,
+              "explanation": {
+                "en": "Koloru (what kind?) koralowego - genitive.",
+                "pl": "Koloru (jakiego?) koralowego – dopełniacz.",
+                "ru": "Koloru (какого?) koralowego — родительный падеж."
+              }
+            },
+            {
+              "question": "W Szczebrzeszynie chrząszcz brzmi w ____.",
+              "options": ["trzcinie", "czcinie", "tszcinie", "trzćinie"],
+              "answer": 0,
+              "explanation": {
+                "en": "Trzcina → w trzcinie. T + rz + c… yes, really.",
+                "pl": "Trzcina → w trzcinie. T, rz, c – tak, naprawdę.",
+                "ru": "Trzcina → w trzcinie. T + rz + c… да, правда."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

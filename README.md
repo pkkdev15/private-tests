@@ -88,3 +88,28 @@ All colors in `style.css` come from CSS variables defined once per theme at the 
 (`:root` = Pink, `:root[data-theme="graphite"]`, `...="green"`, `...="burgundy"`).
 To add a theme: copy one of those blocks with a new name, add a swatch class (`.swatch-<name>`)
 and an entry in `THEMES` in `app.js`, plus its name in `i18n.js`.
+
+## Lessons
+
+The start screen has two tabs: **Tests** and **Lessons**. Lessons are short (3 cards + 3 exercises),
+and progress (completed lessons + best score) is saved per browser in `localStorage`.
+
+`lessons.json` lists the courses; each course file (e.g. `lessons/polish.json`) looks like this:
+
+```json
+{
+  "id": "polish", "lang": "pl", "emoji": "🇵🇱", "title": "Polski na randce",
+  "subtitle": { "en": "...", "pl": "...", "ru": "..." },
+  "categories": [
+    { "id": "sayings", "emoji": "🦉", "title": { "en": "Sayings", "pl": "Powiedzenia", "ru": "..." },
+      "lessons": [
+        { "id": "sayings-love", "level": "B1", "title": { "...": "..." },
+          "cards": [ { "phrase": "Kto się czubi, ten się lubi.", "meaning": { "en": "...", "pl": "...", "ru": "..." }, "example": "...", "note": "optional" } ],
+          "practice": [ { "question": "...", "options": ["...", "..."], "answer": 0, "explanation": { "...": "..." } } ] }
+      ] }
+  ]
+}
+```
+
+Progress is keyed by `course id / lesson id` - keep ids stable when editing, or users lose that lesson's progress.
+Cards and exercises support the same `variants` (m/f) and per-language texts as tests. Run `build.ps1` after editing.
