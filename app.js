@@ -98,7 +98,7 @@
   const THEME_KEY = "uiTheme";
 
   function currentTheme() {
-    return document.documentElement.getAttribute("data-theme") || "pink";
+    return document.documentElement.getAttribute("data-theme") || "pink"; // no attribute = pink base theme
   }
 
   function renderThemeSwitch() {

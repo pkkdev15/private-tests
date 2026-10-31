@@ -14,6 +14,7 @@ powershell -ExecutionPolicy Bypass -File build.ps1
 ```
 
 `serve.ps1` runs `build.ps1` automatically on start. Don't edit `tests-data.js` by hand.
+`build.ps1` also stamps `?v=<timestamp>` on the CSS/JS links in `index.html`, so visitors get fresh files after each deploy - run it before every commit that changes code.
 
 ## Adding a test
 
@@ -80,7 +81,7 @@ Professor Pigeon's lines (praise, threats, final warnings, result verdicts) are 
 
 ## Color themes
 
-The swatches next to the language switch change the color theme: Pink (default), Graphite (dark),
+The swatches next to the language switch change the color theme: Pink, Graphite (dark, the default),
 Dark green and Burgundy. The choice is remembered in the browser and applied before the first paint.
 
 All colors in `style.css` come from CSS variables defined once per theme at the top of the file
