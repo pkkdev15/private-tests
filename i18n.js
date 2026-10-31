@@ -67,6 +67,9 @@ window.I18N = {
       lessonNextLesson: "Next lesson ➜",
       lessonRepeat: "🔁 Repeat",
       lessonAllDone: "🏆 You've completed the whole course!",
+      songLabel: "🎵 Music trivia",
+      songListen: "▶ Listen on YouTube",
+      artCredit: "Illustrations: Twemoji (CC BY 4.0)",
       pigeonCorrect: [
         "Coo-coo! Excellent! You get an A and a crumb from my sandwich.",
         "Bravo! I haven't heard an answer this good since someone threw me a whole bagel.",
@@ -156,6 +159,9 @@ window.I18N = {
       lessonNextLesson: "Następna lekcja ➜",
       lessonRepeat: "🔁 Powtórz",
       lessonAllDone: "🏆 Cały kurs ukończony!",
+      songLabel: "🎵 Ciekawostka muzyczna",
+      songListen: "▶ Posłuchaj na YouTube",
+      artCredit: "Ilustracje: Twemoji (CC BY 4.0)",
       pigeonCorrect: [
         "Gru-gru! Doskonale! Dostajesz piątkę i okruszek z mojej kanapki.",
         "Brawo! Tak dobrej odpowiedzi nie słyszałem, odkąd ktoś rzucił mi całą bułkę.",
@@ -245,6 +251,9 @@ window.I18N = {
       lessonNextLesson: "Следующий урок ➜",
       lessonRepeat: "🔁 Повторить",
       lessonAllDone: "🏆 Весь курс пройден!",
+      songLabel: "🎵 Музыкальный факт",
+      songListen: "▶ Послушать на YouTube",
+      artCredit: "Иллюстрации: Twemoji (CC BY 4.0)",
       pigeonCorrect: [
         "Курлык-курлык! Отлично! Ставлю пятёрку и даю крошку от своего бутерброда.",
         "Браво! Такого ответа я не слышал с тех пор, как мне бросили целый батон.",

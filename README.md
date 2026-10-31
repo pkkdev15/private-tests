@@ -30,6 +30,7 @@ powershell -ExecutionPolicy Bypass -File build.ps1
 3. Run `build.ps1` (only needed for opening the page from disk).
 
 The test list is always the first screen. Direct link to a test: `index.html?test=<id>`.
+Add `"hidden": true` to a test entry to hide it from the app without deleting its file.
 
 ## Interface languages
 
@@ -75,6 +76,7 @@ Professor Pigeon's lines (praise, threats, final warnings, result verdicts) are 
 | `settings.shuffleQuestions` | Randomise question order |
 | `settings.shuffleOptions` | Randomise answer order |
 | `settings.questionsPerTest` | Number of questions per run (`null` = all) |
+| `settings.questionsPerLevel` | Random questions per level, e.g. `{ "A1": 4, "A2": 5 }` - each run differs, levels stay in A1 → C2 order (overrides the two settings above) |
 | `reactions.correct` / `.wrong` | Random date reactions after each answer |
 | `levels[]` | `minPercent`, `code`, `emoji`, `title`, `description` - result by score % |
 | `questions[]` | `level`, `scenario`, `question`, `options[]`, `answer` (0-based index), `explanation` |
@@ -113,3 +115,9 @@ and progress (completed lessons + best score) is saved per browser in `localStor
 
 Progress is keyed by `course id / lesson id` - keep ids stable when editing, or users lose that lesson's progress.
 Cards and exercises support the same `variants` (m/f) and per-language texts as tests. Run `build.ps1` after editing.
+
+Optional per-lesson extras:
+- `"art": "🦋"` on a card - shown as a [Twemoji](https://github.com/jdecked/twemoji) illustration
+  (CC BY 4.0, loaded from jsDelivr; falls back to the plain emoji). Category `emoji` is shown the same way.
+- `"song": { "title": "...", "artist": "...", "note": { ... } }` on a lesson - music trivia on the summary screen,
+  linking to a YouTube search for artist + title (add `"url"` to link a specific video instead).

@@ -9,7 +9,8 @@
   "settings": {
     "shuffleQuestions": false,
     "shuffleOptions": true,
-    "questionsPerTest": null
+    "questionsPerTest": null,
+    "questionsPerLevel": { "A1": 4, "A2": 5, "B1": 5, "B2": 5, "C1": 4, "C2": 4 }
   },
   "reactions": {
     "correct": [
@@ -862,6 +863,261 @@
         "en": "\"Ładny/ładna mi…\" with the dative \"mi\" is ironic and means the opposite: \"Ładna mi godzina!\" = \"A fine time to come home!\" Likewise: \"Ładny mi przyjaciel!\"",
         "pl": "Konstrukcja „ładny/ładna mi…” z celownikiem „mi” jest ironiczna i znaczy odwrotnie: „Ładna mi godzina!” = skandaliczna pora. Podobnie: „Ładny mi przyjaciel!”",
         "ru": "Конструкция «ładny/ładna mi…» с дательным «mi» иронична и значит обратное — как русское «Хорошенькое время!» Так же: «Ładny mi przyjaciel!» (Хорош друг!)."
+      }
+    },
+    {
+      "level": "A1",
+      "scenario": "Kawiarnia pełna ludzi. Przy jedynym wolnym stoliku siedzi ktoś uroczy.",
+      "question": "Przepraszam, czy to miejsce jest ____?",
+      "options": ["wolne", "wolny", "wolna", "wolni"],
+      "answer": 0,
+      "explanation": {
+        "en": "\"Miejsce\" is neuter, so the adjective ends in -e: wolne miejsce.",
+        "pl": "„Miejsce” jest rodzaju nijakiego, więc przymiotnik kończy się na -e: wolne miejsce.",
+        "ru": "«Miejsce» среднего рода, поэтому прилагательное оканчивается на -e: wolne miejsce."
+      }
+    },
+    {
+      "level": "A1",
+      "scenario": "Umawiacie się na pierwszą kolację.",
+      "question": "Spotkajmy się o ____ przed restauracją.",
+      "options": ["ósmej", "osiem", "ósma", "ósmy"],
+      "answer": 0,
+      "explanation": {
+        "en": "Telling the time: o + locative of the ordinal number: o ósmej (godzinie) = at eight.",
+        "pl": "Godziny: o + miejscownik liczebnika porządkowego: o ósmej (godzinie).",
+        "ru": "Время: o + предложный падеж порядкового числительного: o ósmej (godzinie) = в восемь."
+      }
+    },
+    {
+      "level": "A1",
+      "scenario": "Patrzysz głęboko w oczy swojej randki. Mrugnięcie. Westchnienie.",
+      "question": "Masz piękne, ____ oczy!",
+      "options": ["niebieskie", "niebieski", "niebieska", "niebieskich"],
+      "answer": 0,
+      "explanation": {
+        "en": "\"Oczy\" is plural (not masculine-personal), so the adjective ends in -e: niebieskie oczy.",
+        "pl": "„Oczy” to liczba mnoga niemęskoosobowa, więc przymiotnik kończy się na -e: niebieskie oczy.",
+        "ru": "«Oczy» — множественное число (не мужско-личное), поэтому прилагательное на -e: niebieskie oczy."
+      }
+    },
+    {
+      "level": "A2",
+      "scenario": "Opowiadasz znajomym o wczorajszym wieczorze.",
+      "question": "Wczoraj ____ razem w kinie na komedii romantycznej.",
+      "options": ["byliśmy", "byłyśmy", "jesteśmy", "będziemy"],
+      "answer": 0,
+      "explanation": {
+        "en": "Past tense, a mixed couple: (my) byliśmy. \"Byłyśmy\" is only for women. \"Wczoraj\" rules out the present and future.",
+        "pl": "Czas przeszły, para mieszana: (my) byliśmy. „Byłyśmy” – tylko kobiety. „Wczoraj” wyklucza czas teraźniejszy i przyszły.",
+        "ru": "Прошедшее время, смешанная пара: (my) byliśmy. «Byłyśmy» — только женщины. «Wczoraj» исключает настоящее и будущее."
+      },
+      "variants": {
+        "m": {
+          "question": "Wczoraj ____ w kinie na komedii romantycznej. Płakałem tylko trochę.",
+          "options": ["byłem", "byłam", "jestem", "będę"],
+          "explanation": {
+            "en": "Past tense, a man speaking: byłem. A woman would say \"byłam\".",
+            "pl": "Czas przeszły, mówi mężczyzna: byłem. Kobieta powiedziałaby „byłam”.",
+            "ru": "Прошедшее время, говорит мужчина: byłem. Женщина сказала бы «byłam»."
+          }
+        },
+        "f": {
+          "question": "Wczoraj ____ w kinie na komedii romantycznej. Płakałam tylko trochę.",
+          "options": ["byłam", "byłem", "jestem", "będę"],
+          "explanation": {
+            "en": "Past tense, a woman speaking: byłam. A man would say \"byłem\".",
+            "pl": "Czas przeszły, mówi kobieta: byłam. Mężczyzna powiedziałby „byłem”.",
+            "ru": "Прошедшее время, говорит женщина: byłam. Мужчина сказал бы «byłem»."
+          }
+        }
+      }
+    },
+    {
+      "level": "A2",
+      "scenario": "Pierwsze spotkanie po miesiącu pisania na Tinderze.",
+      "question": "Na żywo wyglądasz ____ niż na zdjęciach!",
+      "options": ["ładniej", "ładny", "ładniejszy", "najładniej"],
+      "answer": 0,
+      "explanation": {
+        "en": "\"Wyglądać\" goes with an adverb: ładnie → ładniej (comparative) niż…",
+        "pl": "„Wyglądać” łączy się z przysłówkiem: ładnie → ładniej niż…",
+        "ru": "«Wyglądać» сочетается с наречием: ładnie → ładniej (сравнительная степень) niż…"
+      },
+      "variants": {
+        "m": {
+          "question": "Jesteś ____ niż na zdjęciach!",
+          "options": ["ładniejsza", "ładna", "najładniejsza", "ładniej"],
+          "explanation": {
+            "en": "Comparative of \"ładna\": ładniejsza (niż…). Use the feminine form when talking to a woman.",
+            "pl": "Stopień wyższy od „ładna”: ładniejsza (niż…).",
+            "ru": "Сравнительная степень от «ładna»: ładniejsza (niż…) — красивее."
+          }
+        },
+        "f": {
+          "question": "Jesteś ____ niż na zdjęciach!",
+          "options": ["przystojniejszy", "przystojny", "najprzystojniejszy", "przystojniej"],
+          "explanation": {
+            "en": "Comparative of \"przystojny\": przystojniejszy (niż…) - more handsome.",
+            "pl": "Stopień wyższy od „przystojny”: przystojniejszy (niż…).",
+            "ru": "Сравнительная степень от «przystojny»: przystojniejszy (niż…) — симпатичнее."
+          }
+        }
+      }
+    },
+    {
+      "level": "B1",
+      "scenario": "Koniec udanej randki. Pada obietnica.",
+      "question": "Jutro ____ do ciebie po pracy. Obiecuję!",
+      "options": ["zadzwonię", "dzwonię", "dzwoniłem", "zadzwoniłem"],
+      "answer": 0,
+      "explanation": {
+        "en": "A single action in the future → perfective future: zadzwonię (I'll call).",
+        "pl": "Pojedyncza czynność w przyszłości → czas przyszły dokonany: zadzwonię.",
+        "ru": "Однократное действие в будущем → будущее совершенного вида: zadzwonię (позвоню)."
+      }
+    },
+    {
+      "level": "B1",
+      "scenario": "Minęły dwie godziny od randki. Telefon wibruje.",
+      "question": "Już ____ tobą tęsknię. 🥺",
+      "options": ["za", "do", "o", "po"],
+      "answer": 0,
+      "explanation": {
+        "en": "Tęsknić za kimś (+ instrumental) = to miss someone.",
+        "pl": "Tęsknić za kimś (+ narzędnik).",
+        "ru": "Tęsknić za kimś (+ творительный) = скучать по кому-то."
+      }
+    },
+    {
+      "level": "B2",
+      "scenario": "Wielka kłótnia o to, kto miał kupić chleb.",
+      "question": "Pokłóciliśmy się, ale wieczorem ____ się przy pizzy.",
+      "options": ["pogodziliśmy", "zgodziliśmy", "godziliśmy", "pogodzimy"],
+      "answer": 0,
+      "explanation": {
+        "en": "Pogodzić się = to make up after a quarrel. Zgodzić się = to agree (to something).",
+        "pl": "Pogodzić się = zakończyć kłótnię. Zgodzić się = przystać na coś.",
+        "ru": "Pogodzić się = помириться. Zgodzić się = согласиться (на что-то)."
+      }
+    },
+    {
+      "level": "C1",
+      "scenario": "Przyjaciółka opowiada o swoim byłym.",
+      "question": {
+        "en": "\"Robił mi wodę z mózgu przez dwa lata.\" - What did he do?",
+        "pl": "„Robił mi wodę z mózgu przez dwa lata.” – Co robił?",
+        "ru": "«Robił mi wodę z mózgu przez dwa lata.» — Что он делал?"
+      },
+      "options": [
+        { "en": "He manipulated her and confused her.", "pl": "Manipulował nią i mieszał jej w głowie.", "ru": "Он ею манипулировал и морочил ей голову." },
+        { "en": "He brought her water every morning.", "pl": "Przynosił jej wodę co rano.", "ru": "Он приносил ей воду каждое утро." },
+        { "en": "He was a brain surgeon.", "pl": "Był neurochirurgiem.", "ru": "Он был нейрохирургом." },
+        { "en": "He made her study a lot.", "pl": "Kazał jej dużo się uczyć.", "ru": "Он заставлял её много учиться." }
+      ],
+      "answer": 0,
+      "explanation": {
+        "en": "\"Robić komuś wodę z mózgu\" (to turn someone's brain into water) = to manipulate, brainwash or confuse someone.",
+        "pl": "„Robić komuś wodę z mózgu” = manipulować kimś, mącić mu w głowie.",
+        "ru": "«Robić komuś wodę z mózgu» (делать из мозга воду) = морочить голову, промывать мозги."
+      }
+    },
+    {
+      "level": "C1",
+      "scenario": "Babcia obserwuje nowego chłopaka wnuczki.",
+      "question": {
+        "en": "\"Ona owinęła go sobie wokół palca.\" - What does grandma mean?",
+        "pl": "„Ona owinęła go sobie wokół palca.” – Co ma na myśli babcia?",
+        "ru": "«Ona owinęła go sobie wokół palca.» — Что имеет в виду бабушка?"
+      },
+      "options": [
+        { "en": "She has complete control over him.", "pl": "Ona ma nad nim całkowitą kontrolę.", "ru": "Она полностью им управляет." },
+        { "en": "She gave him an engagement ring.", "pl": "Dała mu pierścionek zaręczynowy.", "ru": "Она подарила ему обручальное кольцо." },
+        { "en": "She bandaged his finger.", "pl": "Zabandażowała mu palec.", "ru": "Она перевязала ему палец." },
+        { "en": "She taught him to knit.", "pl": "Nauczyła go robić na drutach.", "ru": "Она научила его вязать." }
+      ],
+      "answer": 0,
+      "explanation": {
+        "en": "\"Owinąć kogoś sobie wokół palca\" = to wrap someone around your little finger - to control them completely.",
+        "pl": "„Owinąć kogoś sobie wokół palca” = mieć nad kimś pełną władzę.",
+        "ru": "«Owinąć kogoś sobie wokół palca» = вить из кого-то верёвки, полностью им управлять."
+      }
+    },
+    {
+      "level": "C1",
+      "scenario": "Rocznica związku. Wznosisz toast.",
+      "question": "Gdyby nie ty, mój kot ____ moim jedynym towarzystwem w piątkowe wieczory.",
+      "options": ["byłby", "byłaby", "będzie", "był"],
+      "answer": 0,
+      "explanation": {
+        "en": "\"Gdyby nie…\" (if it weren't for…) + conditional: (kot) byłby - masculine, because \"kot\" is masculine.",
+        "pl": "„Gdyby nie…” + tryb przypuszczający: (kot) byłby – rodzaj męski, bo „kot”.",
+        "ru": "«Gdyby nie…» (если бы не…) + сослагательное наклонение: (kot) byłby — мужской род, потому что «kot»."
+      },
+      "variants": {
+        "m": {
+          "question": "Gdyby nie ty, ____ dziś sam w domu z kotem.",
+          "options": ["siedziałbym", "siedziałabym", "siedzę", "siedziałem"],
+          "explanation": {
+            "en": "\"Gdyby nie…\" + conditional; a man speaking: siedziałbym.",
+            "pl": "„Gdyby nie…” + tryb przypuszczający; mówi mężczyzna: siedziałbym.",
+            "ru": "«Gdyby nie…» + сослагательное наклонение; говорит мужчина: siedziałbym."
+          }
+        },
+        "f": {
+          "question": "Gdyby nie ty, ____ dziś sama w domu z kotem.",
+          "options": ["siedziałabym", "siedziałbym", "siedzę", "siedziałam"],
+          "explanation": {
+            "en": "\"Gdyby nie…\" + conditional; a woman speaking: siedziałabym.",
+            "pl": "„Gdyby nie…” + tryb przypuszczający; mówi kobieta: siedziałabym.",
+            "ru": "«Gdyby nie…» + сослагательное наклонение; говорит женщина: siedziałabym."
+          }
+        }
+      }
+    },
+    {
+      "level": "C2",
+      "scenario": "Walentynki. Stacja benzynowa. 23:55.",
+      "question": {
+        "en": "\"Kupił jej kwiaty na odczepnego.\" - What does it mean?",
+        "pl": "„Kupił jej kwiaty na odczepnego.” – Co to znaczy?",
+        "ru": "«Kupił jej kwiaty na odczepnego.» — Что это значит?"
+      },
+      "options": [
+        { "en": "He bought them half-heartedly, just to have it done.", "pl": "Kupił je byle jak, żeby mieć to z głowy.", "ru": "Он купил их кое-как, лишь бы отделаться." },
+        { "en": "He bought very expensive flowers.", "pl": "Kupił bardzo drogie kwiaty.", "ru": "Он купил очень дорогие цветы." },
+        { "en": "He bought flowers with detachable petals.", "pl": "Kupił kwiaty z odczepianymi płatkami.", "ru": "Он купил цветы с отстёгивающимися лепестками." },
+        { "en": "He bought them after a long search.", "pl": "Kupił je po długich poszukiwaniach.", "ru": "Он купил их после долгих поисков." }
+      ],
+      "answer": 0,
+      "explanation": {
+        "en": "\"Na odczepnego\" = half-heartedly, just to get rid of an obligation (or of someone). Petrol-station roses at 23:55 are a classic.",
+        "pl": "„Na odczepnego” = byle jak, żeby się od czegoś (albo kogoś) uwolnić. Róże ze stacji o 23:55 to klasyk.",
+        "ru": "«Na odczepnego» = кое-как, лишь бы отделаться. Розы с заправки в 23:55 — классика."
+      }
+    },
+    {
+      "level": "C2",
+      "scenario": "Babcia z rumieńcem pokazuje stary album ze zdjęciami.",
+      "question": "W młodości miałam wielu ____. Dziadek był siódmy w kolejce.",
+      "options": ["zalotników", "zalotnicy", "zalotniki", "zalotnikom"],
+      "answer": 0,
+      "explanation": {
+        "en": "\"Wielu\" + genitive plural of a masculine-personal noun: wielu zalotników (suitors).",
+        "pl": "„Wielu” + dopełniacz liczby mnogiej rzeczownika męskoosobowego: wielu zalotników.",
+        "ru": "«Wielu» + родительный падеж мн. ч. мужско-личного существительного: wielu zalotników (ухажёров)."
+      }
+    },
+    {
+      "level": "C2",
+      "scenario": "Wspominasz pierwszą randkę z wielką miłością.",
+      "question": "To była ____ randka.",
+      "options": ["niezapomniana", "nie zapomniana", "nie-zapomniana", "niezapomiana"],
+      "answer": 0,
+      "explanation": {
+        "en": "\"Nie\" is written together with adjectives and adjectival participles used as adjectives: niezapomniana.",
+        "pl": "„Nie” z przymiotnikami i imiesłowami przymiotnikowymi piszemy łącznie: niezapomniana.",
+        "ru": "«Nie» с прилагательными и причастиями в роли прилагательных пишется слитно: niezapomniana."
       }
     }
   ]

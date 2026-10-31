@@ -3,6 +3,7 @@
     {
       "id": "english",
       "file": "tests/english-a1-c2.json",
+      "hidden": true,
       "emoji": "🇬🇧",
       "title": "Love at First Sentence",
       "language": { "en": "English", "pl": "Angielski", "ru": "Английский" },

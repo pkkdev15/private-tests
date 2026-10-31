@@ -788,6 +788,51 @@ h1 { color: var(--rose); font-size: clamp(28px, 8vw, 44px); line-height: 1.25; m
 .lesson-all-done { font-weight: 700; color: var(--rose-dark); }
 #lesson-body .feedback .btn-block { margin-top: 4px; }
 
+/* ---------- illustrations & music trivia ---------- */
+.test-emoji img, .course-emoji img { width: 40px; height: 40px; display: block; }
+.course-emoji img { width: 44px; height: 44px; }
+.lesson-cat-name { display: inline-flex; align-items: center; gap: 8px; }
+.cat-art { display: inline-flex; font-size: 20px; }
+.cat-art img { width: 24px; height: 24px; display: block; }
+.lesson-art {
+  display: flex; justify-content: center; align-items: center;
+  width: 96px; height: 96px;
+  margin: 0 auto 10px;
+  font-size: 64px; line-height: 1;
+  border-radius: 50%;
+  background: var(--cream);
+  border: 3px solid var(--blush);
+  animation: pop 500ms cubic-bezier(.2, 1.6, .4, 1);
+}
+.lesson-art img { width: 64px; height: 64px; display: block; }
+
+.song-box {
+  margin: 0 auto 18px;
+  max-width: 460px;
+  padding: 12px 14px;
+  text-align: left;
+  border-radius: 16px;
+  background: var(--surface-2);
+  border: 2px dashed var(--rose);
+}
+.song-label { margin: 0 0 4px; font-size: 12px; font-weight: 700; letter-spacing: .8px; text-transform: uppercase; color: var(--rose-dark); }
+.song-name { margin: 0; font-size: 16px; }
+.song-note { margin: 4px 0 8px; font-size: 14px; opacity: .85; }
+.song-link {
+  display: inline-flex; align-items: center;
+  min-height: 36px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-weight: 700; font-size: 14px;
+  text-decoration: none;
+  color: var(--on-accent);
+  background: linear-gradient(135deg, var(--btn-1), var(--btn-2));
+}
+.welcome-art { display: inline-flex; }
+.welcome-art img { width: 72px; height: 72px; display: block; }
+.art-credit { margin: 10px 0 0; font-size: 12px; opacity: .6; }
+.art-credit a { color: inherit; }
+
 /* ---------- very small phones (iPhone SE 1st gen, small Androids) ---------- */
 @media (max-width: 360px) {
   .table { padding-left: max(8px, env(safe-area-inset-left)); padding-right: max(8px, env(safe-area-inset-right)); }

@@ -233,7 +233,8 @@
   // ---------- test picker ----------
   function loadManifest() {
     return fetchJson(MANIFEST_URL).then((json) => {
-      tests = (json.tests || []).filter((t) => t && t.id && isSafePath(t.file));
+      // "hidden": true keeps a test file in the repo but out of the app
+      tests = (json.tests || []).filter((t) => t && t.id && !t.hidden && isSafePath(t.file));
       if (!tests.length) throw new Error("tests.json has no valid tests.");
     });
   }
@@ -264,9 +265,7 @@
       const btn = document.createElement("button");
       btn.className = "test-card";
 
-      const emoji = document.createElement("span");
-      emoji.className = "test-emoji";
-      emoji.textContent = t.emoji || "💘";
+      const emoji = artImg(t.emoji || "💘", "test-emoji");
 
       const body = document.createElement("span");
       body.className = "test-body";
@@ -373,9 +372,9 @@
   function renderWelcome() {
     $("title").textContent = loc(data.title) || (currentTest && loc(currentTest.title)) || "💘";
     $("subtitle").textContent = loc(data.subtitle);
-    $("test-emoji").textContent = (currentTest && currentTest.emoji) || "💘";
+    $("test-emoji").replaceChildren(artImg((currentTest && currentTest.emoji) || "💘", "welcome-art"));
     $("btn-change-test").hidden = tests.length === 0;
-    const count = Math.min(data.settings.questionsPerTest || data.questions.length, data.questions.length);
+    const count = pickQuestions(data, true);
     $("menu-note").textContent = tr("menuNote", {
       count,
       questions: plural("questions", count),
@@ -383,13 +382,43 @@
     });
   }
 
+  // Choose this run's questions. settings.questionsPerLevel ({ "A1": 4, ... }) draws a random
+  // subset from each level and keeps levels in A1 → C2 order, so every run covers the whole
+  // range but differs a bit. Levels missing from the map are taken whole.
+  // Without it: optional shuffleQuestions + questionsPerTest. countOnly returns just the size.
+  function pickQuestions(test, countOnly) {
+    const s = test.settings;
+    const per = s.questionsPerLevel;
+    if (per) {
+      const groups = new Map();
+      test.questions.forEach((q) => {
+        const lvl = q.level || "";
+        if (!groups.has(lvl)) groups.set(lvl, []);
+        groups.get(lvl).push(q);
+      });
+      const order = [...groups.keys()].sort((a, b) => {
+        const ia = LEVEL_ORDER.indexOf(a), ib = LEVEL_ORDER.indexOf(b);
+        return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib);
+      });
+      let picked = [];
+      order.forEach((lvl) => {
+        const all = groups.get(lvl);
+        const n = per[lvl] == null ? all.length : Math.min(per[lvl], all.length);
+        picked = picked.concat(countOnly ? all.slice(0, n) : shuffle(all).slice(0, n));
+      });
+      return countOnly ? picked.length : picked;
+    }
+    let pool = s.shuffleQuestions ? shuffle(test.questions) : test.questions.slice();
+    if (s.questionsPerTest) pool = pool.slice(0, s.questionsPerTest);
+    return countOnly ? pool.length : pool;
+  }
+
   // ---------- quiz flow ----------
   function startQuiz() {
     playerName = $("player-name").value.trim();
     $("player-name").blur(); // hide the mobile keyboard
     const s = data.settings;
-    let pool = s.shuffleQuestions ? shuffle(data.questions) : data.questions.slice();
-    if (s.questionsPerTest) pool = pool.slice(0, s.questionsPerTest);
+    const pool = pickQuestions(data);
 
     // Apply the gender variant, then prepare options (optionally shuffled)
     // while tracking where the right answer ends up.
@@ -569,6 +598,29 @@
     $("btn-other-test").hidden = tests.length < 2;
   }
 
+  // ---------- illustrations (Twemoji, CC BY 4.0, served from jsDelivr) ----------
+  // An emoji is turned into its Twemoji SVG; if the image can't load, the plain emoji stays.
+  const TWEMOJI_BASE = "https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/";
+
+  function twemojiUrl(emoji) {
+    const cps = [...emoji].map((c) => c.codePointAt(0).toString(16));
+    // Twemoji file names drop the FE0F variation selector unless the emoji contains a ZWJ
+    const name = (emoji.includes("‍") ? cps : cps.filter((c) => c !== "fe0f")).join("-");
+    return `${TWEMOJI_BASE}${name}.svg`;
+  }
+
+  function artImg(emoji, cls) {
+    const wrap = document.createElement("span");
+    wrap.className = cls;
+    wrap.textContent = emoji;
+    const img = new Image();
+    img.alt = "";
+    img.decoding = "async";
+    img.onload = () => { wrap.textContent = ""; wrap.append(img); };
+    img.src = twemojiUrl(emoji);
+    return wrap;
+  }
+
   // ---------- lessons ----------
   // lessons.json lists course files; each course has categories → lessons → cards + practice.
   // Progress is kept per lesson in localStorage: { "course/lesson": { best, total } }.
@@ -620,7 +672,7 @@
       const done = all.filter((l) => progress[lessonKey(course, l)]).length;
 
       const head = el("div", "course-head");
-      head.append(el("span", "course-emoji", course.emoji || "📚"));
+      head.append(artImg(course.emoji || "📚", "course-emoji"));
       const info = el("div", "course-info");
       info.append(el("h3", "course-title", loc(course.title)), el("p", "course-sub", loc(course.subtitle)));
       head.append(info);
@@ -636,7 +688,10 @@
         const catDone = cat.lessons.filter((l) => progress[lessonKey(course, l)]).length;
         const section = el("section", "lesson-cat");
         const h = el("h4", "lesson-cat-title");
-        h.append(el("span", null, `${cat.emoji || ""} ${loc(cat.title)}`), el("span", "lesson-cat-count", `${catDone}/${cat.lessons.length}`));
+        const catName = el("span", "lesson-cat-name");
+        if (cat.emoji) catName.append(artImg(cat.emoji, "cat-art"));
+        catName.append(document.createTextNode(loc(cat.title)));
+        h.append(catName, el("span", "lesson-cat-count", `${catDone}/${cat.lessons.length}`));
         section.append(h);
 
         cat.lessons.forEach((l, i) => {
@@ -711,6 +766,7 @@
   function renderLessonCard(body, card, i) {
     const box = el("div", "lesson-card");
     box.append(el("p", "lesson-step-label", tr("lessonCard", { n: i + 1, total: lesson.cards.length })));
+    if (card.art) box.append(artImg(card.art, "lesson-art"));
     const phrase = el("p", "lesson-phrase", loc(card.phrase));
     phrase.lang = lesson.course.lang || "pl";
     box.append(phrase, el("p", "lesson-meaning", loc(card.meaning)));
@@ -812,6 +868,24 @@
     bubble.append(el("p", "prof-name", tr("profName")), el("p", "prof-line", tr("pigeonResult")[verdict]));
     prof.append(pig, bubble);
     box.append(prof);
+
+    // Music trivia: links to a YouTube search (artist + title), so it never points to a removed video
+    const song = lesson.ref.song;
+    if (song) {
+      const s = el("div", "song-box");
+      s.append(el("p", "song-label", tr("songLabel")));
+      const name = el("p", "song-name");
+      name.append(el("strong", null, song.title), document.createTextNode(` – ${song.artist}`));
+      name.lang = lesson.course.lang || "pl";
+      s.append(name);
+      if (song.note) s.append(el("p", "song-note", loc(song.note)));
+      const a = el("a", "song-link", tr("songListen"));
+      a.href = song.url || `https://www.youtube.com/results?search_query=${encodeURIComponent(`${song.artist} ${song.title}`)}`;
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+      s.append(a);
+      box.append(s);
+    }
 
     const actions = el("div", "actions");
     const next = nextLessonOf(lesson.course, lesson.ref);

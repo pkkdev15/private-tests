@@ -5,6 +5,7 @@ window.TEST_DATA = {
     {
       "id": "english",
       "file": "tests/english-a1-c2.json",
+      "hidden": true,
       "emoji": "🇬🇧",
       "title": "Love at First Sentence",
       "language": { "en": "English", "pl": "Angielski", "ru": "Английский" },
@@ -417,7 +418,8 @@ window.TEST_DATA = {
   "settings": {
     "shuffleQuestions": false,
     "shuffleOptions": true,
-    "questionsPerTest": null
+    "questionsPerTest": null,
+    "questionsPerLevel": { "A1": 4, "A2": 5, "B1": 5, "B2": 5, "C1": 4, "C2": 4 }
   },
   "reactions": {
     "correct": [
@@ -1271,6 +1273,261 @@ window.TEST_DATA = {
         "pl": "Konstrukcja „ładny/ładna mi…” z celownikiem „mi” jest ironiczna i znaczy odwrotnie: „Ładna mi godzina!” = skandaliczna pora. Podobnie: „Ładny mi przyjaciel!”",
         "ru": "Конструкция «ładny/ładna mi…» с дательным «mi» иронична и значит обратное — как русское «Хорошенькое время!» Так же: «Ładny mi przyjaciel!» (Хорош друг!)."
       }
+    },
+    {
+      "level": "A1",
+      "scenario": "Kawiarnia pełna ludzi. Przy jedynym wolnym stoliku siedzi ktoś uroczy.",
+      "question": "Przepraszam, czy to miejsce jest ____?",
+      "options": ["wolne", "wolny", "wolna", "wolni"],
+      "answer": 0,
+      "explanation": {
+        "en": "\"Miejsce\" is neuter, so the adjective ends in -e: wolne miejsce.",
+        "pl": "„Miejsce” jest rodzaju nijakiego, więc przymiotnik kończy się na -e: wolne miejsce.",
+        "ru": "«Miejsce» среднего рода, поэтому прилагательное оканчивается на -e: wolne miejsce."
+      }
+    },
+    {
+      "level": "A1",
+      "scenario": "Umawiacie się na pierwszą kolację.",
+      "question": "Spotkajmy się o ____ przed restauracją.",
+      "options": ["ósmej", "osiem", "ósma", "ósmy"],
+      "answer": 0,
+      "explanation": {
+        "en": "Telling the time: o + locative of the ordinal number: o ósmej (godzinie) = at eight.",
+        "pl": "Godziny: o + miejscownik liczebnika porządkowego: o ósmej (godzinie).",
+        "ru": "Время: o + предложный падеж порядкового числительного: o ósmej (godzinie) = в восемь."
+      }
+    },
+    {
+      "level": "A1",
+      "scenario": "Patrzysz głęboko w oczy swojej randki. Mrugnięcie. Westchnienie.",
+      "question": "Masz piękne, ____ oczy!",
+      "options": ["niebieskie", "niebieski", "niebieska", "niebieskich"],
+      "answer": 0,
+      "explanation": {
+        "en": "\"Oczy\" is plural (not masculine-personal), so the adjective ends in -e: niebieskie oczy.",
+        "pl": "„Oczy” to liczba mnoga niemęskoosobowa, więc przymiotnik kończy się na -e: niebieskie oczy.",
+        "ru": "«Oczy» — множественное число (не мужско-личное), поэтому прилагательное на -e: niebieskie oczy."
+      }
+    },
+    {
+      "level": "A2",
+      "scenario": "Opowiadasz znajomym o wczorajszym wieczorze.",
+      "question": "Wczoraj ____ razem w kinie na komedii romantycznej.",
+      "options": ["byliśmy", "byłyśmy", "jesteśmy", "będziemy"],
+      "answer": 0,
+      "explanation": {
+        "en": "Past tense, a mixed couple: (my) byliśmy. \"Byłyśmy\" is only for women. \"Wczoraj\" rules out the present and future.",
+        "pl": "Czas przeszły, para mieszana: (my) byliśmy. „Byłyśmy” – tylko kobiety. „Wczoraj” wyklucza czas teraźniejszy i przyszły.",
+        "ru": "Прошедшее время, смешанная пара: (my) byliśmy. «Byłyśmy» — только женщины. «Wczoraj» исключает настоящее и будущее."
+      },
+      "variants": {
+        "m": {
+          "question": "Wczoraj ____ w kinie na komedii romantycznej. Płakałem tylko trochę.",
+          "options": ["byłem", "byłam", "jestem", "będę"],
+          "explanation": {
+            "en": "Past tense, a man speaking: byłem. A woman would say \"byłam\".",
+            "pl": "Czas przeszły, mówi mężczyzna: byłem. Kobieta powiedziałaby „byłam”.",
+            "ru": "Прошедшее время, говорит мужчина: byłem. Женщина сказала бы «byłam»."
+          }
+        },
+        "f": {
+          "question": "Wczoraj ____ w kinie na komedii romantycznej. Płakałam tylko trochę.",
+          "options": ["byłam", "byłem", "jestem", "będę"],
+          "explanation": {
+            "en": "Past tense, a woman speaking: byłam. A man would say \"byłem\".",
+            "pl": "Czas przeszły, mówi kobieta: byłam. Mężczyzna powiedziałby „byłem”.",
+            "ru": "Прошедшее время, говорит женщина: byłam. Мужчина сказал бы «byłem»."
+          }
+        }
+      }
+    },
+    {
+      "level": "A2",
+      "scenario": "Pierwsze spotkanie po miesiącu pisania na Tinderze.",
+      "question": "Na żywo wyglądasz ____ niż na zdjęciach!",
+      "options": ["ładniej", "ładny", "ładniejszy", "najładniej"],
+      "answer": 0,
+      "explanation": {
+        "en": "\"Wyglądać\" goes with an adverb: ładnie → ładniej (comparative) niż…",
+        "pl": "„Wyglądać” łączy się z przysłówkiem: ładnie → ładniej niż…",
+        "ru": "«Wyglądać» сочетается с наречием: ładnie → ładniej (сравнительная степень) niż…"
+      },
+      "variants": {
+        "m": {
+          "question": "Jesteś ____ niż na zdjęciach!",
+          "options": ["ładniejsza", "ładna", "najładniejsza", "ładniej"],
+          "explanation": {
+            "en": "Comparative of \"ładna\": ładniejsza (niż…). Use the feminine form when talking to a woman.",
+            "pl": "Stopień wyższy od „ładna”: ładniejsza (niż…).",
+            "ru": "Сравнительная степень от «ładna»: ładniejsza (niż…) — красивее."
+          }
+        },
+        "f": {
+          "question": "Jesteś ____ niż na zdjęciach!",
+          "options": ["przystojniejszy", "przystojny", "najprzystojniejszy", "przystojniej"],
+          "explanation": {
+            "en": "Comparative of \"przystojny\": przystojniejszy (niż…) - more handsome.",
+            "pl": "Stopień wyższy od „przystojny”: przystojniejszy (niż…).",
+            "ru": "Сравнительная степень от «przystojny»: przystojniejszy (niż…) — симпатичнее."
+          }
+        }
+      }
+    },
+    {
+      "level": "B1",
+      "scenario": "Koniec udanej randki. Pada obietnica.",
+      "question": "Jutro ____ do ciebie po pracy. Obiecuję!",
+      "options": ["zadzwonię", "dzwonię", "dzwoniłem", "zadzwoniłem"],
+      "answer": 0,
+      "explanation": {
+        "en": "A single action in the future → perfective future: zadzwonię (I'll call).",
+        "pl": "Pojedyncza czynność w przyszłości → czas przyszły dokonany: zadzwonię.",
+        "ru": "Однократное действие в будущем → будущее совершенного вида: zadzwonię (позвоню)."
+      }
+    },
+    {
+      "level": "B1",
+      "scenario": "Minęły dwie godziny od randki. Telefon wibruje.",
+      "question": "Już ____ tobą tęsknię. 🥺",
+      "options": ["za", "do", "o", "po"],
+      "answer": 0,
+      "explanation": {
+        "en": "Tęsknić za kimś (+ instrumental) = to miss someone.",
+        "pl": "Tęsknić za kimś (+ narzędnik).",
+        "ru": "Tęsknić za kimś (+ творительный) = скучать по кому-то."
+      }
+    },
+    {
+      "level": "B2",
+      "scenario": "Wielka kłótnia o to, kto miał kupić chleb.",
+      "question": "Pokłóciliśmy się, ale wieczorem ____ się przy pizzy.",
+      "options": ["pogodziliśmy", "zgodziliśmy", "godziliśmy", "pogodzimy"],
+      "answer": 0,
+      "explanation": {
+        "en": "Pogodzić się = to make up after a quarrel. Zgodzić się = to agree (to something).",
+        "pl": "Pogodzić się = zakończyć kłótnię. Zgodzić się = przystać na coś.",
+        "ru": "Pogodzić się = помириться. Zgodzić się = согласиться (на что-то)."
+      }
+    },
+    {
+      "level": "C1",
+      "scenario": "Przyjaciółka opowiada o swoim byłym.",
+      "question": {
+        "en": "\"Robił mi wodę z mózgu przez dwa lata.\" - What did he do?",
+        "pl": "„Robił mi wodę z mózgu przez dwa lata.” – Co robił?",
+        "ru": "«Robił mi wodę z mózgu przez dwa lata.» — Что он делал?"
+      },
+      "options": [
+        { "en": "He manipulated her and confused her.", "pl": "Manipulował nią i mieszał jej w głowie.", "ru": "Он ею манипулировал и морочил ей голову." },
+        { "en": "He brought her water every morning.", "pl": "Przynosił jej wodę co rano.", "ru": "Он приносил ей воду каждое утро." },
+        { "en": "He was a brain surgeon.", "pl": "Był neurochirurgiem.", "ru": "Он был нейрохирургом." },
+        { "en": "He made her study a lot.", "pl": "Kazał jej dużo się uczyć.", "ru": "Он заставлял её много учиться." }
+      ],
+      "answer": 0,
+      "explanation": {
+        "en": "\"Robić komuś wodę z mózgu\" (to turn someone's brain into water) = to manipulate, brainwash or confuse someone.",
+        "pl": "„Robić komuś wodę z mózgu” = manipulować kimś, mącić mu w głowie.",
+        "ru": "«Robić komuś wodę z mózgu» (делать из мозга воду) = морочить голову, промывать мозги."
+      }
+    },
+    {
+      "level": "C1",
+      "scenario": "Babcia obserwuje nowego chłopaka wnuczki.",
+      "question": {
+        "en": "\"Ona owinęła go sobie wokół palca.\" - What does grandma mean?",
+        "pl": "„Ona owinęła go sobie wokół palca.” – Co ma na myśli babcia?",
+        "ru": "«Ona owinęła go sobie wokół palca.» — Что имеет в виду бабушка?"
+      },
+      "options": [
+        { "en": "She has complete control over him.", "pl": "Ona ma nad nim całkowitą kontrolę.", "ru": "Она полностью им управляет." },
+        { "en": "She gave him an engagement ring.", "pl": "Dała mu pierścionek zaręczynowy.", "ru": "Она подарила ему обручальное кольцо." },
+        { "en": "She bandaged his finger.", "pl": "Zabandażowała mu palec.", "ru": "Она перевязала ему палец." },
+        { "en": "She taught him to knit.", "pl": "Nauczyła go robić na drutach.", "ru": "Она научила его вязать." }
+      ],
+      "answer": 0,
+      "explanation": {
+        "en": "\"Owinąć kogoś sobie wokół palca\" = to wrap someone around your little finger - to control them completely.",
+        "pl": "„Owinąć kogoś sobie wokół palca” = mieć nad kimś pełną władzę.",
+        "ru": "«Owinąć kogoś sobie wokół palca» = вить из кого-то верёвки, полностью им управлять."
+      }
+    },
+    {
+      "level": "C1",
+      "scenario": "Rocznica związku. Wznosisz toast.",
+      "question": "Gdyby nie ty, mój kot ____ moim jedynym towarzystwem w piątkowe wieczory.",
+      "options": ["byłby", "byłaby", "będzie", "był"],
+      "answer": 0,
+      "explanation": {
+        "en": "\"Gdyby nie…\" (if it weren't for…) + conditional: (kot) byłby - masculine, because \"kot\" is masculine.",
+        "pl": "„Gdyby nie…” + tryb przypuszczający: (kot) byłby – rodzaj męski, bo „kot”.",
+        "ru": "«Gdyby nie…» (если бы не…) + сослагательное наклонение: (kot) byłby — мужской род, потому что «kot»."
+      },
+      "variants": {
+        "m": {
+          "question": "Gdyby nie ty, ____ dziś sam w domu z kotem.",
+          "options": ["siedziałbym", "siedziałabym", "siedzę", "siedziałem"],
+          "explanation": {
+            "en": "\"Gdyby nie…\" + conditional; a man speaking: siedziałbym.",
+            "pl": "„Gdyby nie…” + tryb przypuszczający; mówi mężczyzna: siedziałbym.",
+            "ru": "«Gdyby nie…» + сослагательное наклонение; говорит мужчина: siedziałbym."
+          }
+        },
+        "f": {
+          "question": "Gdyby nie ty, ____ dziś sama w domu z kotem.",
+          "options": ["siedziałabym", "siedziałbym", "siedzę", "siedziałam"],
+          "explanation": {
+            "en": "\"Gdyby nie…\" + conditional; a woman speaking: siedziałabym.",
+            "pl": "„Gdyby nie…” + tryb przypuszczający; mówi kobieta: siedziałabym.",
+            "ru": "«Gdyby nie…» + сослагательное наклонение; говорит женщина: siedziałabym."
+          }
+        }
+      }
+    },
+    {
+      "level": "C2",
+      "scenario": "Walentynki. Stacja benzynowa. 23:55.",
+      "question": {
+        "en": "\"Kupił jej kwiaty na odczepnego.\" - What does it mean?",
+        "pl": "„Kupił jej kwiaty na odczepnego.” – Co to znaczy?",
+        "ru": "«Kupił jej kwiaty na odczepnego.» — Что это значит?"
+      },
+      "options": [
+        { "en": "He bought them half-heartedly, just to have it done.", "pl": "Kupił je byle jak, żeby mieć to z głowy.", "ru": "Он купил их кое-как, лишь бы отделаться." },
+        { "en": "He bought very expensive flowers.", "pl": "Kupił bardzo drogie kwiaty.", "ru": "Он купил очень дорогие цветы." },
+        { "en": "He bought flowers with detachable petals.", "pl": "Kupił kwiaty z odczepianymi płatkami.", "ru": "Он купил цветы с отстёгивающимися лепестками." },
+        { "en": "He bought them after a long search.", "pl": "Kupił je po długich poszukiwaniach.", "ru": "Он купил их после долгих поисков." }
+      ],
+      "answer": 0,
+      "explanation": {
+        "en": "\"Na odczepnego\" = half-heartedly, just to get rid of an obligation (or of someone). Petrol-station roses at 23:55 are a classic.",
+        "pl": "„Na odczepnego” = byle jak, żeby się od czegoś (albo kogoś) uwolnić. Róże ze stacji o 23:55 to klasyk.",
+        "ru": "«Na odczepnego» = кое-как, лишь бы отделаться. Розы с заправки в 23:55 — классика."
+      }
+    },
+    {
+      "level": "C2",
+      "scenario": "Babcia z rumieńcem pokazuje stary album ze zdjęciami.",
+      "question": "W młodości miałam wielu ____. Dziadek był siódmy w kolejce.",
+      "options": ["zalotników", "zalotnicy", "zalotniki", "zalotnikom"],
+      "answer": 0,
+      "explanation": {
+        "en": "\"Wielu\" + genitive plural of a masculine-personal noun: wielu zalotników (suitors).",
+        "pl": "„Wielu” + dopełniacz liczby mnogiej rzeczownika męskoosobowego: wielu zalotników.",
+        "ru": "«Wielu» + родительный падеж мн. ч. мужско-личного существительного: wielu zalotników (ухажёров)."
+      }
+    },
+    {
+      "level": "C2",
+      "scenario": "Wspominasz pierwszą randkę z wielką miłością.",
+      "question": "To była ____ randka.",
+      "options": ["niezapomniana", "nie zapomniana", "nie-zapomniana", "niezapomiana"],
+      "answer": 0,
+      "explanation": {
+        "en": "\"Nie\" is written together with adjectives and adjectival participles used as adjectives: niezapomniana.",
+        "pl": "„Nie” z przymiotnikami i imiesłowami przymiotnikowymi piszemy łącznie: niezapomniana.",
+        "ru": "«Nie» с прилагательными и причастиями в роли прилагательных пишется слитно: niezapomniana."
+      }
     }
   ]
 }
@@ -1299,11 +1556,13 @@ window.TEST_DATA = {
       "lessons": [
         {
           "id": "sayings-love",
+          "song": { "title": "Zawsze tam, gdzie ty", "artist": "Lady Pank", "note": { "en": "A classic Polish rock love song - perfect after a lesson about love proverbs.", "pl": "Klasyka polskiego rocka o miłości – idealna po lekcji o przysłowiach.", "ru": "Классика польского рока о любви — идеально после урока о пословицах." } },
           "level": "B1",
           "title": { "en": "Love proverbs", "pl": "Przysłowia o miłości", "ru": "Пословицы о любви" },
           "cards": [
             {
               "phrase": "Kto się czubi, ten się lubi.",
+              "art": "💞",
               "meaning": {
                 "en": "Those who bicker like each other - teasing is a sign of affection.",
                 "pl": "Kto się często sprzecza, ten tak naprawdę się lubi.",
@@ -1313,6 +1572,7 @@ window.TEST_DATA = {
             },
             {
               "phrase": "Przez żołądek do serca.",
+              "art": "🍲",
               "meaning": {
                 "en": "The way to someone's heart is through their stomach.",
                 "pl": "Najłatwiej zdobyć czyjeś serce dobrym jedzeniem.",
@@ -1322,6 +1582,7 @@ window.TEST_DATA = {
             },
             {
               "phrase": "Nie ma róży bez kolców.",
+              "art": "🌹",
               "meaning": {
                 "en": "There's no rose without thorns - every good thing has its downside.",
                 "pl": "Wszystko, co piękne, ma też swoje wady.",
@@ -1383,6 +1644,7 @@ window.TEST_DATA = {
           "cards": [
             {
               "phrase": "Nie mój cyrk, nie moje małpy.",
+              "art": "🐒",
               "meaning": {
                 "en": "Not my circus, not my monkeys - not my problem.",
                 "pl": "To nie moja sprawa, nie wtrącam się.",
@@ -1392,6 +1654,7 @@ window.TEST_DATA = {
             },
             {
               "phrase": "Co ma piernik do wiatraka?",
+              "art": "🤔",
               "meaning": {
                 "en": "What does gingerbread have to do with a windmill? - What's the connection?",
                 "pl": "Co jedno ma wspólnego z drugim? Mówi się o czymś bez związku.",
@@ -1401,6 +1664,7 @@ window.TEST_DATA = {
             },
             {
               "phrase": "Darowanemu koniowi w zęby się nie zagląda.",
+              "art": "🐴",
               "meaning": {
                 "en": "Don't look a gift horse in the mouth.",
                 "pl": "Nie krytykuje się prezentów.",
@@ -1455,11 +1719,13 @@ window.TEST_DATA = {
       "lessons": [
         {
           "id": "idioms-feelings",
+          "song": { "title": "Kocham cię, kochanie moje", "artist": "Maanam", "note": { "en": "Maanam's legendary hit - and an easy way to remember \"kochanie\".", "pl": "Legendarny przebój Maanamu – i łatwy sposób, żeby zapamiętać „kochanie”.", "ru": "Легендарный хит группы Maanam — и лёгкий способ запомнить «kochanie»." } },
           "level": "B1",
           "title": { "en": "Falling in love", "pl": "Zakochanie", "ru": "Влюблённость" },
           "cards": [
             {
               "phrase": "mieć motyle w brzuchu",
+              "art": "🦋",
               "meaning": {
                 "en": "to have butterflies in your stomach",
                 "pl": "czuć ekscytację i tremę z powodu zakochania",
@@ -1469,6 +1735,7 @@ window.TEST_DATA = {
             },
             {
               "phrase": "stracić dla kogoś głowę",
+              "art": "🤯",
               "meaning": {
                 "en": "to lose your head over someone - to fall madly in love",
                 "pl": "zakochać się bez pamięci",
@@ -1478,6 +1745,7 @@ window.TEST_DATA = {
             },
             {
               "phrase": "być w siódmym niebie",
+              "art": "☁️",
               "meaning": {
                 "en": "to be in seventh heaven - extremely happy",
                 "pl": "być bardzo szczęśliwym",
@@ -1521,11 +1789,13 @@ window.TEST_DATA = {
         },
         {
           "id": "idioms-relationships",
+          "song": { "title": "Jolka, Jolka pamiętasz", "artist": "Budka Suflera", "note": { "en": "A nostalgic rock ballad about meeting an old flame years later.", "pl": "Nostalgiczna ballada rockowa o spotkaniu dawnej miłości po latach.", "ru": "Ностальгическая рок-баллада о встрече с бывшей любовью спустя годы." } },
           "level": "B2",
           "title": { "en": "Relationships", "pl": "Związki", "ru": "Отношения" },
           "cards": [
             {
               "phrase": "wpaść komuś w oko",
+              "art": "👀",
               "meaning": {
                 "en": "to catch someone's eye - someone likes you (literally: to fall into someone's eye)",
                 "pl": "spodobać się komuś",
@@ -1535,6 +1805,7 @@ window.TEST_DATA = {
             },
             {
               "phrase": "chodzić z kimś",
+              "art": "👫",
               "meaning": {
                 "en": "to go out with someone - to be in a relationship (literally: to walk with someone)",
                 "pl": "być z kimś w związku",
@@ -1544,6 +1815,7 @@ window.TEST_DATA = {
             },
             {
               "phrase": "zerwać z kimś",
+              "art": "💔",
               "meaning": {
                 "en": "to break up with someone",
                 "pl": "zakończyć z kimś związek",
@@ -1603,11 +1875,13 @@ window.TEST_DATA = {
       "lessons": [
         {
           "id": "slang-dating",
+          "song": { "title": "Kocham cię jak Irlandię", "artist": "Kobranocka", "note": { "en": "A cult Polish rock song with one of the quirkiest declarations of love ever.", "pl": "Kultowy polski rock z jednym z najbardziej oryginalnych wyznań miłości.", "ru": "Культовый польский рок с одним из самых необычных признаний в любви." } },
           "level": "B1",
           "title": { "en": "Dating slang", "pl": "Slang randkowy", "ru": "Сленг свиданий" },
           "cards": [
             {
               "phrase": "spoko",
+              "art": "😎",
               "meaning": {
                 "en": "cool, OK, no worries (from \"spokojnie\" - calmly)",
                 "pl": "w porządku, luz (od „spokojnie”)",
@@ -1617,6 +1891,7 @@ window.TEST_DATA = {
             },
             {
               "phrase": "wyrwać kogoś",
+              "art": "🕺",
               "meaning": {
                 "en": "to pull / pick someone up (literally: to tear someone out)",
                 "pl": "poderwać kogoś",
@@ -1626,6 +1901,7 @@ window.TEST_DATA = {
             },
             {
               "phrase": "masakra",
+              "art": "😱",
               "meaning": {
                 "en": "a disaster, a nightmare (literally: massacre)",
                 "pl": "coś okropnego, koszmar",
@@ -1687,6 +1963,7 @@ window.TEST_DATA = {
           "cards": [
             {
               "phrase": "No!",
+              "art": "👍",
               "meaning": {
                 "en": "Yes! / Well… - in casual Polish \"no\" very often means YES",
                 "pl": "potoczne „tak” albo „no więc”",
@@ -1696,6 +1973,7 @@ window.TEST_DATA = {
             },
             {
               "phrase": "Weź…",
+              "art": "🙈",
               "meaning": {
                 "en": "Come on… / Stop it… (literally: take) - to protest, tease or hide embarrassment",
                 "pl": "wyraża protest, zniecierpliwienie albo zawstydzenie",
@@ -1705,6 +1983,7 @@ window.TEST_DATA = {
             },
             {
               "phrase": "w sumie",
+              "art": "🤷",
               "meaning": {
                 "en": "actually, all things considered",
                 "pl": "właściwie, jak się zastanowić",
@@ -1768,11 +2047,13 @@ window.TEST_DATA = {
       "lessons": [
         {
           "id": "dimin-petnames",
+          "song": { "title": "Dmuchawce, latawce, wiatr", "artist": "Urszula", "note": { "en": "A gentle Polish rock ballad - as tender as \"kotku\" and \"słoneczko\".", "pl": "Delikatna rockowa ballada – czuła jak „kotku” i „słoneczko”.", "ru": "Нежная польская рок-баллада — ласковая, как «kotku» и «słoneczko»." } },
           "level": "A2",
           "title": { "en": "Pet names", "pl": "Czułe słówka", "ru": "Ласковые прозвища" },
           "cards": [
             {
               "phrase": "kotku, misiu, żabko",
+              "art": "🧸",
               "meaning": {
                 "en": "kitty, teddy bear, little frog - Polish couples love animal pet names (in the vocative!)",
                 "pl": "najpopularniejsze czułe słówka – w wołaczu",
@@ -1782,6 +2063,7 @@ window.TEST_DATA = {
             },
             {
               "phrase": "kochanie, skarbie",
+              "art": "💎",
               "meaning": {
                 "en": "darling, treasure",
                 "pl": "najbardziej klasyczne czułe słówka",
@@ -1791,6 +2073,7 @@ window.TEST_DATA = {
             },
             {
               "phrase": "słoneczko",
+              "art": "☀️",
               "meaning": {
                 "en": "little sun - a diminutive of \"słońce\"",
                 "pl": "zdrobnienie od „słońce”",
@@ -1839,6 +2122,7 @@ window.TEST_DATA = {
           "cards": [
             {
               "phrase": "kawka, herbatka",
+              "art": "☕",
               "meaning": {
                 "en": "a little coffee, a little tea - diminutives make an invitation sound friendly",
                 "pl": "zdrobnienia brzmią przyjaźnie i niezobowiązująco",
@@ -1848,6 +2132,7 @@ window.TEST_DATA = {
             },
             {
               "phrase": "piwko, winko",
+              "art": "🍷",
               "meaning": {
                 "en": "a little beer, a little wine (usually not little at all)",
                 "pl": "„małe” piwko – zwykle wcale nie małe",
@@ -1857,6 +2142,7 @@ window.TEST_DATA = {
             },
             {
               "phrase": "chwileczkę, momencik",
+              "art": "⏳",
               "meaning": {
                 "en": "just a sec - diminutives of \"chwila\" and \"moment\"",
                 "pl": "zdrobnienia od „chwila” i „moment” – grzeczniej i łagodniej",
@@ -1911,11 +2197,13 @@ window.TEST_DATA = {
       "lessons": [
         {
           "id": "flirt-compliments",
+          "song": { "title": "Wszystko, czego dziś chcę", "artist": "Izabela Trojanowska", "note": { "en": "A Polish rock classic from the early 80s - confident, bold and flirty.", "pl": "Klasyka polskiego rocka z początku lat 80. – pewna siebie, odważna i zalotna.", "ru": "Классика польского рока начала 80-х — уверенная, дерзкая и кокетливая." } },
           "level": "A2",
           "title": { "en": "Compliments", "pl": "Komplementy", "ru": "Комплименты" },
           "cards": [
             {
               "phrase": "Ładnie ci w tym.",
+              "art": "👗",
               "meaning": {
                 "en": "You look nice in that (literally: it's nice to you in that).",
                 "pl": "Dobrze wyglądasz w tym ubraniu.",
@@ -1925,6 +2213,7 @@ window.TEST_DATA = {
             },
             {
               "phrase": "Masz piękny uśmiech.",
+              "art": "😁",
               "meaning": {
                 "en": "You have a beautiful smile.",
                 "pl": "Klasyczny, bezpieczny komplement.",
@@ -1934,6 +2223,7 @@ window.TEST_DATA = {
             },
             {
               "phrase": "Podobasz mi się.",
+              "art": "😍",
               "meaning": {
                 "en": "I like you / I find you attractive (literally: you please me).",
                 "pl": "Jesteś dla mnie atrakcyjny / atrakcyjna.",
@@ -1982,6 +2272,7 @@ window.TEST_DATA = {
           "cards": [
             {
               "phrase": "Dasz się zaprosić na kawę?",
+              "art": "💌",
               "meaning": {
                 "en": "Will you let me take you out for coffee? (polite and charming)",
                 "pl": "uprzejme, czarujące zaproszenie",
@@ -1991,6 +2282,7 @@ window.TEST_DATA = {
             },
             {
               "phrase": "Może się kiedyś umówimy?",
+              "art": "📅",
               "meaning": {
                 "en": "Maybe we could go out sometime? (umówić się = to arrange a date)",
                 "pl": "„umówić się” = zaplanować spotkanie, randkę",
@@ -2000,6 +2292,7 @@ window.TEST_DATA = {
             },
             {
               "phrase": "Odprowadzę cię.",
+              "art": "🌙",
               "meaning": {
                 "en": "I'll walk you home.",
                 "pl": "propozycja odprowadzenia do domu",
@@ -2044,6 +2337,323 @@ window.TEST_DATA = {
       ]
     },
     {
+      "id": "restaurant",
+      "emoji": "🍽️",
+      "title": { "en": "At the restaurant", "pl": "W restauracji", "ru": "В ресторане" },
+      "lessons": [
+        {
+          "id": "rest-order",
+          "level": "A1",
+          "title": { "en": "Ordering", "pl": "Zamawianie", "ru": "Заказ" },
+          "cards": [
+            {
+              "phrase": "Poproszę…",
+              "art": "🙋",
+              "meaning": {
+                "en": "I'd like… / Can I have… - the polite way to order",
+                "pl": "uprzejmy sposób zamawiania",
+                "ru": "Мне, пожалуйста… — вежливый способ сделать заказ"
+              },
+              "example": "Poproszę dwa razy pierogi i jedną świecę. Romantycznie."
+            },
+            {
+              "phrase": "Smacznego!",
+              "art": "🍽️",
+              "meaning": {
+                "en": "Enjoy your meal! (literally: tastily!)",
+                "pl": "życzenie przy jedzeniu",
+                "ru": "Приятного аппетита!"
+              },
+              "example": "Smacznego! – Dziękuję, nawzajem."
+            },
+            {
+              "phrase": "Rachunek, proszę.",
+              "art": "🧾",
+              "meaning": {
+                "en": "The bill, please.",
+                "pl": "prośba o rachunek",
+                "ru": "Счёт, пожалуйста."
+              },
+              "example": "Rachunek, proszę. Osobno? Razem? Ja stawiam!"
+            }
+          ],
+          "practice": [
+            {
+              "question": "____ dwa razy pierogi.",
+              "options": ["Poproszę", "Poprosisz", "Poprosiłem", "Poprosić"],
+              "answer": 0,
+              "explanation": {
+                "en": "Poproszę = I'd like (literally: I will ask for).",
+                "pl": "Poproszę = uprzejme zamówienie.",
+                "ru": "Poproszę = мне, пожалуйста (дословно: «попрошу»)."
+              }
+            },
+            {
+              "question": {
+                "en": "The waiter brings the food. What do you wish each other?",
+                "pl": "Kelner przynosi jedzenie. Czego sobie życzycie?",
+                "ru": "Официант приносит еду. Что вы желаете друг другу?"
+              },
+              "options": ["Smacznego!", "Na zdrowie!", "Dobranoc!", "Wszystkiego najlepszego!"],
+              "answer": 0,
+              "explanation": {
+                "en": "Smacznego = enjoy your meal. \"Na zdrowie\" is for toasts (and sneezes).",
+                "pl": "„Smacznego” mówimy do jedzenia, „Na zdrowie” – przy toaście (i kichnięciu).",
+                "ru": "«Smacznego» — приятного аппетита. «Na zdrowie» — для тоста (и когда чихают)."
+              }
+            },
+            {
+              "question": "____, proszę. Ja stawiam!",
+              "options": ["Rachunek", "Rachunku", "Rachunkiem", "Rachunki"],
+              "answer": 0,
+              "explanation": {
+                "en": "Rachunek, proszę = the bill, please (nominative).",
+                "pl": "Rachunek, proszę – mianownik.",
+                "ru": "Rachunek, proszę — счёт, пожалуйста (именительный падеж)."
+              }
+            }
+          ]
+        },
+        {
+          "id": "rest-dishes",
+          "song": { "title": "Sto lat", "artist": "piosenka tradycyjna", "note": { "en": "The song Poles sing for birthdays and toasts. \"Sto lat\" = a hundred years!", "pl": "Piosenka, którą Polacy śpiewają na urodzinach i przy toastach. „Sto lat” – i więcej!", "ru": "Песня, которую поляки поют на днях рождения и при тостах. «Sto lat» = сто лет!" } },
+          "level": "A2",
+          "title": { "en": "Polish dishes & toasts", "pl": "Polskie potrawy i toasty", "ru": "Польские блюда и тосты" },
+          "cards": [
+            {
+              "phrase": "pierogi",
+              "art": "🥟",
+              "meaning": {
+                "en": "dumplings - the national dish (one is \"pieróg\")",
+                "pl": "narodowe danie; jeden to „pieróg”",
+                "ru": "вареники — национальное блюдо (одна штука — «pieróg»)"
+              },
+              "example": "Pierogi ruskie, z mięsem czy z jagodami? – Tak."
+            },
+            {
+              "phrase": "żurek",
+              "art": "🍲",
+              "meaning": {
+                "en": "sour rye soup, often served in a bread bowl",
+                "pl": "kwaśna zupa na zakwasie, często podawana w chlebie",
+                "ru": "журек — кислый суп на ржаной закваске, часто в хлебе"
+              },
+              "example": "Żurek w chlebie na pierwszej randce? Odważnie."
+            },
+            {
+              "phrase": "Na zdrowie!",
+              "art": "🥂",
+              "meaning": {
+                "en": "Cheers! (literally: to health!)",
+                "pl": "toast",
+                "ru": "За здоровье! / Будем!"
+              },
+              "example": "Za nas! Na zdrowie! 🥂"
+            }
+          ],
+          "practice": [
+            {
+              "question": "Poproszę pierogi ____ jagodami.",
+              "options": ["z", "ze", "w", "na"],
+              "answer": 0,
+              "explanation": {
+                "en": "Z + instrumental for fillings: pierogi z jagodami, z mięsem.",
+                "pl": "Z + narzędnik: pierogi z jagodami, z mięsem.",
+                "ru": "Z + творительный для начинки: pierogi z jagodami (с черникой)."
+              }
+            },
+            {
+              "question": {
+                "en": "The singular of \"pierogi\" is:",
+                "pl": "Liczba pojedyncza od „pierogi” to:",
+                "ru": "Единственное число от «pierogi»:"
+              },
+              "options": ["pieróg", "pierog", "pierogo", "pierogiś"],
+              "answer": 0,
+              "explanation": {
+                "en": "Pieróg - with ó: pierogi → pieróg.",
+                "pl": "Pieróg – z „ó”: pierogi → pieróg.",
+                "ru": "Pieróg — с «ó»: pierogi → pieróg."
+              }
+            },
+            {
+              "question": {
+                "en": "You raise a glass with your date. You say:",
+                "pl": "Wznosisz z randką toast. Mówisz:",
+                "ru": "Ты поднимаешь бокал со своей парой. Ты говоришь:"
+              },
+              "options": ["Na zdrowie!", "Smacznego!", "Rachunek, proszę.", "Dobranoc!"],
+              "answer": 0,
+              "explanation": {
+                "en": "Na zdrowie = cheers. Smacznego is for food.",
+                "pl": "„Na zdrowie” – toast. „Smacznego” – do jedzenia.",
+                "ru": "«Na zdrowie» — тост. «Smacznego» — к еде."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quarrels",
+      "emoji": "💔",
+      "title": { "en": "Arguments & making up", "pl": "Kłótnie i godzenie się", "ru": "Ссоры и примирение" },
+      "lessons": [
+        {
+          "id": "quarrel-fight",
+          "level": "B1",
+          "title": { "en": "A lovers' quarrel", "pl": "Kłótnia zakochanych", "ru": "Ссора влюблённых" },
+          "cards": [
+            {
+              "phrase": "Mam tego dość!",
+              "art": "😤",
+              "meaning": {
+                "en": "I've had enough of this!",
+                "pl": "Nie mogę już tego znieść!",
+                "ru": "С меня хватит!"
+              },
+              "example": "Znowu skarpetki na podłodze? Mam tego dość!"
+            },
+            {
+              "phrase": "Daj mi spokój.",
+              "art": "🙅",
+              "meaning": {
+                "en": "Leave me alone (literally: give me peace).",
+                "pl": "Zostaw mnie w spokoju.",
+                "ru": "Оставь меня в покое."
+              },
+              "example": "Daj mi spokój, oglądam mecz. (Mecz trwa cztery godziny.)"
+            },
+            {
+              "phrase": "Obraziłeś się? / Obraziłaś się?",
+              "art": "😒",
+              "meaning": {
+                "en": "Are you offended? Are you sulking? (obrazić się = to take offence)",
+                "pl": "„Obrazić się” = poczuć się urażonym i się dąsać.",
+                "ru": "Ты обиделся? / Ты обиделась? («obrazić się» = обидеться)"
+              },
+              "example": "Obraziłaś się? – Nie. – Na pewno? – NIE!"
+            }
+          ],
+          "practice": [
+            {
+              "question": "Mam tego ____!",
+              "options": ["dość", "dużo", "mało", "trochę"],
+              "answer": 0,
+              "explanation": {
+                "en": "Mieć czegoś dość = to be fed up with something (+ genitive: tego).",
+                "pl": "Mieć czegoś dość = być czymś zmęczonym, zniecierpliwionym (+ dopełniacz).",
+                "ru": "Mieć czegoś dość = быть сытым по горло (+ родительный: tego)."
+              }
+            },
+            {
+              "question": "Daj mi ____, oglądam mecz.",
+              "options": ["spokój", "spokojny", "spokojnie", "spokojną"],
+              "answer": 0,
+              "explanation": {
+                "en": "Dać komuś spokój - accusative: spokój.",
+                "pl": "Dać komuś spokój – biernik: spokój.",
+                "ru": "Dać komuś spokój — винительный падеж: spokój."
+              }
+            },
+            {
+              "question": {
+                "en": "Your date has been silent for an hour and answers \"Nic.\" to everything. What happened?",
+                "pl": "Randka od godziny milczy i na wszystko odpowiada „Nic.”. Co się stało?",
+                "ru": "Твоя пара уже час молчит и на всё отвечает «Nic.». Что случилось?"
+              },
+              "options": [
+                { "en": "Your date is offended (obraził/obraziła się).", "pl": "Randka się obraziła.", "ru": "Твоя пара обиделась." },
+                { "en": "Your date has lost their voice.", "pl": "Randka straciła głos.", "ru": "Твоя пара потеряла голос." },
+                { "en": "Your date is learning to meditate.", "pl": "Randka uczy się medytacji.", "ru": "Твоя пара учится медитировать." },
+                { "en": "Everything is fine.", "pl": "Wszystko jest w porządku.", "ru": "Всё в порядке." }
+              ],
+              "answer": 0,
+              "explanation": {
+                "en": "\"Nic\" (nothing) after an hour of silence definitely means something.",
+                "pl": "„Nic” po godzinie milczenia zdecydowanie oznacza „coś”.",
+                "ru": "«Nic» (ничего) после часа молчания — это точно что-то."
+              }
+            }
+          ]
+        },
+        {
+          "id": "quarrel-sorry",
+          "song": { "title": "Nie płacz, Ewka", "artist": "Perfect", "note": { "en": "A Polish rock classic - perfect for after an argument.", "pl": "Klasyka polskiego rocka – w sam raz po kłótni.", "ru": "Классика польского рока — как раз после ссоры." } },
+          "level": "B1",
+          "title": { "en": "Saying sorry", "pl": "Przeprosiny", "ru": "Извинения" },
+          "cards": [
+            {
+              "phrase": "Przepraszam, to moja wina.",
+              "art": "🙇",
+              "meaning": {
+                "en": "I'm sorry, it's my fault.",
+                "pl": "klasyczne przeprosiny z przyznaniem się do winy",
+                "ru": "Прости, это моя вина."
+              },
+              "example": "Przepraszam, to moja wina. Następnym razem zapytam, zanim zjem twoje ciasto."
+            },
+            {
+              "phrase": "Wybaczysz mi?",
+              "art": "🥺",
+              "meaning": {
+                "en": "Will you forgive me?",
+                "pl": "prośba o wybaczenie",
+                "ru": "Ты меня простишь?"
+              },
+              "example": "Wybaczysz mi? Mam czekoladę."
+            },
+            {
+              "phrase": "Zgoda?",
+              "art": "🤝",
+              "meaning": {
+                "en": "Truce? Friends again? (zgoda = agreement, peace)",
+                "pl": "propozycja pogodzenia się",
+                "ru": "Мир? (zgoda = согласие, примирение)"
+              },
+              "example": "Zgoda? – Zgoda. Ale pizzę wybieram ja."
+            }
+          ],
+          "practice": [
+            {
+              "question": "Przepraszam, to moja ____.",
+              "options": ["wina", "winy", "winą", "winie"],
+              "answer": 0,
+              "explanation": {
+                "en": "To (jest) moja wina - nominative.",
+                "pl": "To (jest) moja wina – mianownik.",
+                "ru": "To (jest) moja wina — именительный падеж."
+              }
+            },
+            {
+              "question": "____ mi? Mam czekoladę.",
+              "options": ["Wybaczysz", "Wybaczasz", "Wybaczyłeś", "Wybaczyć"],
+              "answer": 0,
+              "explanation": {
+                "en": "Perfective future: wybaczysz mi? = will you forgive me?",
+                "pl": "Czas przyszły dokonany: wybaczysz mi?",
+                "ru": "Будущее совершенного вида: wybaczysz mi? = простишь меня?"
+              }
+            },
+            {
+              "question": {
+                "en": "You want to end the argument and make peace. You say:",
+                "pl": "Chcesz zakończyć kłótnię i się pogodzić. Mówisz:",
+                "ru": "Ты хочешь закончить ссору и помириться. Ты говоришь:"
+              },
+              "options": ["Zgoda?", "Mam tego dość!", "Daj mi spokój.", "Masakra."],
+              "answer": 0,
+              "explanation": {
+                "en": "Zgoda? = truce? Usually followed by pizza.",
+                "pl": "„Zgoda?” – propozycja pokoju. Zwykle potem jest pizza.",
+                "ru": "«Zgoda?» = мир? Обычно потом бывает пицца."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "pronunciation",
       "emoji": "👅",
       "title": { "en": "Pronunciation & tongue-twisters", "pl": "Wymowa i łamańce językowe", "ru": "Произношение и скороговорки" },
@@ -2055,6 +2665,7 @@ window.TEST_DATA = {
           "cards": [
             {
               "phrase": "sz, cz",
+              "art": "🍫",
               "meaning": {
                 "en": "sz ≈ English \"sh\", cz ≈ \"ch\": szampan, czekolada",
                 "pl": "sz jak w „szampan”, cz jak w „czekolada”",
@@ -2064,6 +2675,7 @@ window.TEST_DATA = {
             },
             {
               "phrase": "rz = ż",
+              "art": "🐸",
               "meaning": {
                 "en": "rz and ż sound the same (like \"s\" in \"pleasure\"): rzeka, żaba",
                 "pl": "rz i ż brzmią tak samo: rzeka, żaba",
@@ -2073,6 +2685,7 @@ window.TEST_DATA = {
             },
             {
               "phrase": "ą, ę",
+              "art": "💍",
               "meaning": {
                 "en": "nasal vowels: ą ≈ \"on\", ę ≈ \"en\": mąż (husband), ręka (hand)",
                 "pl": "samogłoski nosowe: mąż, ręka",
@@ -2124,11 +2737,13 @@ window.TEST_DATA = {
         },
         {
           "id": "pron-twisters",
+          "song": { "title": "Chrząszcz", "artist": "Jan Brzechwa", "note": { "en": "Not a song, but the famous children's poem behind the tongue-twister - look for a recitation.", "pl": "To nie piosenka, tylko słynny wiersz dla dzieci, z którego pochodzi łamaniec – posłuchaj recytacji.", "ru": "Это не песня, а знаменитое детское стихотворение, откуда взялась скороговорка, — послушай декламацию." } },
           "level": "B2",
           "title": { "en": "Tongue-twisters", "pl": "Łamańce językowe", "ru": "Скороговорки" },
           "cards": [
             {
               "phrase": "Stół z powyłamywanymi nogami.",
+              "art": "🪑",
               "meaning": {
                 "en": "A table with broken-off legs.",
                 "pl": "Klasyczny łamaniec z „ł”.",
@@ -2138,6 +2753,7 @@ window.TEST_DATA = {
             },
             {
               "phrase": "Król Karol kupił królowej Karolinie korale koloru koralowego.",
+              "art": "👑",
               "meaning": {
                 "en": "King Karol bought Queen Karolina coral-coloured beads.",
                 "pl": "Łamaniec na „k” i „r” – i romantyczny prezent.",
@@ -2147,6 +2763,7 @@ window.TEST_DATA = {
             },
             {
               "phrase": "W Szczebrzeszynie chrząszcz brzmi w trzcinie.",
+              "art": "🪲",
               "meaning": {
                 "en": "In Szczebrzeszyn a beetle buzzes in the reeds - the king of Polish tongue-twisters.",
                 "pl": "Król polskich łamańców językowych.",
